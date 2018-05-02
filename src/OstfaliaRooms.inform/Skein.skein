@@ -1,0 +1,1881 @@
+<?xml version="1.0"?>
+
+<Skein rootNode="node-1002">
+    <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
+    <item nodeId="node-1002">
+        <command xml:space="preserve">OstfaliaRooms</command>
+        <result xml:space="preserve">
+
+
+Ostfalia
+An Interactive Fiction by Fadi Dokmak, Amina Mustafi, Ibrahim Karaki
+Release 1 / Serial number 180426 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Westkorridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1112"></child>
+            <child nodeId="node-1042"></child>
+            <child nodeId="node-1033"></child>
+            <child nodeId="node-1030"></child>
+            <child nodeId="node-1021"></child>
+            <child nodeId="node-1008"></child>
+            <child nodeId="node-1003"></child>
+        </children>
+    </item>
+    <item nodeId="node-1003">
+        <command xml:space="preserve">show</command>
+        <result xml:space="preserve">(yourself yourself)
+(first taking yourself)
+You are always self-possessed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1004"></child>
+        </children>
+    </item>
+    <item nodeId="node-1004">
+        <command xml:space="preserve">go southeast</command>
+        <result xml:space="preserve">
+R051
+Ein Labor. Nördlich befindet sich der Korridor Abschnitt 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1005"></child>
+        </children>
+    </item>
+    <item nodeId="node-1005">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1006"></child>
+        </children>
+    </item>
+    <item nodeId="node-1006">
+        <command xml:space="preserve">go northwest</command>
+        <result xml:space="preserve">
+Korridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Korridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1007"></child>
+        </children>
+    </item>
+    <item nodeId="node-1007">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1008">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 2
+Westkorridor Abschnitt 2. Hier finden sich zwei Räume und ein Labor. Nordöstlich ist der Raum 059 und nordwestlich ist Raum 058. Im Süden findet sich der Laborraum 053. Weiter im Westen ist 3. Westkorridorabschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1020"></child>
+            <child nodeId="node-1019"></child>
+            <child nodeId="node-1009"></child>
+        </children>
+    </item>
+    <item nodeId="node-1009">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1010"></child>
+        </children>
+    </item>
+    <item nodeId="node-1010">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Ecke
+Die Westkorridor Ecke zwischen Abschnitt 3 und 4. Hier befinden sich der Kopierer sowie das Kopieraufladegerät. Südöstlich ist der Laborraum 055 und südwestlich der Laborraum 056. Im Westen befindet sich der Westkorridorabschnitt 3 und nördlich der Abschnitt 4.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1011"></child>
+        </children>
+    </item>
+    <item nodeId="node-1011">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 4
+Westkorridor Abschnitt 4. HIer findet sich ein Frauen WC sowie ein Raum und ein Labor. Im Osten ist das Frauen WC. Im Nordwestlichen ist der Laborraum 075 und im Südwestlichen der Raum 074. Weiter im Norden ist der 6. Westkorridorabschnitt und im Süden ist die Westkorridorecke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1012"></child>
+        </children>
+    </item>
+    <item nodeId="node-1012">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 5
+Westkorridor Abschnitt 5. Hier befinden sich zwei normale Büros. Westlich liegt der Raum 076 und Östlich der Raum 072. Weiter im Norden geht es zum 6. Westkorridorabschnitt und südlich ist der 4. Abschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1013"></child>
+        </children>
+    </item>
+    <item nodeId="node-1013">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 6
+Westkorridor Abschnitt 6. Hier ist das RoboCup Labor sowie ein weiteres Labor und ein Büro. Im Osten ist das RoboCup Labor, im Südwesten der Raum 077 und im Nordwesten der Laborraum 078. Südlich ist Westkorridor Abschnitt 5 und Nördlich ist der Westkorridor Abschnitt 7.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1014"></child>
+        </children>
+    </item>
+    <item nodeId="node-1014">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 7
+Westkorridor Abschnitt 7. Hier befindet sich ein Labor und zwei Büros. Östlich liegt das Labor 085, nordwestlich ein Zwischenraum der zum Raum 080A führt. Südwestlich liegt der Raum 079. Nördlich ist der 8. und letzte Westkorridorabschnitt und südlich ist der 7. Abschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1015"></child>
+        </children>
+    </item>
+    <item nodeId="node-1015">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 8
+Westkorridor Abschnitt 8. Dies ist der nördlichste Teil des Westkorridors des Westflügels. Hier befinden sich vier Büros. Im Südwestlichen ist Raum 081 und im Südöstlichen der Raum 084. Im Nordwestlichen ist der Raum 082 und im Nordöstlichen der Raum 083. Weiter im Süden geht es zum Westkorridorabschnitt 7.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1016"></child>
+        </children>
+    </item>
+    <item nodeId="node-1016">
+        <command xml:space="preserve">go notrth</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1017"></child>
+        </children>
+    </item>
+    <item nodeId="node-1017">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1018"></child>
+        </children>
+    </item>
+    <item nodeId="node-1018">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 7
+Westkorridor Abschnitt 7. Hier befindet sich ein Labor und zwei Büros. Östlich liegt das Labor 085, nordwestlich ein Zwischenraum der zum Raum 080A führt. Südwestlich liegt der Raum 079. Nördlich ist der 8. und letzte Westkorridorabschnitt und südlich ist der 7. Abschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1019">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Raum 053
+Ein Labor. Nördlich befindet sich der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1020">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Korridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Westlich befindet sich Raum R051 und östlich Raum R060.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1021">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1022"></child>
+        </children>
+    </item>
+    <item nodeId="node-1022">
+        <command xml:space="preserve">go southeast</command>
+        <result xml:space="preserve">
+R051
+Ein Labor. Nördlich befindet sich der Korridor Abschnitt 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1023"></child>
+        </children>
+    </item>
+    <item nodeId="node-1023">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+R052
+Ein normales Bürozimmer. Nördlich befindet sich der Korridor Abschnitt 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1024"></child>
+        </children>
+    </item>
+    <item nodeId="node-1024">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+R051
+Ein Labor. Nördlich befindet sich der Korridor Abschnitt 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1025"></child>
+        </children>
+    </item>
+    <item nodeId="node-1025">
+        <command xml:space="preserve">go northwest</command>
+        <result xml:space="preserve">
+Korridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Korridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1026"></child>
+        </children>
+    </item>
+    <item nodeId="node-1026">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Korridor Abschnitt 2
+Korridor Abschnitt 2. Hier finden sich zwei Räume und ein Labor. Nordöstlich ist der Raum 059 und nordwestlich ist Raum 058. Im Süden findet sich der Laborraum 053. Weiter im Westen ist 3. Korridorabschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1027"></child>
+        </children>
+    </item>
+    <item nodeId="node-1027">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+R053
+Ein Labor. Nördlich befindet sich der Korridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1028"></child>
+        </children>
+    </item>
+    <item nodeId="node-1028">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Korridor Abschnitt 2
+Korridor Abschnitt 2. Hier finden sich zwei Räume und ein Labor. Nordöstlich ist der Raum 059 und nordwestlich ist Raum 058. Im Süden findet sich der Laborraum 053. Weiter im Westen ist 3. Korridorabschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1029"></child>
+        </children>
+    </item>
+    <item nodeId="node-1029">
+        <command xml:space="preserve">go northwest</command>
+        <result xml:space="preserve">
+R058
+Ein normales Bürozimmer. Südlich befindet sich der Korridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1030">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1031"></child>
+        </children>
+    </item>
+    <item nodeId="node-1031">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Korridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Hier befinden sich die Räume R051, R060
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1032"></child>
+        </children>
+    </item>
+    <item nodeId="node-1032">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+R060
+Ein normales Bürozimmer
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1033">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Zwischenraum A
+Ein kleiner Zwischenraum. Weiter im Norden ist der Raum 060 und im Osten ist das Herren WC. Im Süden geht zum Westkorridor Abschnitt 1.
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1041"></child>
+            <child nodeId="node-1034"></child>
+            <child nodeId="node-1140"></child>
+            <child nodeId="node-1184"></child>
+            <child nodeId="node-1124"></child>
+            <child nodeId="node-1136"></child>
+        </children>
+    </item>
+    <item nodeId="node-1136">
+        <command xml:space="preserve">say hey</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1144"></child>
+        </children>
+    </item>
+    <item nodeId="node-1144">
+        <command xml:space="preserve">say ok</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1145"></child>
+        </children>
+    </item>
+    <item nodeId="node-1145">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1146"></child>
+        </children>
+    </item>
+    <item nodeId="node-1146">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 2
+Westkorridor Abschnitt 2. Hier finden sich zwei Räume und ein Labor. Nordöstlich ist der Raum 059 und nordwestlich ist Raum 058. Im Süden findet sich der Laborraum 053. Weiter im Westen ist 3. Westkorridorabschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1147"></child>
+        </children>
+    </item>
+    <item nodeId="node-1147">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1148"></child>
+        </children>
+    </item>
+    <item nodeId="node-1148">
+        <command xml:space="preserve">look at doo</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1149"></child>
+        </children>
+    </item>
+    <item nodeId="node-1149">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1150"></child>
+        </children>
+    </item>
+    <item nodeId="node-1150">
+        <command xml:space="preserve">see</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1151"></child>
+        </children>
+    </item>
+    <item nodeId="node-1151">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+You can see Geist here.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1152"></child>
+        </children>
+    </item>
+    <item nodeId="node-1152">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Raum 057
+Ein Labor. Südlich befindet sich der Westkorridor Abschnitt 3.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1153"></child>
+        </children>
+    </item>
+    <item nodeId="node-1153">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1154"></child>
+        </children>
+    </item>
+    <item nodeId="node-1154">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1155"></child>
+        </children>
+    </item>
+    <item nodeId="node-1155">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Ecke
+Die Westkorridor Ecke zwischen Abschnitt 3 und 4. Hier befinden sich der Kopierer sowie das Kopieraufladegerät. Südöstlich ist der Laborraum 055 und südwestlich der Laborraum 056. Im Westen befindet sich der Westkorridorabschnitt 3 und nördlich der Abschnitt 4.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1124">
+        <command xml:space="preserve">say hello ghost</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1125"></child>
+        </children>
+    </item>
+    <item nodeId="node-1125">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1126"></child>
+        </children>
+    </item>
+    <item nodeId="node-1126">
+        <command xml:space="preserve">say hello</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1127"></child>
+        </children>
+    </item>
+    <item nodeId="node-1127">
+        <command xml:space="preserve">say bye</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1128"></child>
+        </children>
+    </item>
+    <item nodeId="node-1128">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Zwischenraum A
+Ein kleiner Zwischenraum. Weiter im Norden ist der Raum 060 und im Osten ist das Herren WC. Im Süden geht zum Westkorridor Abschnitt 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1129"></child>
+        </children>
+    </item>
+    <item nodeId="node-1129">
+        <command xml:space="preserve">say bruh</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1130"></child>
+        </children>
+    </item>
+    <item nodeId="node-1130">
+        <command xml:space="preserve">say bruh</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1131"></child>
+        </children>
+    </item>
+    <item nodeId="node-1131">
+        <command xml:space="preserve">say bruh</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1132"></child>
+        </children>
+    </item>
+    <item nodeId="node-1132">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1133"></child>
+        </children>
+    </item>
+    <item nodeId="node-1133">
+        <command xml:space="preserve">say he</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1134"></child>
+        </children>
+    </item>
+    <item nodeId="node-1134">
+        <command xml:space="preserve">say br</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1184">
+        <command xml:space="preserve">say hello</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1185"></child>
+        </children>
+    </item>
+    <item nodeId="node-1185">
+        <command xml:space="preserve">say bruh</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1186"></child>
+        </children>
+    </item>
+    <item nodeId="node-1186">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1187"></child>
+        </children>
+    </item>
+    <item nodeId="node-1187">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Ostkorridor 1
+Hier ist der Ostkorridor 1. Von hier aus kann man nördlich in die Damentoilette und östlich in den Ostkorridor 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1188"></child>
+        </children>
+    </item>
+    <item nodeId="node-1188">
+        <command xml:space="preserve">say be</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1140">
+        <command xml:space="preserve">saay br</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1141"></child>
+        </children>
+    </item>
+    <item nodeId="node-1141">
+        <command xml:space="preserve">say br</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+1buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1034">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1035"></child>
+            <child nodeId="node-1158"></child>
+            <child nodeId="node-1191"></child>
+            <child nodeId="node-1119"></child>
+        </children>
+    </item>
+    <item nodeId="node-1119">
+        <command xml:space="preserve">show</command>
+        <result xml:space="preserve">(Geist Geist)
+(first taking Geist)
+I don't suppose Geist would care for that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1120"></child>
+        </children>
+    </item>
+    <item nodeId="node-1120">
+        <command xml:space="preserve">say hello</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1121"></child>
+        </children>
+    </item>
+    <item nodeId="node-1121">
+        <command xml:space="preserve">say heloooo</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1122"></child>
+        </children>
+    </item>
+    <item nodeId="node-1122">
+        <command xml:space="preserve">say bro</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1191">
+        <command xml:space="preserve">say bruh</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1192"></child>
+        </children>
+    </item>
+    <item nodeId="node-1192">
+        <command xml:space="preserve">say bruh</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1193"></child>
+        </children>
+    </item>
+    <item nodeId="node-1193">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 2
+Westkorridor Abschnitt 2. Hier finden sich zwei Räume und ein Labor. Nordöstlich ist der Raum 059 und nordwestlich ist Raum 058. Im Süden findet sich der Laborraum 053. Weiter im Westen ist 3. Westkorridorabschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1194"></child>
+        </children>
+    </item>
+    <item nodeId="node-1194">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1195"></child>
+        </children>
+    </item>
+    <item nodeId="node-1195">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Ecke
+Die Westkorridor Ecke zwischen Abschnitt 3 und 4. Hier befinden sich der Kopierer sowie das Kopieraufladegerät. Südöstlich ist der Laborraum 055 und südwestlich der Laborraum 056. Im Westen befindet sich der Westkorridorabschnitt 3 und nördlich der Abschnitt 4.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1196"></child>
+        </children>
+    </item>
+    <item nodeId="node-1196">
+        <command xml:space="preserve">say sd</command>
+        <result xml:space="preserve">(to yourself)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1158">
+        <command xml:space="preserve">say b</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1159"></child>
+        </children>
+    </item>
+    <item nodeId="node-1159">
+        <command xml:space="preserve">say b</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1160"></child>
+        </children>
+    </item>
+    <item nodeId="node-1160">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 2
+Westkorridor Abschnitt 2. Hier finden sich zwei Räume und ein Labor. Nordöstlich ist der Raum 059 und nordwestlich ist Raum 058. Im Süden findet sich der Laborraum 053. Weiter im Westen ist 3. Westkorridorabschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1161"></child>
+        </children>
+    </item>
+    <item nodeId="node-1161">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1162"></child>
+        </children>
+    </item>
+    <item nodeId="node-1162">
+        <command xml:space="preserve">say asd</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1163"></child>
+        </children>
+    </item>
+    <item nodeId="node-1163">
+        <command xml:space="preserve">say sad</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1164"></child>
+        </children>
+    </item>
+    <item nodeId="node-1164">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Ecke
+Die Westkorridor Ecke zwischen Abschnitt 3 und 4. Hier befinden sich der Kopierer sowie das Kopieraufladegerät. Südöstlich ist der Laborraum 055 und südwestlich der Laborraum 056. Im Westen befindet sich der Westkorridorabschnitt 3 und nördlich der Abschnitt 4.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1165"></child>
+        </children>
+    </item>
+    <item nodeId="node-1165">
+        <command xml:space="preserve">say sad</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1166"></child>
+        </children>
+    </item>
+    <item nodeId="node-1166">
+        <command xml:space="preserve">say ad</command>
+        <result xml:space="preserve">(to yourself)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1167"></child>
+        </children>
+    </item>
+    <item nodeId="node-1167">
+        <command xml:space="preserve">say asdasd</command>
+        <result xml:space="preserve">(to yourself)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1035">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 2
+Westkorridor Abschnitt 2. Hier finden sich zwei Räume und ein Labor. Nordöstlich ist der Raum 059 und nordwestlich ist Raum 058. Im Süden findet sich der Laborraum 053. Weiter im Westen ist 3. Westkorridorabschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1036"></child>
+            <child nodeId="node-1171"></child>
+        </children>
+    </item>
+    <item nodeId="node-1171">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1172"></child>
+        </children>
+    </item>
+    <item nodeId="node-1172">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Westkorridor Ecke
+Die Westkorridor Ecke zwischen Abschnitt 3 und 4. Hier befinden sich der Kopierer sowie das Kopieraufladegerät. Südöstlich ist der Laborraum 055 und südwestlich der Laborraum 056. Im Westen befindet sich der Westkorridorabschnitt 3 und nördlich der Abschnitt 4.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1173"></child>
+        </children>
+    </item>
+    <item nodeId="node-1173">
+        <command xml:space="preserve">say</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1174"></child>
+        </children>
+    </item>
+    <item nodeId="node-1174">
+        <command xml:space="preserve">say sad</command>
+        <result xml:space="preserve">(to yourself)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1175"></child>
+        </children>
+    </item>
+    <item nodeId="node-1175">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 3
+Westkorridor Abschnitt 3. Hier findet sich ein Labor und ein Raum. Im Norden ist der Laborraum 053 und im Süden der Raum 054. Westlich hiervon liegt die Westkorridorecke.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1176"></child>
+        </children>
+    </item>
+    <item nodeId="node-1176">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 2
+Westkorridor Abschnitt 2. Hier finden sich zwei Räume und ein Labor. Nordöstlich ist der Raum 059 und nordwestlich ist Raum 058. Im Süden findet sich der Laborraum 053. Weiter im Westen ist 3. Westkorridorabschnitt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1177"></child>
+        </children>
+    </item>
+    <item nodeId="node-1177">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1178"></child>
+        </children>
+    </item>
+    <item nodeId="node-1178">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Zwischenraum A
+Ein kleiner Zwischenraum. Weiter im Norden ist der Raum 060 und im Osten ist das Herren WC. Im Süden geht zum Westkorridor Abschnitt 1.
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1179"></child>
+        </children>
+    </item>
+    <item nodeId="node-1179">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">
+Westkorridor Abschnitt 1
+Der Eingangsbereich des Ostflügels. Im Norden ist ein Zwischenraum der ins Herren WC und zum Raum 060 führt. Südöstlich der Laborraum 051 und südwestlich der Raum 052. Östlich ist der Westkorridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1180"></child>
+        </children>
+    </item>
+    <item nodeId="node-1180">
+        <command xml:space="preserve">say hey</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1181"></child>
+        </children>
+    </item>
+    <item nodeId="node-1181">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+Zwischenraum A
+Ein kleiner Zwischenraum. Weiter im Norden ist der Raum 060 und im Osten ist das Herren WC. Im Süden geht zum Westkorridor Abschnitt 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1182"></child>
+        </children>
+    </item>
+    <item nodeId="node-1182">
+        <command xml:space="preserve">say ad</command>
+        <result xml:space="preserve">(to Geist)
+There is no reply.
+
+buuh.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1036">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Korridor Abschnitt 2
+Der Bereich des Korridors direkt hinter des Eingangsbereichs. Nördlich befindet sich Raum R052 und südlich der Raum R059. Weiter östlich liegt der Korridor Abschnitt 3.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1037"></child>
+        </children>
+    </item>
+    <item nodeId="node-1037">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1038"></child>
+        </children>
+    </item>
+    <item nodeId="node-1038">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">
+R052
+Ein normales Bürozimmer. Südlich davon befindet sich der Korridor Abschnitt 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1039"></child>
+        </children>
+    </item>
+    <item nodeId="node-1039">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1040"></child>
+        </children>
+    </item>
+    <item nodeId="node-1040">
+        <command xml:space="preserve">go southsouthwest</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1041">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Herren WC
+Ein Herren WC. Es befindet sich im Eingangbereich des Westflügels. Südlich ist der Westkorridor Abschnitt 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1042">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Ostkorridor 1
+Hier ist der Ostkorridor 1. Von hier aus kann man nördlich in die Damentoilette und östlich in den Ostkorridor 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1110"></child>
+            <child nodeId="node-1043"></child>
+        </children>
+    </item>
+    <item nodeId="node-1043">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Ostkorridor 2
+Hier ist der Ostkorridor 2. Nordwestlich ist der Fahrstuhl und nordöstlich ist der Raum 023. Südwestlich befindet sich der Raum 020, südlich der Raum 029 und südöstlich der Raum 028b. Westlich vom Ostkorridor 2 befindet sich der Ostkorridor 1 und östlich vom Ostkorridor 2 ist der Ostkorridor 3
+
+You can see Fahrstuhl_door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1103"></child>
+            <child nodeId="node-1309"></child>
+            <child nodeId="node-1090"></child>
+            <child nodeId="node-1054"></child>
+            <child nodeId="node-1052"></child>
+            <child nodeId="node-1044"></child>
+        </children>
+    </item>
+    <item nodeId="node-1044">
+        <command xml:space="preserve">ho northwest</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1045"></child>
+        </children>
+    </item>
+    <item nodeId="node-1045">
+        <command xml:space="preserve">go northwest</command>
+        <result xml:space="preserve">
+Fahrstuhl
+Hier befindet sich ein Fahrstuhl. Nördlich vom Fahrstuhl gelangt man in den Raum Barriere, der ein barrierefreier Zugang für den Fahrstuhl darstellt. Südlich gelangt man auf den Ostkorridor 2. Mit dem Befehl go up gelangt man in den Dachgschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1046"></child>
+        </children>
+    </item>
+    <item nodeId="node-1046">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1047"></child>
+        </children>
+    </item>
+    <item nodeId="node-1047">
+        <command xml:space="preserve">go up</command>
+        <result xml:space="preserve">
+Aufzug Dachgeschoss
+Hier befindet sich der Fahrstuhl. Südwestlich vom Fahrstuhl ist das Östliche Treppenhaus. Südlich von diesem Raum ist der Seminar Raum 224. Mit dem Befehl go down gelangt man in den Erdgeschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1048"></child>
+        </children>
+    </item>
+    <item nodeId="node-1048">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">
+Treppenhaus Ost Dachgeschosss
+Treppenhaus Ost. Westlich von diesem Raum befinden sich der Leerer Raum Dachgeschoss und der Lernbereich Dachgeshoss. Östlich befinden sich die Aufzug Dachgeschoss und Seminar Raum 224 Räume
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1049"></child>
+        </children>
+    </item>
+    <item nodeId="node-1049">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Lernbereich Dachgeshoss
+Lernbereich Dachgeshoss südlich im SuedKorridor. In diesem Raum können Studenten lernen. Sowohl westlich als auch östlich befindet sich ein Treppenhaus. Im norden befindet sich ein leerer Raum
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1050"></child>
+        </children>
+    </item>
+    <item nodeId="node-1050">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1051"></child>
+        </children>
+    </item>
+    <item nodeId="node-1051">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1052">
+        <command xml:space="preserve">go soutwest</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1053"></child>
+        </children>
+    </item>
+    <item nodeId="node-1053">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">
+Raum 030
+Hier ist ein Büro. Westlich von Raum 030 kann man in den Raum 029/zum Sekretariat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1054">
+        <command xml:space="preserve">go northwest</command>
+        <result xml:space="preserve">
+Fahrstuhl
+Hier befindet sich ein Fahrstuhl. Nördlich vom Fahrstuhl gelangt man in den Raum Barriere, der ein barrierefreier Zugang für den Fahrstuhl darstellt. Südlich gelangt man auf den Ostkorridor 2. Mit dem Befehl go up gelangt man in den Dachgschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1082"></child>
+            <child nodeId="node-1055"></child>
+        </children>
+    </item>
+    <item nodeId="node-1055">
+        <command xml:space="preserve">go up</command>
+        <result xml:space="preserve">
+Aufzug Dachgeschoss
+Hier befindet sich der Fahrstuhl. Südwestlich vom Fahrstuhl ist das Östliche Treppenhaus. Südlich von diesem Raum ist der Seminar Raum 224. Mit dem Befehl go down gelangt man in den Erdgeschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1081"></child>
+            <child nodeId="node-1056"></child>
+        </children>
+    </item>
+    <item nodeId="node-1056">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">
+Treppenhaus Ost Dachgeschosss
+Treppenhaus Ost. Westlich von diesem Raum befinden sich der Leerer Raum Dachgeschoss und der Lernbereich Dachgeshoss. Östlich befinden sich die Aufzug Dachgeschoss und Seminar Raum 224 Räume
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1057"></child>
+        </children>
+    </item>
+    <item nodeId="node-1057">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Lernbereich Dachgeshoss
+Lernbereich Dachgeshoss südlich im SuedKorridor. In diesem Raum können Studenten lernen. Sowohl westlich als auch östlich befindet sich ein Treppenhaus. Im norden befindet sich ein leerer Raum
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1058"></child>
+        </children>
+    </item>
+    <item nodeId="node-1058">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1059"></child>
+        </children>
+    </item>
+    <item nodeId="node-1059">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1078"></child>
+            <child nodeId="node-1074"></child>
+            <child nodeId="node-1060"></child>
+        </children>
+    </item>
+    <item nodeId="node-1060">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1061"></child>
+        </children>
+    </item>
+    <item nodeId="node-1061">
+        <command xml:space="preserve">speak</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1062"></child>
+        </children>
+    </item>
+    <item nodeId="node-1062">
+        <command xml:space="preserve">show</command>
+        <result xml:space="preserve">(Geist Geist)
+(first taking Geist)
+I don't suppose Geist would care for that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1063"></child>
+        </children>
+    </item>
+    <item nodeId="node-1063">
+        <command xml:space="preserve">talk to geist</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1064"></child>
+        </children>
+    </item>
+    <item nodeId="node-1064">
+        <command xml:space="preserve">speack with geist</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1065"></child>
+        </children>
+    </item>
+    <item nodeId="node-1065">
+        <command xml:space="preserve">go to geist</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1066"></child>
+        </children>
+    </item>
+    <item nodeId="node-1066">
+        <command xml:space="preserve">show</command>
+        <result xml:space="preserve">(Geist Geist)
+(first taking Geist)
+I don't suppose Geist would care for that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1067"></child>
+        </children>
+    </item>
+    <item nodeId="node-1067">
+        <command xml:space="preserve">geist</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1068"></child>
+        </children>
+    </item>
+    <item nodeId="node-1068">
+        <command xml:space="preserve">ask geist</command>
+        <result xml:space="preserve">(for Geist)
+(Geist first taking Geist)
+Geist has better things to do.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1069"></child>
+        </children>
+    </item>
+    <item nodeId="node-1069">
+        <command xml:space="preserve">ask geist about</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1070"></child>
+        </children>
+    </item>
+    <item nodeId="node-1070">
+        <command xml:space="preserve">talk geist</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1071"></child>
+        </children>
+    </item>
+    <item nodeId="node-1071">
+        <command xml:space="preserve">tell geist</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1072"></child>
+        </children>
+    </item>
+    <item nodeId="node-1072">
+        <command xml:space="preserve">tell geist he is a looser</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1073"></child>
+        </children>
+    </item>
+    <item nodeId="node-1073">
+        <command xml:space="preserve">ask geist</command>
+        <result xml:space="preserve">(for Geist)
+(Geist first taking Geist)
+Geist has better things to do.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1074">
+        <command xml:space="preserve">go south</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1075"></child>
+        </children>
+    </item>
+    <item nodeId="node-1075">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1076"></child>
+        </children>
+    </item>
+    <item nodeId="node-1076">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1077"></child>
+        </children>
+    </item>
+    <item nodeId="node-1077">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1078">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1079"></child>
+        </children>
+    </item>
+    <item nodeId="node-1079">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1080"></child>
+        </children>
+    </item>
+    <item nodeId="node-1080">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1081">
+        <command xml:space="preserve">go down</command>
+        <result xml:space="preserve">
+Fahrstuhl
+Hier befindet sich ein Fahrstuhl. Nördlich vom Fahrstuhl gelangt man in den Raum Barriere, der ein barrierefreier Zugang für den Fahrstuhl darstellt. Südlich gelangt man auf den Ostkorridor 2. Mit dem Befehl go up gelangt man in den Dachgschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1082">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1083"></child>
+        </children>
+    </item>
+    <item nodeId="node-1083">
+        <command xml:space="preserve">go up</command>
+        <result xml:space="preserve">
+Aufzug Dachgeschoss
+Hier befindet sich der Fahrstuhl. Südwestlich vom Fahrstuhl ist das Östliche Treppenhaus. Südlich von diesem Raum ist der Seminar Raum 224. Mit dem Befehl go down gelangt man in den Erdgeschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1084"></child>
+        </children>
+    </item>
+    <item nodeId="node-1084">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">
+Treppenhaus Ost Dachgeschosss
+Treppenhaus Ost. Westlich von diesem Raum befinden sich der Leerer Raum Dachgeschoss und der Lernbereich Dachgeshoss. Östlich befinden sich die Aufzug Dachgeschoss und Seminar Raum 224 Räume
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1085"></child>
+        </children>
+    </item>
+    <item nodeId="node-1085">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Lernbereich Dachgeshoss
+Lernbereich Dachgeshoss südlich im SuedKorridor. In diesem Raum können Studenten lernen. Sowohl westlich als auch östlich befindet sich ein Treppenhaus. Im norden befindet sich ein leerer Raum
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1086"></child>
+        </children>
+    </item>
+    <item nodeId="node-1086">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1087"></child>
+        </children>
+    </item>
+    <item nodeId="node-1087">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1088"></child>
+        </children>
+    </item>
+    <item nodeId="node-1088">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1089"></child>
+        </children>
+    </item>
+    <item nodeId="node-1089">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1090">
+        <command xml:space="preserve">go northeast</command>
+        <result xml:space="preserve">
+Raum 023
+Hier befindet sich ein Raum mit Kaffeeautomaten. Nördlich von dem Raum 023 befindet sich ein leerer Raum und südlich gelangt man auf den Ostkorridor 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1091"></child>
+        </children>
+    </item>
+    <item nodeId="node-1091">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">
+Ostkorridor 2
+Hier ist der Ostkorridor 2. Nordwestlich ist der Fahrstuhl und nordöstlich ist der Raum 023. Südwestlich befindet sich der Raum 020, südlich der Raum 029 und südöstlich der Raum 028b. Westlich vom Ostkorridor 2 befindet sich der Ostkorridor 1 und östlich vom Ostkorridor 2 ist der Ostkorridor 3
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1092"></child>
+        </children>
+    </item>
+    <item nodeId="node-1092">
+        <command xml:space="preserve">go northwest</command>
+        <result xml:space="preserve">
+Fahrstuhl
+Hier befindet sich ein Fahrstuhl. Nördlich vom Fahrstuhl gelangt man in den Raum Barriere, der ein barrierefreier Zugang für den Fahrstuhl darstellt. Südlich gelangt man auf den Ostkorridor 2. Mit dem Befehl go up gelangt man in den Dachgschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1093"></child>
+        </children>
+    </item>
+    <item nodeId="node-1093">
+        <command xml:space="preserve">go up</command>
+        <result xml:space="preserve">
+Aufzug Dachgeschoss
+Hier befindet sich der Fahrstuhl. Westlich vom Fahrstuhl ist das Östliche Treppenhaus. Südlich von diesem Raum ist der Seminar Raum 224. Mit dem Befehl go down gelangt man in den Erdgeschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1094"></child>
+        </children>
+    </item>
+    <item nodeId="node-1094">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1095"></child>
+        </children>
+    </item>
+    <item nodeId="node-1095">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1096"></child>
+        </children>
+    </item>
+    <item nodeId="node-1096">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Raum 223
+Hörsaal östlich im SuedKorridor. Südlich von diesem Raum sind die Räume Aufzug Dachgeschoss und Seminar Raum 224
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1097"></child>
+        </children>
+    </item>
+    <item nodeId="node-1097">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Aufzug Dachgeschoss
+Hier befindet sich der Fahrstuhl. Westlich vom Fahrstuhl ist das Östliche Treppenhaus. Südlich von diesem Raum ist der Seminar Raum 224. Mit dem Befehl go down gelangt man in den Erdgeschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1098"></child>
+        </children>
+    </item>
+    <item nodeId="node-1098">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">
+Treppenhaus Ost Dachgeschosss
+Treppenhaus Ost. Westlich von diesem Raum befinden sich der Leerer Raum Dachgeschoss und der Lernbereich Dachgeshoss. Östlich befinden sich die Aufzug Dachgeschoss und Seminar Raum 224 Räume
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1099"></child>
+        </children>
+    </item>
+    <item nodeId="node-1099">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Lernbereich Dachgeshoss
+Lernbereich Dachgeshoss südlich im SuedKorridor. In diesem Raum können Studenten lernen. Sowohl westlich als auch östlich befindet sich ein Treppenhaus. Im norden befindet sich ein leerer Raum
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1100"></child>
+        </children>
+    </item>
+    <item nodeId="node-1100">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1101"></child>
+        </children>
+    </item>
+    <item nodeId="node-1101">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1102"></child>
+        </children>
+    </item>
+    <item nodeId="node-1102">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1309">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">Die Aufzugtür ist geschlossen
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1310"></child>
+        </children>
+    </item>
+    <item nodeId="node-1310">
+        <command xml:space="preserve">push Erdgeschoss Fahrstuhltürknopf</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1429"></child>
+        </children>
+    </item>
+    <item nodeId="node-1429">
+        <command xml:space="preserve">push Fahrstuhl knopf</command>
+        <result xml:space="preserve">Die Aufzugtür öffnet sich
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1103">
+        <command xml:space="preserve">do northwest</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1104"></child>
+        </children>
+    </item>
+    <item nodeId="node-1104">
+        <command xml:space="preserve">go northwest</command>
+        <result xml:space="preserve">
+Fahrstuhl
+Hier befindet sich ein Fahrstuhl. Nördlich vom Fahrstuhl gelangt man in den Raum Barriere, der ein barrierefreier Zugang für den Fahrstuhl darstellt. Südlich gelangt man auf den Ostkorridor 2. Mit dem Befehl go up gelangt man in den Dachgschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1105"></child>
+        </children>
+    </item>
+    <item nodeId="node-1105">
+        <command xml:space="preserve">go up</command>
+        <result xml:space="preserve">
+Aufzug Dachgeschoss
+Hier befindet sich der Fahrstuhl. Südwestlich vom Fahrstuhl ist das Östliche Treppenhaus. Südlich von diesem Raum ist der Seminar Raum 224. Mit dem Befehl go down gelangt man in den Erdgeschoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1106"></child>
+        </children>
+    </item>
+    <item nodeId="node-1106">
+        <command xml:space="preserve">go southwest</command>
+        <result xml:space="preserve">
+Treppenhaus Ost Dachgeschosss
+Treppenhaus Ost. Westlich von diesem Raum befinden sich der Leerer Raum Dachgeschoss und der Lernbereich Dachgeshoss. Östlich befinden sich die Aufzug Dachgeschoss und Seminar Raum 224 Räume
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1107"></child>
+        </children>
+    </item>
+    <item nodeId="node-1107">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Lernbereich Dachgeshoss
+Lernbereich Dachgeshoss südlich im SuedKorridor. In diesem Raum können Studenten lernen. Sowohl westlich als auch östlich befindet sich ein Treppenhaus. Im norden befindet sich ein leerer Raum
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1108"></child>
+        </children>
+    </item>
+    <item nodeId="node-1108">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Treppenhaus West Dachgeschosss
+Treppenhaus West. Wesltich von diesem Raum befindet sich der Hörsaal 252. Östlich vom Treppenhaus befinden sich der Raum Lernbereich Dachgeshoss.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1109"></child>
+        </children>
+    </item>
+    <item nodeId="node-1109">
+        <command xml:space="preserve">go west</command>
+        <result xml:space="preserve">
+Raum 252
+Ein Hörsaal westlich im SuedKorridor. Östlich von diesem Raum ist der Westliche Treppenhaus Westlich von hier befindet sich der Korridor 6 Dachgeschoss..
+
+You can see Geist here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1110">
+        <command xml:space="preserve">go Ostkorridor 2</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1111"></child>
+        </children>
+    </item>
+    <item nodeId="node-1111">
+        <command xml:space="preserve">go east</command>
+        <result xml:space="preserve">
+Ostkorridor 2
+Hier ist der Ostkorridor 2. Nordwestlich ist der Fahrstuhl und nordöstlich ist der Raum 023. Südwestlich befindet sich der Raum 020, südlich der Raum 029 und südöstlich der Raum 028b. Westlich vom Ostkorridor 2 befindet sich der Ostkorridor 1 und östlich vom Ostkorridor 2 ist der Ostkorridor 3
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1112">
+        <command xml:space="preserve">R051, R052, R053, R054, R055, R056, R057, R058, R059, R060, R071, R072, R073, R074, R075, R076, R077, R078, R079, R080, R081, R082, R083, R084, R085 are rooms.</command>
+        <result xml:space="preserve">You seem to want to talk to someone, but I can't see whom.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+</Skein>
