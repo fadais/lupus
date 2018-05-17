@@ -1,0 +1,123 @@
+"AussereRaume" by Amina Mustafi
+
+[Arbeitspaket A 1]
+
+[Raum Gamma Junction mit den dazugehörigen Türen sowie Nebenräumen]
+Gamma Junction is a room. 
+The description of Gamma Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster zu sehen.
+Nordwestlich befindet sich Gamma Delta Corridor, südwestlich Gamma Beta Corridor und darunter der Hangar. Eine Treppe führt hoch zum Xeno Lab, die durch eine Luke versperrt ist. Eine Tür führt zur Storage Area, die sich in der linken Seitenebene befindet.".
+Down of Gamma Junction is Hangar.
+Up of Gamma Junction is Xeno-Lab.
+Northwest of Gamma Junction is a door called door_gamma2gamma. 
+The description of door_gamma2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
+The door_gamma2gamma can be locked or unlocked.
+The door_gamma2gamma is locked.
+The door_gamma2gamma is closed.
+Northwest of door_gamma2gamma is Gamma Delta Corridor. 
+Southwest of Gamma Junction is a door called door_gamma2gambeta. 
+The description of door_gamma2gambeta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
+The door_gamma2gambeta can be locked or unlocked.
+The door_gamma2gambeta is locked.
+The door_gamma2gambeta is closed.
+Southwest of door_gamma2gambeta is Gamma Beta Corridor.
+West of Gamma Junction is Storage Area.
+
+[Raum Gamma Delta Corridor mit der dazugehörigen Tür sowie Nebenräumen]
+Gamma Delta Corridor is a room. 
+The description of Gamma Delta Corridor is "In diesem Raum kann man durch eine Wartungsluke in das Kommunikationsmodul gelangen. Des weiteren befinden sich Spuren von Handlaserwaffen, eine Leiche und ein Bodenfenster im Raum.
+Die Wartungsluke führt runter in die Com Base, allerdings ist sie durch eine Luke versperrt. Südöstlich befindet sich die  Gamma Junction und nordwestlich Delta Junction.".
+Down of Gamma Delta Corridor is Wartungsluke zum Kommunikationsmodul.
+Southeast of Gamma Delta Corridor is Gamma Junction.
+Northwest of Gamma Delta Corridor is a door called door_delta2gamma.
+The description of door_delta2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The door_delta2gamma can be locked or unlocked.
+The door_delta2gamma is locked.
+The door_delta2gamma is closed.
+Northwest of door_delta2gamma is Delta Junction.
+
+[Raum Delta Junction sowie Nebenräumen]
+Delta Junction is a room. 
+The description of Delta Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster zu sehen.
+Südöstlich ist Gamma Delta Corridor und südwestlich Alpha Delta Corridor. Eine Treppe führt hoch zum Solar Lab, allerdings ist sie durch eine Luke versperrt. In diesem Raum, befindet sich eine Tür die zum Delta Greenhouse führt, die sich in der linken Seitenebene befindet.".
+Up of Delta Junction is Solar Lab.
+Southeast of Delta Junction is Gamma Delta Corridor.
+Southwest of Delta Junction is Alpha Delta Corridor.
+West of Delta Junction is Delta Greenhouse.
+
+[Raum Alpha Delta Corridor mit der dazugehörigen Tür sowie Nebenräumen]
+Alpha Delta Corridor is a room.
+The description of Alpha Delta Corridor is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum.
+Nordöstlich ist Delta Junction und südwestlich Alpha Junction.".
+Northeast of Alpha Delta Corridor is a door called door_alpha2delta.
+The description of door_alpha2delta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The door_alpha2delta can be locked or unlocked.
+The door_alpha2delta is locked.
+The door_alpha2delta is closed.
+Northeast of door_alpha2delta is Delta Junction.
+Southwest of Alpha Delta Corridor is Alpha Junction.
+
+[Raum Alpha Junction mit der dazugehörigen Tür sowie Nebenräumen]
+Alpha Junction is a room.
+The description of Alpha Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Eine Treppe führt hoch zum Med-Lab, allerdings ist sie durch eine Luke versperrt. Nordöstlich befindet sich Alpha Delta Corridor, südwestlich Alpha Beta Corridor und darunter der Duty Room.".
+Up of Alpha Junction is Med-Lab.
+Down of Alpha Junction is Duty Room.
+Northeast of Alpha Junction is a door called door_alpha2aldelta.
+The description of door_alpha2aldelta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The door_alpha2aldelta can be locked or unlocked.
+The door_alpha2aldelta is locked.
+The door_alpha2aldelta is closed.
+Northeast of door_alpha2aldelta is Alpha Delta Corridor. 
+Southeast of Alpha Junction is Alpha Beta Corridor.
+
+[Raum Alpha Beta Corridor mit den dazugehörigen Türen sowie Nebenräumen]
+Alpha Beta Corridor is a room.
+The description of Alpha Beta Corridor is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum.
+Nordwestlich ist Alpha Junction und südöstlich Beta Junction.".
+Northwest of Alpha Beta Corridor is a door called door_alpha2alpha.
+The description of door_alpha2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The door_alpha2alpha can be locked or unlocked.
+The door_alpha2alpha is locked.
+The door_alpha2alpha is closed.
+Northwest of door_alpha2alpha is Alpha Junction.
+Southeast of Alpha Beta Corridor is a door called door_beta2alpha.
+The description of door_beta2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The door_beta2alpha can be locked or unlocked.
+The door_beta2alpha is locked.
+The door_beta2alpha is closed.
+Southeast of door_beta2alpha is Beta Junction.
+
+[Raum Beta Junction mit der dazugehörigen Tür sowie Nebenräumen]
+Beta Junction is a room.
+The description of Beta Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Eine Treppe führt hoch zum Engineering Lab, allerdings ist sie durch eine Luke versperrt. Nordwestlich befindet sich der Alpha Beta Corridor und nordöstlich Gamma Beta Corridor.".
+Up of Beta Junction is Engineering Lab. 
+Northwest of Beta Junction is Alpha Beta Corridor.
+Northeast of Beta Junction is a door called door_gamma2beta.
+The description of door_gamma2beta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The door_gamma2beta can be locked or unlocked.
+The door_gamma2beta is locked.
+The door_gamma2beta is closed.
+Northeast of door_gamma2beta is Gamma Beta Corridor.
+
+[Raum Gamma Beta Corridor sowie Nebenräumen]
+Gamma Beta Corridor is a room.
+The description of Gamma Beta Corridor is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Südwestlich ist Beta Junction und nordöstlich Gamma Junction.".
+Southwest of Gamma Beta Corridor is Beta Junction.
+Northeast of Gamma Beta Corridor is Gamma Junction.  
+
+[Raum Delta Greenhouse sowie Nebenräumen]
+Delta Greenhouse is a room. 
+The description of Delta Greenhouse is "Eines von zwei Gewächshaus auf der Linken Seitenebene des Äußeren Rings. Ein Bodenfenster ist hier zu sehen. In diesem Raum befindet sich eine Tür, die östlich zum Delta Junction führt. Im Südwesten ist der Storage Room.".
+Southwest of Delta Greenhouse is Storage Room.
+East of Delta Greenhouse is Delta Junction.
+
+[Raum Beta Greenhouse sowie Nebenräumen]
+Beta Greenhouse is a room. 
+The description of Beta Greenhouse is "Eines von zwei Gewächshäusern auf der linken Seitenebene des Äußeren Rings. Es ist ein Bodenfenster im Raum. Nordöstlich befindet sich die Storage Area.".
+Northeast of Beta Greenhouse is Storage Area.
+
+[Raum Storage Area sowie Nebenräumen]
+Storage Area is a room.
+The description of Storage Area is "Ein Lagerraum auf der linken Seitenebene des äußeren Rings. Storage Area enthält Bodenfenster. Südwestlich ist das Beta Greenhouse. Eine Treppe führt hoch zur Delta AI, allerdings ist sie durch eine Luke versperrt. Eine Tür führt östlich zum Gamma Junction.".
+Up of Storage Area is Delta AI. 
+Southwest of Storage Area is Beta Greenhouse.
+East of Storage Area is Gamma Junction.
