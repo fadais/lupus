@@ -1,4 +1,18 @@
 "A4" by Ibrahim Karaki
 
 [Raum Solar Lab]
-Solar Lab is a Room. The Description of Solar Lab is "Raum in inneren Ring. Solar Lab enthält Deckenfenster. Eine Treppe führt runter zur Delta Junction." Down of the Solar Lab is Delta Junction. North of the Solar Lab is a door called door_delta2solar. The Description of door_delta2solar is "Eine Luke die runter zum Gamma Junction im äußeren Ring führt.".
+Solar Lab is a Room. The Description of Solar Lab is "Raum in inneren Ring. Solar Lab enthält Deckenfenster. Eine Treppe führt runter zur Delta Junction." Down of the Solar Lab is Delta Junction. North of the Solar Lab is a door called door_delta2solar. The Description of door_delta2solar is "Eine Luke die runter zum Gamma Junction im äußeren Ring führt.". North of door_delta2solar is Delta Junction.
+
+[Engineering Lab]
+Engineering Lab is a Room. The Description of Engineering Lab is "Ein Maschinenraum, der von Ingenieuren genutzt wird. Es befindet sich ein Deckenfenster im Raum. Eine Treppe führt runter zur Beta Junction.". Down of the Engineering Lab is the Beta Junction. South of the Engineering Lab is a door called door_beta2engin. The Description of door_beta2engin is "Ein Luke die runter zur Beta Junction im äußeren Ring führt.". South of the door_beta2engin is Beta Junction.
+
+[Transporter Raum]
+Transporter Raum is a Room. The Description of Transporter Raum is "In diesem Raum kann man sich in das Solar-Modul beamen.
+Transporter Raum enthält Deckenfenster. Nordwestlich ist die Alpha AI. (Teleportiert den Spieler zum Transport Module in der Solar Module).". Northwest of Transporter Raum is a door called door_alpha2trans. Northwest of door_alpha2trans is Alpha AI.
+
+[Main Generator]
+Main Generator is a Room. The Description of the Main Generator is "In diesem Raum befindet sich der Hauptgenerator der Station.
+Main Generator enthält Deckenfenster. Südöstlich ist die Delta AI.". Southeast of the Main Generator is a door called door_mag2delta. Southeast of the door_mag2delta is Delta AI.
+
+[Delta AI]
+Delta AI is a Room. The Description of Delta AI is "Ein Raum in dem sich eine KI befindet. Delta AI enthält Deckenfenster. Nordwestlich ist der Main Generator. Eine Treppe führt runter zur Storage Area.".Northwest of the Delta AI is a door called door_mag2delta. Northwest of the door_mag2delta is the Main Generator. Down of the Delta AI is the Storage Area. East of the Delta AI is a door called door_storage2delta. The Description of door_storage2delta is "Eine Luke die runter zur Storage Area im äußeren Ring führt.". East of door_storage2delta is Storage Area.
