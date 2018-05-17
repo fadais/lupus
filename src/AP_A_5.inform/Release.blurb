@@ -1,18 +1,18 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/fadais/Desktop/solar.inform/Build/StatusCblorb.html"
+status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/fadais/lupus-komp/src/AP_A_5.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "/Users/fadais/Desktop/solar.inform"
-release to "/Users/fadais/Desktop/solar.materials/Release"
+project folder "/Users/fadais/lupus-komp/src/AP_A_5.inform"
+release to "/Users/fadais/lupus-komp/src/AP_A_5.materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "solar.gblorb"
-storyfile "/Users/fadais/Desktop/solar.inform/Build/output.ulx" include
-ifiction "/Users/fadais/Desktop/solar.inform/Metadata.iFiction" include
+storyfile "/Users/fadais/lupus-komp/src/AP_A_5.inform/Build/output.ulx" include
+ifiction "/Users/fadais/lupus-komp/src/AP_A_5.inform/Metadata.iFiction" include
 cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 
