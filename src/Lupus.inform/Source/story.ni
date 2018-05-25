@@ -1,5 +1,12 @@
 "Lupus" by Amina Mustafi
 
+[AP A 24 - Einführung]
+
+[Einführungstext der beim ersten Start des Spiels kommt]
+when play begins:
+	say "Die Lupus Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Der Pilot und Spezialist für Vakuumeinsätze Percy Braden sowie der Ingenieur Barry McIntyre befinden sich gerade auf dem Weg dahin. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.
+	Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet."
+
 
 [Arbeitspaket A 1]
 
@@ -204,8 +211,161 @@ Southwest of Storage Area is Beta Greenhouse.
 East of Storage Area is Gamma Junction.
 
 
+[AP A 11 - Fähre]
+Fähre is an openable, enterable container. 
+Fähre is fixed in place.
+The description of Fähre is "Die Raumfähre mit der Percy und Barry zur Lupus Station geflogen kamen."
+[TODO Fähre is in the Hangar.]
+
+[AP A 16 - Palette und Antigrav]
+
+[Antigraviationsgreifer]
+Antigravitationsgreifer is a thing in the Fähre. 
+The description of Antigravitationsgreifer is "Ein Antigravitationsgreifer. Objekte, an denen der Greifer angebracht ist schweben durch die Gegend. Vielleicht könnte ihn an der Palette anbringen.".
+[sobald der Greifer auf die Palette getan wird, schwebt die Palette]
+Instead of putting the Antigravitationsgreifer on the Palette:
+	now the Palette is HOVER;
+	remove Antigravitationsgreifer from play;
+	say "Durch den Antigravitationsgreifer schwebt die Palette jetzt und kann gestoßen werden, sodass sie in einem anschließenden Raum schwebt.";
+
+[Palette]
+Palette is a thing in the Fähre. 
+The description of Palette is "Eine Palette, auf der sich Forschungsutensilien befinden.".
+[Palette kann normal sein, schweben und blockiert sein (wenn sie in der Luke steckt)] 
+Palette can be NORMAL, HOVER. Palette is NORMAL.
+[Stoßen der Palette im Schwebemodus]
+Instead of pushing the Palette when Palette is HOVER:
+	[Erstellt eine Liste aller erreichbaren Räume]
+	let list be a list of objects;
+	repeat with way running through directions:
+		let place be the room-or-door the way from the the location of the player;
+		if place is a room:
+			add place to the list, if absent;
+		if place is a door:
+			if place is open:
+				add the other side of place to the list, if absent;	
+	if the number of entries in list is 0:
+		say "Die Palette ist gegen die Wand geschwebt";
+		stop;
+	[wähle einen zufälligen Raum aus der Liste]
+	let random be a random number between 1 and the number of entries in list;	
+	let room be the entry random of list;
+	[Prüfe ob der gewählte Raum eine Ausnahme ist]
+	if the printed name of room matches the text "door_com2doc":
+		say “Die Palette darf nicht durch die Weltraumtür.”;
+		stop;
+	if the printed name of room matches the text "door_gamma2gamma":
+		say "Der Wartungsschacht ist zu eng für die Palette.”;
+		stop;
+	if the printed name of room matches the text "door_beta2engin" or the printed name of room matches the text "door_alpha2med" or the printed name of room matches the text "door_delta2solar":
+		say "Die Palette ist in der Luke stecken geblieben und nun kannst du nicht mehr weiterspielen.";
+		stop;
+	[Bewege Palette in den Raum]
+	now Palette is in room;
+	say "Die Palette ist in den Raum [room] geschwebt.";
+	[Prüfe ob Xeno Lab]
+	if room is Xeno Lab:
+		now door_gamma2xeno is BLOCKED;
+		now door_gamma2xeno is open;
+		remove Palette from play; 
+		say "Die Palette ist durch die Luke des Xeno Lab in einen Raum des inneren Ringes geflogen, sodass der Antigravitationsgreifer durch den Engine‐Core überlastet ist und die Palette nun die Luke blockiert, also die Luke nicht mehr geschlossen werden kann. Ein Durchschreiten ist jetzt möglich.”;
+		stop;
+
+
 [AP A 13 - Maschinenkern]
 maschinenkern is a backdrop. 
 [kann rot, grün, orange sein]
 maschinenkern can be RED or ORANGE or GREEN. maschinenkern is GREEN. 
+
+
+
+
+
+
+
+
+[Arbeitspaket A 5]
+
+[Solar Module Map]
+solar module is a region.
+
+[Räume deklarieren + Beschreibungen]
+
+[Hauptebene]
+[Region]
+hauptebene is a region. 
+hauptebene is inside the solar module.
+
+[Räume]
+Lab Module <Solar Module> is a room. 
+The description of Lab Module <Solar Module> is "Das Labor des Solar Modules. Östlich ist der Storage. In diesem Raum gibt es eine Treppe die nach oben zum Antenna Array führt." 
+Lab Module <Solar Module> is inside the hauptebene.
+
+Storage <Solar Module> is a room. 
+The description of Storage <Solar Module> is "Der Lagerraum des Solar Modules. Westlich ist das Lab Module. In diesem Raum befindet sich eine Treppe die nach unten zum Damaged Modul und es befindet sich eine Treppe die nach oben zum Solar Modul führt." 
+Storage <Solar Module> is inside the hauptebene.
+
+Com Module <Solar Module> is a room. 
+The description of Com Module <Solar Module> is "Das Kommunikationsmodul des Solar Modules. Östlich ist das Control Module. In diesem Raum befindet sich eine Treppe die  nach unten zum Delta Greenhouse führt." 
+Com Module <Solar Module> is inside the hauptebene.
+
+Control Module <Solar Module> is a room.
+The description of Control Module <Solar Module> is "Die Kontrollzentrale des Solar Modules. Westlich ist das Com Module. In diesem Raum gibt es eine Treppe die nach oben zum Pulsator Modul führt.".  
+Control Module <Solar Module> is inside the hauptebene. 
+
+[Linke Seitenebene]
+[Region]
+linke seitenebene is a region.
+linke seitenebene is inside the solar module.
+
+[Räume]
+Rescue Module <Solar Module> is a room. 
+The description of Rescue Module <Solar Module> is "Das Rettungsmodul des Solar Modules. Südlich ist das Delta Greenhouse." 
+Rescue Module <Solar Module> is inside the linke seitenebene.
+
+Damaged Module <Solar Module> is a room. 
+The description of Damaged Module <Solar Module> is "Das Damaged Module des Solar Modules. Südlich ist das Energy Module. In diesem Raum befindet sich eine Treppe die nach oben zum Storage führt." 
+Damaged Module <Solar Module> is inside the linke seitenebene.
+
+Delta Greenhouse <Solar Module> is a room. 
+The description of Delta Greenhouse <Solar Module> is "Das Damaged Module des Solar Modules. Südlich ist das Energy Module. In diesem Raum befindet sich eine Treppe die nach oben zum Storage führt." 
+Delta Greenhouse <Solar Module> is inside the linke seitenebene.
+
+Energy Module <Solar Module> is a room. 
+The description of Energy Module <Solar Module> is "Der Raum dient zur Energiegewinnung für das Solar Modul. Nördlich ist das Damaged Module." 
+Energy Module <Solar Module> is inside the linke seitenebene.
+ 
+[Rechte Seitenebene]
+[Region]
+rechte seitenebene is a region.
+rechte seitenebene is inside the solar module.
+
+[Räume]
+Antenna Array <Solar Module> is a room.
+The description of Antenna Array <Solar Module> is "  Der Antennenraum des Solar Modules. Südlich ist der Transporter Modul. In diesem Raum befindet sich eine Treppe die nach unten zum Lab Module führt." 
+Antenna Array <Solar Module> is inside the rechte seitenebene.
+
+Solar Module Room <Solar Module> is a room. 
+The description of Solar Module Room <Solar Module> is "Hier wird über Solarpanels zusätzliche Energie für das Solar Module gewonnen. Südlich ist der Antenna Array. In diesem Raum befindet sich eine Treppe die nach unten zum Storage führt."
+Solar Module Room <Solar Module> is inside the rechte seitenebene.
+
+Transporter Module <Solar Module> is a room. 
+The description of Transporter Module <Solar Module> is "Hier befindet sich der Teleporter des Solar Modules. Nördlich ist das Antenna Array zu erreichen."
+Transporter Module <Solar Module> is inside the rechte seitenebene.
+
+Pulsator Module <Solar Module> is a room. The description of Pulsator Module <Solar Module> is "Hier befindet sich der Teleporter des Solar Modules. Nördlich ist das Antenna Array zu erreichen."
+Pulsator Module <Solar Module> is inside the rechte seitenebene.
+
+[Räumliche Anordnung]
+Storage <Solar Module> is east of Lab Module <Solar Module>. 
+Control Module <Solar Module> is east of Com Module <Solar Module>.
+Delta Greenhouse <Solar Module> is below Com Module <Solar Module>. 
+Damaged Module <Solar Module> is north of Energy Module <Solar Module>.
+Delta Greenhouse <Solar Module> is south of Rescue Module <Solar Module>.
+Antenna Array <Solar Module> is north of Transporter Module <Solar Module>.
+Lab Module <Solar Module> is below Antenna Array <Solar Module>.
+Pulsator Module <Solar Module> is south of Solar Module Room <Solar Module>.
+Solar Module Room <Solar Module is above Storage <Solar Module>.
+Control Module <Solar Module> is below Pulsator Module <Solar Module>.
+Storage <Solar Module> is above Damaged Module <Solar Module>.
 
