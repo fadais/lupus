@@ -1,0 +1,34 @@
+"AP A 2 - Xeno Luke" by Fadi Dokmak
+
+[Arbeitspaket AP A 2]
+[Xeno Lab Raum]
+Xeno Lab is a room. The description of Xeno Lab is "Labor im inneren Ring. Xeno Lab enthält Deckenfenster und eine Klappe in der Wand. Eine Treppe führt runter zur Gamma Junction.". 
+[Xeno Lab is in the Innerer Ring.] [Darunter Gamma Junction]
+
+[Xeno Luke]
+[TODO name der Xenoluke ändern]
+door_gamma2xeno is a closed door with printed name "Xeno Luke". 
+door_gamma2xeno is below Xeno Lab. [TODO weiterer Raum]
+[hat Attribut BLOCKED oder UNBLOCKED (je nach Palette]
+door_gamma2xeno is either BLOCKED or UNBLOCKED. door_gamma2xeno is UNBLOCKED. 
+[Beschreibung ist je nach Attribut anders]
+The description of door_gamma2xeno is "[if door_gamma2xeno is BLOCKED] Die Luke des Xeno-Labs. Die Palette blockiert den Schließvorgang, sodass man nun hinein kann. [otherwise if door_gamma2xeno is UNBLOCKED] Die Luke des Xeno-Labs. Sie kann ohne passenden Transponder nicht geöffnet werden. Nach dem Öffnen schließt sie sich sofort wieder, sodass man nicht hinein kann ohne die Luke zu blockieren.".
+
+Laborkittel is a wearable thing in the Xeno Lab.[TODO kann weg sobald der Laborkittel implementiert ist]
+ 
+[Xeno Luke kann nur geöffnet werden wenn der Spieler den Kittel trägt]
+Instead of opening door_gamma2xeno when the player is not wearing the Laborkittel:
+	say "Du benötigst den passenden Transponder.";	
+[Xeno Luke kann nur passiert werden, wenn sie blockiert ist]
+Instead of going through the door_gamma2xeno when the door_gamma2xeno is UNBLOCKED:
+	say "Du musst die Luke blockieren bevor du durch kannst";
+
+[Xeno Luke schließt sich 1 Zug nach dem Öffnern wieder, wenn sie nicht blockiert wurde]
+counter is a number that varies. counter is 0.
+Every Turn when the door_gamma2xeno is open:
+	if counter >= 1 and door_gamma2xeno is open and door_gamma2xeno is UNBLOCKED:
+		say "Die Xeno Luke ist von selbst wieder zugegangen.";
+		now door_gamma2xeno is closed;
+		now counter is 0;
+		stop;
+	now counter is counter + 1;
