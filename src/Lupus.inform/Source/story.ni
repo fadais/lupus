@@ -7,9 +7,29 @@ when play begins:
 	Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet."
 
 
-[AP A 17 Alarm, Pfeifen, blinkender Knopf]
+[AP A 17]
+[Alarm]
 Alarm is a backdrop. Alarm can be AKTIV or DEAKTIV. Alarm is AKTIV. 
+[After looking at Videoblog:
+	now Alarm is AKTIV;
 
+Kontaminierte hören nun bei allen Aktionen die Geräusche verursachen
+-       der Alarm verstummt nicht, wenn der Blinkende Knopf bereits einmal gedrückt wurde, also den Zustand AUS hat
+-            	nach Anschauen des Videoblogs im MedLab geht der Alarm wieder an(Szene 2), also bekommt den Zustand AN
+                -      	Kontaminierte reagieren nur noch auf Geräusche, die den Alarm übertönen
+-               Kontaminierte reagieren verschieden je nach Alarm Zustand
+-            	Wenn der Alarm den Zustand AN hat:
+                -      	Kontaminierte reagieren nur auf Geräusche die lauter als der Alarm sind: Drucklufthammer benutzen, Hebel im Storage Room  
+-     anderen Aktionen (auch mit Geräuschen, außer oben genannte) werden von den Kontaminierten nicht gehört, also werden sie nicht aufmerksam und werden sie wie Aktionen ohne Geräusche behandelt (nach 2 Zügen wird man kontaminiert, kein folgen)
+-      	Wenn der Alarm den Zustand AUS hat:
+-      	Alle Aktionen, die Geräusche verursache (Ansprechen, klatschen, videoblog, drucklufthammer, knarrendes geräusch eines Hebels) wird der Kontaminierte aufmerksam
+-      	Außerhalb des Inneren und äußeren Ring ist der Alarm nicht zu hören, also hat er dort keinen Einfluss (bzw. ist AUS)
+
+]
+
+
+
+[Pfeifen]
 Pfeifen is a backdrop. Pfeifen can be AKTIV or DEAKTIV. Pfeifen is DEAKTIV. Pfeifen is in Gamma Junction and Xeno Lab. 
 After entering the Xeno Lab:
 	now Pfeifen is AKTIV;
@@ -18,6 +38,7 @@ After opening the door_gamma2xeno:
 After closing the door_gamma2xeno:
 	now Pfeifen is DEAKTIV in Gamma Junction;
 
+[Blinkender Knopf]
 Blinkender Knopf is a thing in Xeno Lab. It is fixed in place. Blinkender Knopf can be BLINKT or BLINKT NICHT. Blinkender Knopf is BLINKT.
 The description of Blinkender Knopf is "[if Blinkender Knopf is BLINKT] Ein blinkender Knopf ‐ vielleicht verstummt das Pfeifen ja, wenn man ihn drückt. [otherwise if Blinkender Knopf is BLINKT NICHT] Ein Knopf. Er hat anscheinend keine Funktion.".
 After pushing Blinkender Knopf:
@@ -29,11 +50,24 @@ After pushing Blinkender Knopf:
 	otherwise if Blinkender Knopf is BLINKT NICHT:
 		say "Knopf wurde gedrückt, daher keine Funktion!";
 
-[-    Nachdem die Phiole zerbrochen ist und der Nebel freigesetzt wird, dann wird der Zustand auf AUS gesetzt -> Knopf hat keine Funktion mehr]
-
-[AP A 18 Klappe in der Wand, Phiole]
+[AP A 18]
+[Klappe in der Wand] 
 Klappe in der Wand is a container. Klappe in der Wand is scenery. It is fixed in place and openable. Klappe in der Wand can be OPEN and CLOSED. 
+Before opening Klappe in der Wand:
+	say "Die Klappe lässt sich so nicht öffnen.";
+After opening Klappe in der Wand:
+	say "Die Klappe ist aufgegangen. Dahinter befand sich eine Phiole mit rosafarbenem Nebel.";
 
+[Phiole]
+Phiole is a thing in Klappe in der Wand. It is portable. Phiole can be NICHT ZERBROCHEN or ZERBROCHEN. Phiole is NICHT ZERBROCHEN. The description of Phiole is "[if Phiole is NICHT ZERBROCHEN] Eine Phiole mit rosafarbenen Nebel darin. [otherwise if Phiole is ZERBROCHEN] Eine zerbrochene, leere Phiole.".
+Before taking the Phiole:
+	now Phiole is NICHT ZERBROCHEN;
+After taking the Phiole:
+	say "Beim Versuch die Phiole zu nehmen fällt sie auf den Boden und zerbricht. Dabei wird rosafarbener Nebel freigesetzt und Percy wird kontaminiert.";
+	now Phiole is in Xeno Lab;
+	now Phiole is ZERBROCHEN;
+	[now Percy is KONTAMINIERT;]
+	now Blinkender Knopf is BLINKT NICHT;
 
 
 
@@ -42,10 +76,13 @@ Türpanel is a Kind of Thing. The Description of Türpanel is "Ein Türpanel. Mi
 Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
 
 
-[Arbeitspaket A 12 Bodenfenster und Deckenfenster]
+[Arbeitspaket A 12]
+[Bodenfenster]
 Bodenfenster is a kind of thing. 
 Bodenfenster is a scenery. Bodenfenster is fixed in place. 
 Bodenfenster can be GANZ or DEFEKT. Bodenfenster is GANZ. 
+
+[Deckenfenster]
 Deckenfenster is a kind of thing.
 Deckenfenster is a scenery. Deckenfenster is fixed in place. 
 
@@ -427,11 +464,6 @@ Instead of pushing the Palette when Palette is HOVER:
 maschinenkern is a backdrop. 
 [kann rot, grün, orange sein]
 maschinenkern can be RED or ORANGE or GREEN. maschinenkern is GREEN. 
-
-
-
-
-
 
 
 
