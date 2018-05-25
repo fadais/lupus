@@ -8,12 +8,36 @@ when play begins:
 
 
 [AP A 17 Alarm, Pfeifen, blinkender Knopf]
-alarm is a backdrop. 
-pfeifen is a backdrop.
-[kann rot, grün, orange sein]
+Alarm is a backdrop. Alarm can be AKTIV or DEAKTIV. Alarm is AKTIV. 
+
+Pfeifen is a backdrop. Pfeifen can be AKTIV or DEAKTIV. Pfeifen is DEAKTIV. Pfeifen is in Gamma Junction and Xeno Lab. 
+After entering the Xeno Lab:
+	now Pfeifen is AKTIV;
+After opening the door_gamma2xeno:
+	now Pfeifen is AKTIV in Gamma Junction;
+After closing the door_gamma2xeno:
+	now Pfeifen is DEAKTIV in Gamma Junction;
+
+Blinkender Knopf is a thing in Xeno Lab. It is fixed in place. Blinkender Knopf can be BLINKT or BLINKT NICHT. Blinkender Knopf is BLINKT.
+The description of Blinkender Knopf is "[if Blinkender Knopf is BLINKT] Ein blinkender Knopf ‐ vielleicht verstummt das Pfeifen ja, wenn man ihn drückt. [otherwise if Blinkender Knopf is BLINKT NICHT] Ein Knopf. Er hat anscheinend keine Funktion.".
+After pushing Blinkender Knopf:
+	if Blinkender Knopf is BLINKT:
+		now Pfeifen is DEAKTIV;
+		now Alarm is DEAKTIV;
+		now Klappe in der Wand is OPEN;
+		say "Es hat sich eine Klappe in der Wand geöffnet und eine Phiole war dahinter verborgen";
+	otherwise if Blinkender Knopf is BLINKT NICHT:
+		say "Knopf wurde gedrückt, daher keine Funktion!";
+
+[-    Nachdem die Phiole zerbrochen ist und der Nebel freigesetzt wird, dann wird der Zustand auf AUS gesetzt -> Knopf hat keine Funktion mehr]
+
+[AP A 18 Klappe in der Wand, Phiole]
+Klappe in der Wand is a container. Klappe in der Wand is scenery. It is fixed in place and openable. Klappe in der Wand can be OPEN and CLOSED. 
 
 
 
+
+[Türpanel]
 Türpanel is a Kind of Thing. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place.
 Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
 
@@ -22,8 +46,6 @@ Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
 Bodenfenster is a kind of thing. 
 Bodenfenster is a scenery. Bodenfenster is fixed in place. 
 Bodenfenster can be GANZ or DEFEKT. Bodenfenster is GANZ. 
-
-
 Deckenfenster is a kind of thing.
 Deckenfenster is a scenery. Deckenfenster is fixed in place. 
 
