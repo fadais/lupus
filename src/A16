@@ -15,7 +15,7 @@ Instead of putting the Antigravitationsgreifer on the Palette:
 Palette is a thing in the Fähre. 
 The description of Palette is "Eine Palette, auf der sich Forschungsutensilien befinden.".
 [Palette kann normal sein, schweben und blockiert sein (wenn sie in der Luke steckt)] 
-Palette can be NORMAL, HOVER, BLOCK. Palette is BLOCK.
+Palette can be NORMAL, HOVER. Palette is NORMAL.
 [Stoßen der Palette im Schwebemodus]
 Instead of pushing the Palette when Palette is HOVER:
 	[Erstellt eine Liste aller erreichbaren Räume]
@@ -50,6 +50,6 @@ Instead of pushing the Palette when Palette is HOVER:
 	if room is Xeno Lab:
 		now door_gamma2xeno is BLOCKED;
 		now door_gamma2xeno is open;
-		remove Palette from play; [TODO]
+		remove Palette from play; 
 		say "Die Palette ist durch die Luke des Xeno Lab in einen Raum des inneren Ringes geflogen, sodass der Antigravitationsgreifer durch den Engine‐Core überlastet ist und die Palette nun die Luke blockiert, also die Luke nicht mehr geschlossen werden kann. Ein Durchschreiten ist jetzt möglich.”;
 		stop;
