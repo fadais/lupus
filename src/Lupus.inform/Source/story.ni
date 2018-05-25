@@ -174,7 +174,7 @@ The description of Alpha Junction is "Korridor im äußeren Ring. Es ist ein Bod
 Fenster Alpha Junction is a Bodenfenster in Alpha Junction. The description of Fenster Alpha Junction is "Ein Bodenfenster. Es gibt den Blick ins Weltall frei.".
 
 
-Up of Alpha Junction is a door called door_alpha2med. The description of door_alpha2med is "Eine Luke zum Med Lab". Up of door_alpha2med is Med Lab. The description of Med Lab is "Labor im inneren Ring auf der Hauptebene. Hier befinden sich verschiedene medizinische Einrichtungen. Dieser Raum enthält eine Dekontaminationskabine, ein Krankenbett und ein Deckenfenster.Eine Treppe führt runter zur Alpha Junction.".
+Up of Alpha Junction is a door called door_alpha2med. door_alpha2medPanel is a Türpanel and a part of door_alpha2med with printed name "Türpanel". The description of door_alpha2med is "Eine Luke zum Med Lab". Up of door_alpha2med is Med Lab. The description of Med Lab is "Labor im inneren Ring auf der Hauptebene. Hier befinden sich verschiedene medizinische Einrichtungen. Dieser Raum enthält eine Dekontaminationskabine, ein Krankenbett und ein Deckenfenster.Eine Treppe führt runter zur Alpha Junction.".
 
 [Fenster Med Lab]
 Fenster Med Lab is a Deckenfenster in Med Lab. The description of Fenster Med Lab is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
@@ -290,7 +290,7 @@ Fenster Storage Room is a Bodenfenster in Storage Room. The description of Fenst
 
 [Alpha AI]
 Up of Storage Room is a door called door_storage2alpha. The description of door_storage2alpha is "Eine Luke, die hoch zur Alpha AI führt.". Up of door_storage2alpha is Alpha AI. The description of Alpha AI is "In diesem Raum befindet sich die KI AI. Alpha AI enthält Deckenfenster. Eine Treppe führt runter zum Storage Room. Südöstlich befindet sich der Transporter Raum.".
-Down of Storage Room is a door called door_cafe2storage. The description of door_cafe2storage is "Eine Tür zur Cafeteria". Down of door_cafe2storage is Cafeteria.
+Down of Storage Room is a door called door_cafe2storage. door_cafe2storagePanel is a Türpanel and a part of door_cafe2storage with printed name "Türpanel". The description of door_cafe2storage is "Eine Tür zur Cafeteria". Down of door_cafe2storage is Cafeteria.
 
 [Fenster Alpha AI]
 Fenster Alpha AI is a Deckenfenster in Alpha AI. The description of Fenster Alpha AI is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
