@@ -7,6 +7,9 @@ when play begins:
 	Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet."
 
 
+Türpanel is a Kind of Thing. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place.
+Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
+
 
 [Arbeitspaket A 12 Bodenfenster und Deckenfenster]
 Bodenfenster is a kind of thing. 
@@ -29,19 +32,19 @@ Nordwestlich befindet sich Gamma Delta Corridor, südwestlich Gamma Beta Corrido
 Fenster Gamma Junction is a Bodenfenster in Gamma Junction. The description of Fenster Gamma Junction is "Ein Bodenfenster. Es gibt den Blick ins Weltall frei.".
 
 [Hangarmodul]
-Down of Gamma Junction is a door called door_hang2gamma. The description of door_hang2gamma is "Eine Tür zum Hangar.". Down of door_hang2gamma is Hangar. The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". 
+Down of Gamma Junction is a door called door_hang2gamma. The description of door_hang2gamma is "Eine Tür zum Hangar.". Down of door_hang2gamma is Hangar. The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". door_hang2gammaPanel is a Türpanel and a part of door_hang2gamma with printed name "Türpanel".
+
+
+
 Umkleidekammer is a supporter in Hangar. 
-Down of Hangar is a door called door_hang2dock. The description of door_hang2dock is "Tür zur Docking Bay.". Down of door_hang2dock is Docking Bay. The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.".
+Down of Hangar is a door called door_hang2dock. The description of door_hang2dock is "Tür zur Docking Bay.". Down of door_hang2dock is Docking Bay. The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
+
 [Arbeitspaket AP A 2]
 [Xeno Lab Raum]
 Up of Gamma Junction is a door called door_gamma2xeno. Up of door_gamma2xeno is Xeno Lab. The description of Xeno Lab is "Labor im inneren Ring. Xeno Lab enthält Deckenfenster und eine Klappe in der Wand. Eine Treppe führt runter zur Gamma Junction.". 
 
 [Fenster Xeno Lab]
 Fenster Xeno Lab is a Deckenfenster in Xeno Lab. The description of Fenster Xeno Lab is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
-
-
-[Xeno Lab is in the Innerer Ring.] [Darunter Gamma Junction]
-
 
 [Xeno Luke]
 [TODO name der Xenoluke ändern]
@@ -70,13 +73,16 @@ Every Turn when the door_gamma2xeno is open:
 	now counter is counter + 1;
 
 
-Northwest of Gamma Junction is a door called door_gamma2gamma. 
+Northwest of Gamma Junction is a door called door_gamma2gamma. door_gamma2gammaPanel is a Türpanel and a part of door_gamma2gamma with printed name "Türpanel".
+
 The description of door_gamma2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
 The door_gamma2gamma can be locked or unlocked.
 The door_gamma2gamma is locked.
 The door_gamma2gamma is closed.
 Northwest of door_gamma2gamma is Gamma Delta Corridor. 
-Southwest of Gamma Junction is a door called door_gamma2gambeta. 
+
+Southwest of Gamma Junction is a door called door_gamma2gambeta. door_gamma2gambetaPanel is a Türpanel and a part of door_gamma2gambeta with printed name "Türpanel".
+
 The description of door_gamma2gambeta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
 The door_gamma2gambeta can be locked or unlocked.
 The door_gamma2gambeta is locked.
@@ -108,7 +114,8 @@ East of Com Base is Antenna Array. The description of Antenna Array is "Ein Raum
 
 
 Southeast of Gamma Delta Corridor is Gamma Junction.
-Northwest of Gamma Delta Corridor is a door called door_delta2gamma.
+Northwest of Gamma Delta Corridor is a door called door_delta2gamma. door_delta2gammaPanel is a Türpanel and a part of door_delta2gamma with printed Name "Türpanel".
+
 The description of door_delta2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_delta2gamma can be locked or unlocked.
 The door_delta2gamma is locked.
@@ -125,7 +132,8 @@ Fenster Delta Junction is a Bodenfenster in Delta Junction. The description of F
 
 
 [Raum Solar Lab]
-Up of Delta Junction is a door called door_delta2solar. The Description of door_delta2solar is "Eine Luke die runter zum Gamma Junction im äußeren Ring führt.". Up of door_delta2solar is Solar Lab. The Description of Solar Lab is "Raum in inneren Ring. Solar Lab enthält Deckenfenster. Eine Treppe führt runter zur Delta Junction.".
+Up of Delta Junction is a door called door_delta2solar. door_delta2solarPanel is a Türpanel and a part of door_delta2solar with printed name "Türpanel". The Description of door_delta2solar is "Eine Luke die runter zum Gamma Junction im äußeren Ring führt.". Up of door_delta2solar is Solar Lab. The Description of Solar Lab is "Raum in inneren Ring. Solar Lab enthält Deckenfenster. Eine Treppe führt runter zur Delta Junction.".
+
 
 [Fenster Solar Lab]
 Fenster Solar Lab is a Deckenfenster in Solar Lab. The description of Fenster Solar Lab is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
@@ -142,7 +150,8 @@ Nordöstlich ist Delta Junction und südwestlich Alpha Junction.".
 [Fenster Alpha Delta Corridor]
 Fenster Alpha Delta Corridor is a Bodenfenster in Alpha Delta Corridor. The description of Fenster Alpha Delta Corridor is "Ein Bodenfenster. Es gibt den Blick ins Weltall frei.".
 
-Northeast of Alpha Delta Corridor is a door called door_alpha2delta.
+Northeast of Alpha Delta Corridor is a door called door_alpha2delta. door_alpha2deltaPanel is Türpanel and a part of door_alpha2delta with printed name "Türpanel".
+
 The description of door_alpha2delta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_alpha2delta can be locked or unlocked.
 The door_alpha2delta is locked.
@@ -165,7 +174,8 @@ Fenster Med Lab is a Deckenfenster in Med Lab. The description of Fenster Med La
 
 
 [Dienstmodul]
-Down of Alpha Junction is a door called door_duty2alpha. The description of door_duty2alpha is "Eine Tür zum Dienstraum". Down of door_duty2alpha is Duty Room. The description of Duty Room is "Ein Dienstraum. Dieser Raum ist an den äußeren Ring angedockt. Darüber befindet sich die Alpha Junction und darunter die Crew Quarter. Über eine Tür im Osten gelangt der Spieler zum Briefing Room und über eine Tür im Westen gelangt der Spieler zur Cafeteria.".
+Down of Alpha Junction is a door called door_duty2alpha. door_duty2alphaPanel is a Türpanel and a part of door_duty2alpha with printed name "Türpanel". The description of door_duty2alpha is "Eine Tür zum Dienstraum". Down of door_duty2alpha is Duty Room. The description of Duty Room is "Ein Dienstraum. Dieser Raum ist an den äußeren Ring angedockt. Darüber befindet sich die Alpha Junction und darunter die Crew Quarter. Über eine Tür im Osten gelangt der Spieler zum Briefing Room und über eine Tür im Westen gelangt der Spieler zur Cafeteria.".
+
 Down of Duty Room is Crew Quarter. The description of Crew Quarter is "Mitarbeiter Raum, welcher unter anderem Umkleide- kabinen enthält. Darüber ist der Duty Room. Über eine Tür im Westen gelangt der Spieler zum Fitness Raum.". West of Crew Quarter is Fitness Raum. The description of Fitness Raum is "Ein Fitnessraum im Dienstmodul auf der linken Seitenebene. Über eine Tür im Osten gelangt der Spieler zum Crew Quarter.".
 West of Duty Room is Cafeteria. The description of Cafeteria is "Eine Cafeteria im Dienstmodul auf der linken Seitenebene. Darüber befindet sich der Storage Room. Über eine Tür im Osten gelangt der Spieler zum Duty Room.".
 East of Duty Room is Briefing Room. The description of Briefing Room is "Raum im Dienstmodul auf der rechten Seitenebene. Darunter befindet sich die Bridge. Über eine Tür im Westen gelangt der Spieler zum Duty Room führt.". Down of Briefing Room is a door called door_brid2brief. 
@@ -185,7 +195,8 @@ Instead of opening door_brid2brief when the player is not having the mobitab:
 	say "Du benötigst das Mobitab um die Tür zu öffnen.";	
 
 
-Northeast of Alpha Junction is a door called door_alpha2aldelta.
+Northeast of Alpha Junction is a door called door_alpha2aldelta. door_alpha2aldeltaPanel is a Türpanel and a part of door_alpha2aldelta with printed name "Türpanel".
+
 The description of door_alpha2aldelta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_alpha2aldelta can be locked or unlocked.
 The door_alpha2aldelta is locked.
@@ -203,13 +214,16 @@ Nordwestlich ist Alpha Junction und südöstlich Beta Junction.".
 [Fenster Alpha Beta Corridor]
 Fenster Alpha Beta Corridor is a Bodenfenster in Alpha Beta Corridor. The description of Fenster Alpha Beta Corridor is "Ein Bodenfenster. Man kann direkt auf das Raumphänomen blicken, in dessen Nähe das Solar-Modul liegt.".
 
-Northwest of Alpha Beta Corridor is a door called door_alpha2alpha.
+Northwest of Alpha Beta Corridor is a door called door_alpha2alpha. door_alpha2alphaPanel is a Türpanel and a part of door_alpha2alpha with printed name "Türpanel".
+
 The description of door_alpha2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_alpha2alpha can be locked or unlocked.
 The door_alpha2alpha is locked.
 The door_alpha2alpha is closed.
 Northwest of door_alpha2alpha is Alpha Junction.
-Southeast of Alpha Beta Corridor is a door called door_beta2alpha.
+
+Southeast of Alpha Beta Corridor is a door called door_beta2alpha. door_beta2alphaPanel is a Türpanel and a part of door_beta2alpha with printed name "Türpanel".
+
 The description of door_beta2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_beta2alpha can be locked or unlocked.
 The door_beta2alpha is locked.
@@ -225,13 +239,15 @@ Fenster Beta Junction is a Bodenfenster in Beta Junction. The description of Fen
 
 
 [Engineering Lab]
-Up of Beta Junction is a door called door_beta2engin. The Description of door_beta2engin is "Ein Luke die runter zur Beta Junction im äußeren Ring führt.". Up of the door_beta2engin is Engineering Lab. The Description of Engineering Lab is "Ein Maschinenraum, der von Ingenieuren genutzt wird. Es befindet sich ein Deckenfenster im Raum. Eine Treppe führt runter zur Beta Junction.". 
+Up of Beta Junction is a door called door_beta2engin. door_beta2enginPanel is a Türpanel and a part of door_beta2engin with printed name "Türpanel".  The Description of door_beta2engin is "Ein Luke die runter zur Beta Junction im äußeren Ring führt.". Up of the door_beta2engin is Engineering Lab. The Description of Engineering Lab is "Ein Maschinenraum, der von Ingenieuren genutzt wird. Es befindet sich ein Deckenfenster im Raum. Eine Treppe führt runter zur Beta Junction.". 
 
 [Fenster Engineering Lab]
 Fenster Engineering Lab is a Deckenfenster in Engineering Lab. The description of Fenster Engineering Lab is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
 
 Northwest of Beta Junction is Alpha Beta Corridor.
-Northeast of Beta Junction is a door called door_gamma2beta.
+
+Northeast of Beta Junction is a door called door_gamma2beta. door_gamma2betaPanel is a Türpanel and a part of door_gamma2beta with printed name "Türpanel".
+
 The description of door_gamma2beta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_gamma2beta can be locked or unlocked.
 The door_gamma2beta is locked.
@@ -299,7 +315,8 @@ The description of Storage Area is "Ein Lagerraum auf der linken Seitenebene des
 Fenster Storage Area is a Bodenfenster in Storage Area. The description of Fenster Storage Area is "Ein Bodenfenster. Es gibt den Blick ins Weltall frei.".
 
 [Delta AI]
-Up of Storage Area is a door called door_storage2delta. The Description of door_storage2delta is "Eine Luke die hoch zur Delta AI führt.". Up of door_storage2delta is Delta AI. The Description of Delta AI is "Ein Raum in dem sich eine KI befindet. Delta AI enthält Deckenfenster. Nordwestlich ist der Main Generator. Eine Treppe führt runter zur Storage Area.".
+Up of Storage Area is a door called door_storage2delta. door_storage2deltaPanel is a Türpanel and a part of door_storage2delta with printed name "Türpanel". The Description of door_storage2delta is "Eine Luke die hoch zur Delta AI führt.". Up of door_storage2delta is Delta AI. The Description of Delta AI is "Ein Raum in dem sich eine KI befindet. Delta AI enthält Deckenfenster. Nordwestlich ist der Main Generator. Eine Treppe führt runter zur Storage Area.".
+
 
 [Fenster Delta AI]
 Fenster Delta AI is a Deckenfenster in Delta AI. The description of Fenster Delta AI is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
@@ -473,4 +490,12 @@ Pulsator Module <Solar Module> is south of Solar Module Room <Solar Module>.
 Solar Module Room <Solar Module is above Storage <Solar Module>.
 Control Module <Solar Module> is below Pulsator Module <Solar Module>.
 Storage <Solar Module> is above Damaged Module <Solar Module>.
+
+
+[Sicherheitsausweis]
+Sicherheitsausweis is a thing in Hangar. The Description of Sicherheitsausweis is "Ein Sicherheitsausweis. Damit kann man wahrscheinlich einige Türen öffnen.". Sicherheitsausweis is portable.
+
+
+[MobiTab]
+Mobitab is a device in Hangar. The Description of Mobitab is "Ein Mobitab. Eine Art Tablet mit vielen nützlichen Funktionen. Es kann mit einem Türpanel verbunden werden, um es zu beschädigen.". Mobitab is portable.
 
