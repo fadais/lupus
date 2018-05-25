@@ -7,6 +7,13 @@ when play begins:
 	Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet."
 
 
+[AP A 17 Alarm, Pfeifen, blinkender Knopf]
+alarm is a backdrop. 
+pfeifen is a backdrop.
+[kann rot, grün, orange sein]
+
+
+
 Türpanel is a Kind of Thing. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place.
 Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
 
