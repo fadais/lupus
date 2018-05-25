@@ -20,5 +20,17 @@ You can see three doors and door_hang2gamma here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1019"></child>
+        </children>
+    </item>
+    <item nodeId="node-1019">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Gamma Junction
+Korridor im äußeren Ring. Es ist ein Bodenfenster zu sehen. Nordwestlich befindet sich Gamma Delta Corridor, südwestlich Gamma Beta Corridor und darunter der Hangar. Eine Treppe führt hoch zum Xeno Lab, die durch eine Luke versperrt ist. Eine Tür führt zur Storage Area, die sich in der linken Seitenebene befindet.
+
+You can see three doors and door_hang2gamma here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
 </Skein>
