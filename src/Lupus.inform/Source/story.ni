@@ -51,8 +51,6 @@ door_gamma2xeno is below Xeno Lab. [TODO weiterer Raum]
 door_gamma2xeno is either BLOCKED or UNBLOCKED. door_gamma2xeno is UNBLOCKED. 
 [Beschreibung ist je nach Attribut anders]
 The description of door_gamma2xeno is "[if door_gamma2xeno is BLOCKED] Die Luke des Xeno-Labs. Die Palette blockiert den Schließvorgang, sodass man nun hinein kann. [otherwise if door_gamma2xeno is UNBLOCKED] Die Luke des Xeno-Labs. Sie kann ohne passenden Transponder nicht geöffnet werden. Nach dem Öffnen schließt sie sich sofort wieder, sodass man nicht hinein kann ohne die Luke zu blockieren.".
-
-Laborkittel is a wearable thing in the Xeno Lab.[TODO kann weg sobald der Laborkittel implementiert ist]
  
 [Xeno Luke kann nur geöffnet werden wenn der Spieler den Kittel trägt]
 Instead of opening door_gamma2xeno when the player is not wearing the Laborkittel:
@@ -93,6 +91,12 @@ The description of Gamma Delta Corridor is "In diesem Raum kann man durch eine W
 [Fenster Gamma Delta Corridor]
 Fenster Gamma Delta Corridor is a Bodenfenster in Gamma Delta Corridor. The description of Fenster Gamma Delta Corridor is "[if Bodenfenster is GANZ] Ein Bodenfenster. Man kann direkt auf die Antennenkonfiguration des Kommunikationsmoduls blicken. [otherwise if Bodenfenster is DEFEKT] Ein kaputtes Bodenfenster. Es saugt den Sauerstoff aus der Station...".
 
+Leiche is a person. Leiche is in Gamma Delta Corridor. The description of Leiche is "Die Leiche eines Wissenschaftlers. Vielleicht trägt sie was Interessantes bei sich.". 
+[NOCH NICHT FERTIG!!!
+Instead of talking with Leiche:
+	say "Das ist eine Leiche. Du kannst nicht mit ihr reden.".]
+Leiche wears Laborkittel. The description of Laborkittel is "Ein Laborkittel, der mal einem Wissenschaftler gehört hat. Es scheint so, als wäre darin irgendetwas eingenäht.".
+Laborkittel is a wearable thing. Laborkittel is a portable thing.
 
 [Kommunikationsmodul]
 [Com Base]
