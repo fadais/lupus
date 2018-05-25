@@ -40,6 +40,11 @@ Klappe in der Wand is a container. Klappe in der Wand is scenery. It is fixed in
 [Türpanel]
 Türpanel is a Kind of Thing. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place.
 Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
+After putting the Sicherheitsausweis on the Türpanel:
+	if Türpanel is GANZ:	
+		say "Tür kann geöffnet werden.";
+	otherwise if Türpanel is DEFEKT:
+		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
 
 
 [Arbeitspaket A 12 Bodenfenster und Deckenfenster]
@@ -63,10 +68,17 @@ Fenster Gamma Junction is a Bodenfenster in Gamma Junction. The description of F
 [Hangarmodul]
 Down of Gamma Junction is a door called door_hang2gamma. The description of door_hang2gamma is "Eine Tür zum Hangar.". Down of door_hang2gamma is Hangar. The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". door_hang2gammaPanel is a Türpanel and a part of door_hang2gamma with printed name "Türpanel".
 
+[Umkleiderkammer]
+Umkleidekammer is a container in Hangar. Umkleidekammer is closed. Umkleidekammer is openable.
+Umkleidekammer is not lockable. Umkleidekammer is fixed in place.
 
+[Umkleidekammerspind]
+Umkleidekammerspind is a container. The Umkleidekammerspind is in Umkleidekammer. The printed name of Umkleidekammerspind is "Ein alter Spind.". Umkleidekammerspind is not enterable.The Umkleidekammerspind is fixed in place. The carrying capacity of Umkleidekammerspind is 1.
+ 
+[Spind]
+Spind is a container in Hangar with printed name "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed. Spind is openable. Spind is fixed in place. 
 
-Umkleidekammer is a supporter in Hangar. 
-Down of Hangar is a door called door_hang2dock. The description of door_hang2dock is "Tür zur Docking Bay.". Down of door_hang2dock is Docking Bay. The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
+Down of Hangar is a door called door_hang2dock. The description of door_hang2dock is "Tür zur Docking Bay.". Down of door_hang2dock is Docking Bay. The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". Umkleidekammer is enterable. Umkleidekammer is fixed in place.
 
 [Arbeitspaket AP A 2]
 [Xeno Lab Raum]
@@ -522,9 +534,19 @@ Storage <Solar Module> is above Damaged Module <Solar Module>.
 
 
 [Sicherheitsausweis]
-Sicherheitsausweis is a thing in Hangar. The Description of Sicherheitsausweis is "Ein Sicherheitsausweis. Damit kann man wahrscheinlich einige Türen öffnen.". Sicherheitsausweis is portable.
+Sicherheitsausweis is a thing in Spind. The Description of Sicherheitsausweis is "Ein Sicherheitsausweis. Damit kann man wahrscheinlich einige Türen öffnen.". Sicherheitsausweis is portable.
 
 
 [MobiTab]
-Mobitab is a device in Hangar. The Description of Mobitab is "Ein Mobitab. Eine Art Tablet mit vielen nützlichen Funktionen. Es kann mit einem Türpanel verbunden werden, um es zu beschädigen.". Mobitab is portable.
+Mobitab is a device in Spind. The Description of Mobitab is "Ein Mobitab. Eine Art Tablet mit vielen nützlichen Funktionen. Es kann mit einem Türpanel verbunden werden, um es zu beschädigen.". Mobitab is portable.
+
+[Pult]
+Pult is a Supporter in the Med Lab. The Description of Pult is "Ein Pult auf dem sich ein Videoblog befindet.". The Pult is fixed in place. The carrying capacity of Pult is 1
+
+[Krankenbett]
+Krankenbett is a Supporter in the Med Lab. Krankenbett is a Thing. The Description of the Krankenbett is "Ein bequem aussehendes Krankenbett". The carrying capacity of Krankenbett is 1. The Krankenbett is enterable.
+
+
+[Videoblog]
+Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place. Videoblog is a device.
 
