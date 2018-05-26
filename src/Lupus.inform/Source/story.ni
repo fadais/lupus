@@ -12,7 +12,6 @@ when play begins:
 Alarm is a backdrop. Alarm can be AKTIV or DEAKTIV. Alarm is AKTIV. 
 [After looking at Videoblog:
 	now Alarm is AKTIV;
-
 Kontaminierte hören nun bei allen Aktionen die Geräusche verursachen
 -       der Alarm verstummt nicht, wenn der Blinkende Knopf bereits einmal gedrückt wurde, also den Zustand AUS hat
 -            	nach Anschauen des Videoblogs im MedLab geht der Alarm wieder an(Szene 2), also bekommt den Zustand AN
@@ -23,9 +22,7 @@ Kontaminierte hören nun bei allen Aktionen die Geräusche verursachen
 -     anderen Aktionen (auch mit Geräuschen, außer oben genannte) werden von den Kontaminierten nicht gehört, also werden sie nicht aufmerksam und werden sie wie Aktionen ohne Geräusche behandelt (nach 2 Zügen wird man kontaminiert, kein folgen)
 -      	Wenn der Alarm den Zustand AUS hat:
 -      	Alle Aktionen, die Geräusche verursache (Ansprechen, klatschen, videoblog, drucklufthammer, knarrendes geräusch eines Hebels) wird der Kontaminierte aufmerksam
--      	Außerhalb des Inneren und äußeren Ring ist der Alarm nicht zu hören, also hat er dort keinen Einfluss (bzw. ist AUS)
-
-]
+-      	Außerhalb des Inneren und äußeren Ring ist der Alarm nicht zu hören, also hat er dort keinen Einfluss (bzw. ist AUS)]
 
 
 
@@ -244,11 +241,53 @@ The description of Alpha Junction is "Korridor im äußeren Ring. Es ist ein Bod
 [Fenster Alpha Junction]
 Fenster Alpha Junction is a Bodenfenster in Alpha Junction. The description of Fenster Alpha Junction is "Ein Bodenfenster. Es gibt den Blick ins Weltall frei.".
 
-
+[Med Lab]
 Up of Alpha Junction is a door called door_alpha2med. door_alpha2medPanel is a Türpanel and a part of door_alpha2med with printed name "Türpanel". The description of door_alpha2med is "Eine Luke zum Med Lab". Up of door_alpha2med is Med Lab. The description of Med Lab is "Labor im inneren Ring auf der Hauptebene. Hier befinden sich verschiedene medizinische Einrichtungen. Dieser Raum enthält eine Dekontaminationskabine, ein Krankenbett und ein Deckenfenster.Eine Treppe führt runter zur Alpha Junction.".
 
 [Fenster Med Lab]
 Fenster Med Lab is a Deckenfenster in Med Lab. The description of Fenster Med Lab is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
+
+[Pult]
+Pult is a Supporter in the Med Lab. The Description of Pult is "Ein Pult auf dem sich ein Videoblog befindet.". The Pult is fixed in place. The carrying capacity of Pult is 1
+
+[Krankenbett]
+Krankenbett is a Supporter in the Med Lab. Krankenbett is a Thing. The Description of the Krankenbett is "Ein bequem aussehendes Krankenbett". The carrying capacity of Krankenbett is 1. The Krankenbett is enterable.
+
+[Videoblog]
+Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place. Videoblog is a device.
+
+
+[Dekontaminationskabine]
+Dekontaminationskabine is supporter in Med Lab. It is fixed in place and enterable. [openable] [Dekontaminationskabine is CLOSED.] The carrying capacity of Dekontaminationskabine is 1.
+Dekontaminationskabine can be AKTIVIERT, DEAKTIVIERT, EMPTY or FULL.  The description of Dekontaminationskabine is "Eine Dekontaminationskabine. Wenn man einen Kontaminierten hineinlockt und die Tür hinter ihm schließt, könnte man ihn heilen.".
+
+[Before closing Dekontaminationskabine:
+	if Dekontaminationskabine is EMPTY and AKTIVIERT:
+		say "Kabine ist leer. Es kann keine Dekontamination stattfinden.";
+	otherwise if Dekontaminationskabine is FULL and Maschinenkern is GREEN:
+		say "Dekontamination kann starten";
+	otherwise if Dekontaminationskabine is 
+
+After closing Dekontaminationskabine:
+	say "Die Dekontamination war erfolgreich. Percy ist geheilt!";
+	now player is NICHT KONTAMINIERT;
+	now Maschinenkern is ORANGE;
+	now door_brid2brief is UNLOCKED;
+]
+[
+
+-       BEFORE: bevor man sie schließt:
+o   Falls die Kabine leer ist, passiert nichts
+o   Falls Percy in der Kabine ist UND Maschinenkern Energielevel = GREEN, dann startet die Dekontamination
+o   Falls ein anderer Kontaminierten (NICHT PERCY) drin ist UND Maschinenkern Energielevel = GREEN, dann kommt „Das ist nicht Percy! Du hast verloren!“ (Spiel beendet)
+o   Falls mehrere Kontaminierte in der Kabine sind UND Maschinenkern Energielevel = HIGH: „Es kann nur ein Kontaminierter gleichzeitig geheilt werden.“
+o   Falls Maschinenkern Energielevel != GREEN: „Die Energie der Station reicht nicht mehr dafür aus.“
+-       AFTER: nach der Dekontamination
+			 -       Gebe folgende Meldung aus: „Die Dekontamination war erfolgreich. Percy ist geheilt!“
+			-        Setze Percy kontaminiert auf FALSE
+o   Setze Maschinenkern Energielevel auf ORANGE
+·        
+-      Entriegle die door_brid2brief, sodass sie durch das Mobitab geöffnet werden kann]
 
 
 [Dienstmodul]
@@ -572,13 +611,5 @@ Sicherheitsausweis is a thing in Spind. The Description of Sicherheitsausweis is
 [MobiTab]
 Mobitab is a device in Spind. The Description of Mobitab is "Ein Mobitab. Eine Art Tablet mit vielen nützlichen Funktionen. Es kann mit einem Türpanel verbunden werden, um es zu beschädigen.". Mobitab is portable.
 
-[Pult]
-Pult is a Supporter in the Med Lab. The Description of Pult is "Ein Pult auf dem sich ein Videoblog befindet.". The Pult is fixed in place. The carrying capacity of Pult is 1
 
-[Krankenbett]
-Krankenbett is a Supporter in the Med Lab. Krankenbett is a Thing. The Description of the Krankenbett is "Ein bequem aussehendes Krankenbett". The carrying capacity of Krankenbett is 1. The Krankenbett is enterable.
-
-
-[Videoblog]
-Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place. Videoblog is a device.
 
