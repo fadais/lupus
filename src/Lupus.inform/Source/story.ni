@@ -67,13 +67,8 @@ After taking the Phiole:
 	now Blinkender Knopf is BLINKT NICHT;
 
 [Türpanel]
-Türpanel is a Kind of Thing. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place.
+Türpanel is a Kind of Supporter. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place. The carrying capacity of Türpanel is 1.
 Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
-After putting the Sicherheitsausweis on the Türpanel:
-	if Türpanel is GANZ:	
-		say "Tür kann geöffnet werden.";
-	otherwise if Türpanel is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
 
 [Arbeitspaket A 12]
 [Bodenfenster]
@@ -99,12 +94,14 @@ Nordwestlich befindet sich Gamma Delta Corridor, südwestlich Gamma Beta Corrido
 Fenster Gamma Junction is a Bodenfenster in Gamma Junction. The description of Fenster Gamma Junction is "Ein Bodenfenster. Es gibt den Blick ins Weltall frei.".
 
 [Hangarmodul]
-Down of Gamma Junction is a door called door_hang2gamma. The description of door_hang2gamma is "Eine Tür zum Hangar.". Down of door_hang2gamma is Hangar. The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". door_hang2gammaPanel is a Türpanel and a part of door_hang2gamma with printed name "door_hang2gammaPanel  Türpanel". The Description of door_hang2gammaPanel is "door_hang2gammaPanel  Türpanel".
-After putting the Sicherheitsausweis on the door_hang2gammaPanel:
-	if door_hang2gammaPanel is GANZ:	
+Down of Gamma Junction is a door called door_hang2gamma. The description of door_hang2gamma is "Eine Tür zum Hangar.". Down of door_hang2gamma is Hangar. The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". 
+[Türpanel für Tür door_hang2gamma]
+Türpanel door_hang2gamma is a Türpanel and a part of door_hang2gamma with printed name "Türpanel door_hang2gamma". 
+After putting the Sicherheitsausweis on the Türpanel door_hang2gamma:
+	if Türpanel door_hang2gamma is GANZ:	
 		now door_hang2gamma is unlocked;
 		say "Tür kann geöffnet werden.";
-	otherwise if door_hang2gammaPanel is DEFEKT:
+	otherwise if Türpanel door_hang2gamma is DEFEKT:
 		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
 
 [Umkleiderkammer]
@@ -112,7 +109,7 @@ Umkleidekammer is a container in Hangar. Umkleidekammer is closed. Umkleidekamme
 Umkleidekammer is not lockable. Umkleidekammer is enterable. Umkleidekammer is fixed in place.
 
 [Umkleidekammerspind]
-Umkleidekammerspind is a container. The Umkleidekammerspind is in Umkleidekammer. The printed name of Umkleidekammerspind is "Ein alter Spind.". Umkleidekammerspind is not enterable.The Umkleidekammerspind is fixed in place. The carrying capacity of Umkleidekammerspind is 1. Umkleidekammerspind is locked. Umkleidekammerspind is closed.
+Umkleidekammerspind is a container. The Umkleidekammerspind is in Umkleidekammer. The printed name of Umkleidekammerspind is "Ein alter Spind.". Umkleidekammerspind is not enterable.The Umkleidekammerspind is fixed in place. The carrying capacity of Umkleidekammerspind is 1. Umkleidekammerspind is locked. Umkleidekammerspind is closed. Umkleidekammerspind is not lockable.
  
 [Spind]
 Spind is a container in Hangar with description "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed. Spind is openable. Spind is fixed in place. 
@@ -152,20 +149,40 @@ Every Turn when the door_gamma2xeno is open:
 	now counter is counter + 1;
 
 
-Northwest of Gamma Junction is a door called door_gamma2gamma. door_gamma2gammaPanel is a Türpanel and a part of door_gamma2gamma with printed name "Türpanel".
-After putting the Sicherheitsausweis on door_gamma2gammaPanel:
-	if door_gamma2gammaPanel is GANZ:	
-		now door_gamma2gamma is unlocked;
-		say "Tür kann geöffnet werden.";
-	otherwise if door_gamma2gammaPanel is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
-
+Northwest of Gamma Junction is a door called door_gamma2gamma. 
 
 The description of door_gamma2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
 The door_gamma2gamma can be locked or unlocked.
 The door_gamma2gamma is locked.
 The door_gamma2gamma is closed.
-Northwest of door_gamma2gamma is Gamma Delta Corridor. 
+The door_gamma2gamma is lockable.
+The door_gamma2gamma is openable.
+Northwest of door_gamma2gamma is Gamma Delta Corridor.
+Instead of opening the door_gamma2gamma:
+	if door_gamma2gamma is locked and Türpanel door_gamma2gamma is GANZ:
+		say "Du musst das Türpanel benutzen";
+	otherwise if door_gamma2gamma is locked and Türpanel door_gamma2gamma is DEFEKT:
+		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+
+[Türpanel door_gamma2gamma]
+Türpanel door_gamma2gamma is a Türpanel and a part of door_gamma2gamma with printed name "Türpanel door_gamma2gamma".
+After putting the Sicherheitsausweis on Türpanel door_gamma2gamma:
+	if Türpanel door_gamma2gamma is GANZ:	
+		now door_gamma2gamma is unlocked;
+		now door_gamma2gamma is open;
+		say "Tür hat sich geöffnet.";
+	otherwise if Türpanel door_gamma2gamma is DEFEKT:
+		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+
+Every Turn when the door_gamma2gamma is open:
+	if counter >= 1 and door_gamma2gamma is open and Türpanel door_gamma2gamma is GANZ:
+		say "Die Tür door_gamma2gamma ist von selbst wieder zugegangen.";
+		now door_gamma2gamma is closed;
+		now door_gamma2gamma is locked;
+		now counter is 0;
+		stop;
+	now counter is counter + 1;
+
 
 Southwest of Gamma Junction is a door called door_gamma2gambeta. door_gamma2gambetaPanel is a Türpanel and a part of door_gamma2gambeta with printed name "Türpanel".
 
@@ -199,7 +216,7 @@ West of Com Base is Second Generator. The description of Second Generator is "In
 East of Com Base is Antenna Array. The description of Antenna Array is "Ein Raum, der sich im Com Modul befindet. Eine Tür führt westlich ins Com Base.".
 
 
-Southeast of Gamma Delta Corridor is Gamma Junction.
+Southeast of Gamma Delta Corridor is door_gamma2gamma . Southeast of door_gamma2gamma is Gamma Junction.
 Northwest of Gamma Delta Corridor is a door called door_delta2gamma. door_delta2gammaPanel is a Türpanel and a part of door_delta2gamma with printed Name "Türpanel".
 
 The description of door_delta2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
@@ -269,7 +286,7 @@ Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Sta
 
 
 [Dekontaminationskabine]
-Dekontaminationskabine is supporter in Med Lab. It is fixed in place and enterable. [openable] [Dekontaminationskabine is CLOSED.] The carrying capacity of Dekontaminationskabine is 1.
+Dekontaminationskabine is a container in Med Lab. It is fixed in place and enterable. [openable] [Dekontaminationskabine is CLOSED.] The carrying capacity of Dekontaminationskabine is 1.
 Dekontaminationskabine can be AKTIVIERT, DEAKTIVIERT, EMPTY or FULL.  The description of Dekontaminationskabine is "Eine Dekontaminationskabine. Wenn man einen Kontaminierten hineinlockt und die Tür hinter ihm schließt, könnte man ihn heilen.".
 
 [Before closing Dekontaminationskabine:
