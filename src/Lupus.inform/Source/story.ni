@@ -115,7 +115,7 @@ Umkleidekammer is not lockable. Umkleidekammer is enterable. Umkleidekammer is f
 Umkleidekammerspind is a container. The Umkleidekammerspind is in Umkleidekammer. The printed name of Umkleidekammerspind is "Ein alter Spind.". Umkleidekammerspind is not enterable.The Umkleidekammerspind is fixed in place. The carrying capacity of Umkleidekammerspind is 1. Umkleidekammerspind is locked. Umkleidekammerspind is closed.
  
 [Spind]
-Spind is a container in Hangar with printed name "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed. Spind is openable. Spind is fixed in place. 
+Spind is a container in Hangar with description "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed. Spind is openable. Spind is fixed in place. 
 
 Down of Hangar is a door called door_hang2dock. The description of door_hang2dock is "Tür zur Docking Bay.". Down of door_hang2dock is Docking Bay. The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
 
@@ -640,7 +640,7 @@ Instead of switching on Drucklufthammer when the Drucklufthammer is ENTLADEN:
 	say "Der Akku des Drucklufthammers ist leer. Du musst ihn erst an einem Türpanel aufladen."
 [Nach dem Einschalten sind alle Kontaminierten im Raum aufmerksam und er ist entladen]
 After switching on the Drucklufthammer when the Drucklufthammer is GELADEN:
-	say "Der Druckluft hat ein lautes Geräusch erzeugt.";
+	say "Der Drucklufthammer hat ein lautes Geräusch erzeugt.";
 	[Schleife läuft durch jeden Kontaminierten im Raum und setzt ihn auf aufmerksam]
 	[
 	repeat with kontaminierter running through the kontaminierte in the location of the player: 
@@ -655,13 +655,12 @@ After switching on the Drucklufthammer when the Drucklufthammer is GELADEN:
 Understand "connect [Drucklufthammer] to [Türpanel]" as connecting.  Connecting is an action applying to two things.
 [Was passiert beim Verbinden]
 Carry out connecting:
-	now Drucklufthammer is GELADEN;
-[Was wird beim Verbinden ausgegeben]
-Report connecting:
+	say "Verbinde Drucklufthammer mit Panel..";
 	if Drucklufthammer is GELADEN:
 		say "Der Drucklufthammer war bereits geladen.";
 	otherwise:
 		say "Der Drucklufthammer ist wieder vollständig aufgeladen.";
-	
+		now Drucklufthammer is GELADEN;
+
 
 
