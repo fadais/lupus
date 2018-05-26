@@ -998,13 +998,13 @@ After switching on the Drucklufthammer when the Drucklufthammer is GELADEN:
 Understand "connect [Drucklufthammer] to [Türpanel]" as connecting.  Connecting is an action applying to two things.
 [Was passiert beim Verbinden]
 Carry out connecting:
-	now Drucklufthammer is GELADEN;
-[Was wird beim Verbinden ausgegeben]
-Report connecting:
+	say "Der Drucklufthammer wird geladen..";
 	if Drucklufthammer is GELADEN:
 		say "Der Drucklufthammer war bereits geladen.";
 	otherwise:
 		say "Der Drucklufthammer ist wieder vollständig aufgeladen.";
+		now Drucklufthammer is GELADEN;
+	
 	
 
 [ARBEITSPAKET A 5 - SOLAR RÄUME]
