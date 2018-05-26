@@ -1,11 +1,13 @@
-"Lupus" by Amina Mustafi
+"Lupus" by Ibrahim Karaki, Amina Mustafi, Fadi Dokmak
 
-[AP A 24 - Einführung]
+[
+	AP A 24 - Einführung 
+	Fadi
+]
 [Einführungstext der beim ersten Start des Spiels kommt]
 when play begins:
 	say "Die Lupus Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Der Pilot und Spezialist für Vakuumeinsätze Percy Braden sowie der Ingenieur Barry McIntyre befinden sich gerade auf dem Weg dahin. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.
-	Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet."
-
+	   Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet.".
 
 [AP A 17]
 [Alarm]
@@ -23,8 +25,6 @@ Kontaminierte hören nun bei allen Aktionen die Geräusche verursachen
 -      	Wenn der Alarm den Zustand AUS hat:
 -      	Alle Aktionen, die Geräusche verursache (Ansprechen, klatschen, videoblog, drucklufthammer, knarrendes geräusch eines Hebels) wird der Kontaminierte aufmerksam
 -      	Außerhalb des Inneren und äußeren Ring ist der Alarm nicht zu hören, also hat er dort keinen Einfluss (bzw. ist AUS)]
-
-
 
 [Pfeifen]
 Pfeifen is a backdrop. Pfeifen can be AKTIV or DEAKTIV. Pfeifen is DEAKTIV. Pfeifen is in Gamma Junction and Xeno Lab. 
@@ -66,8 +66,6 @@ After taking the Phiole:
 	[now Percy is KONTAMINIERT;]
 	now Blinkender Knopf is BLINKT NICHT;
 
-
-
 [Türpanel]
 Türpanel is a Kind of Thing. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place.
 Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
@@ -76,7 +74,6 @@ After putting the Sicherheitsausweis on the Türpanel:
 		say "Tür kann geöffnet werden.";
 	otherwise if Türpanel is DEFEKT:
 		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
-
 
 [Arbeitspaket A 12]
 [Bodenfenster]
@@ -88,6 +85,8 @@ Bodenfenster can be GANZ or DEFEKT. Bodenfenster is GANZ.
 Deckenfenster is a kind of thing.
 Deckenfenster is a scenery. Deckenfenster is fixed in place. 
 
+[Fenster Xeno Lab]
+Fenster Xeno Lab is a Deckenfenster in Xeno Lab. The description of Fenster Xeno Lab is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
 
 [Arbeitspaket A 1]
 
@@ -120,13 +119,13 @@ Spind is a container in Hangar with printed name "Der Spind eines Deckoffiziers.
 
 Down of Hangar is a door called door_hang2dock. The description of door_hang2dock is "Tür zur Docking Bay.". Down of door_hang2dock is Docking Bay. The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
 
-[Arbeitspaket AP A 2]
+
+[
+	Arbeitspaket AP A 2 - Xeno Lab und Xeno Luke
+	Fadi
+]
 [Xeno Lab Raum]
 Up of Gamma Junction is a door called door_gamma2xeno. Up of door_gamma2xeno is Xeno Lab. The description of Xeno Lab is "Labor im inneren Ring. Xeno Lab enthält Deckenfenster und eine Klappe in der Wand. Eine Treppe führt runter zur Gamma Junction.". 
-
-[Fenster Xeno Lab]
-Fenster Xeno Lab is a Deckenfenster in Xeno Lab. The description of Fenster Xeno Lab is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
-
 [Xeno Luke]
 [TODO name der Xenoluke ändern]
 door_gamma2xeno is a closed door with printed name "Xeno Luke". 
@@ -135,16 +134,15 @@ door_gamma2xeno is below Xeno Lab. [TODO weiterer Raum]
 door_gamma2xeno is either BLOCKED or UNBLOCKED. door_gamma2xeno is UNBLOCKED. 
 [Beschreibung ist je nach Attribut anders]
 The description of door_gamma2xeno is "[if door_gamma2xeno is BLOCKED] Die Luke des Xeno-Labs. Die Palette blockiert den Schließvorgang, sodass man nun hinein kann. [otherwise if door_gamma2xeno is UNBLOCKED] Die Luke des Xeno-Labs. Sie kann ohne passenden Transponder nicht geöffnet werden. Nach dem Öffnen schließt sie sich sofort wieder, sodass man nicht hinein kann ohne die Luke zu blockieren.".
- 
 [Xeno Luke kann nur geöffnet werden wenn der Spieler den Kittel trägt]
 Instead of opening door_gamma2xeno when the player is not wearing the Laborkittel:
 	say "Du benötigst den passenden Transponder.";	
 [Xeno Luke kann nur passiert werden, wenn sie blockiert ist]
 Instead of going through the door_gamma2xeno when the door_gamma2xeno is UNBLOCKED:
 	say "Du musst die Luke blockieren bevor du durch kannst";
-
+	
 [Xeno Luke schließt sich 1 Zug nach dem Öffnern wieder, wenn sie nicht blockiert wurde]
-counter is a number that varies. counter is 0.
+counter is a number that varies. 
 Every Turn when the door_gamma2xeno is open:
 	if counter >= 1 and door_gamma2xeno is open and door_gamma2xeno is UNBLOCKED:
 		say "Die Xeno Luke ist von selbst wieder zugegangen.";
@@ -309,9 +307,13 @@ Down of Alpha Junction is a door called door_duty2alpha. door_duty2alphaPanel is
 Down of Duty Room is Crew Quarter. The description of Crew Quarter is "Mitarbeiter Raum, welcher unter anderem Umkleide- kabinen enthält. Darüber ist der Duty Room. Über eine Tür im Westen gelangt der Spieler zum Fitness Raum.". West of Crew Quarter is Fitness Raum. The description of Fitness Raum is "Ein Fitnessraum im Dienstmodul auf der linken Seitenebene. Über eine Tür im Osten gelangt der Spieler zum Crew Quarter.".
 West of Duty Room is Cafeteria. The description of Cafeteria is "Eine Cafeteria im Dienstmodul auf der linken Seitenebene. Darüber befindet sich der Storage Room. Über eine Tür im Osten gelangt der Spieler zum Duty Room.".
 East of Duty Room is Briefing Room. The description of Briefing Room is "Raum im Dienstmodul auf der rechten Seitenebene. Darunter befindet sich die Bridge. Über eine Tür im Westen gelangt der Spieler zum Duty Room führt.". Down of Briefing Room is a door called door_brid2brief. 
-[AP A 8 - Bridge]
-Down of door_brid2brief is Bridge. The description of Bridge is "In diesem Raum wird die Station gesteuert. Darüber befindet sich der Briefing Room."
 
+
+[
+	AP A 8 - Bridge
+	Autor: Fadi
+]
+Down of door_brid2brief is Bridge. The description of Bridge is "In diesem Raum wird die Station gesteuert. Darüber befindet sich der Briefing Room.".
 [Tür vom Briefing Room zur Bridge]
 door_brid2brief is a closed door. 
 The description of door_brid2brief is "Die Luke zur Brücke.Sie kann mit einem Mobitab geöffnet werden, sobald die Kommandosperre ausgeschaltet wurde.".
@@ -320,8 +322,7 @@ door_brid2brief is above Bridge.
 Instead of opening door_brid2brief when the Maschinenkern is GREEN, say "Die Kommandosperre ist noch aktiv.“.
 Instead of going through door_brid2brief when the Maschinenkern is GREEN, say "Die Kommandosperre ist noch aktiv.“.
 [danach kann die Tür nur passiert werden, wenn das Mobitab im inventar ist]
-mobitab is a thing. [TODO Entfernen sobald mobitab implementiert]
-Instead of opening door_brid2brief when the player is not having the mobitab:
+Instead of opening door_brid2brief when the player is not having the mobitab and Maschinenkern is not GREEN:
 	say "Du benötigst das Mobitab um die Tür zu öffnen.";	
 
 
@@ -333,8 +334,6 @@ The door_alpha2aldelta is locked.
 The door_alpha2aldelta is closed.
 Northeast of door_alpha2aldelta is Alpha Delta Corridor. 
 Southeast of Alpha Junction is Alpha Beta Corridor.
-
-
 
 [Raum Alpha Beta Corridor mit den dazugehörigen Türen sowie Nebenräumen]
 Alpha Beta Corridor is a room.
@@ -424,7 +423,6 @@ Transporter Raum is a Room. The Description of Transporter Raum is "In diesem Ra
 [Fenster Transporter Raum]
 Fenster Transporter Raum is a Deckenfenster in Transporter Raum. The description of Fenster Transporter Raum is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
 
-
 Northwest of Transporter Raum is a door called door_alpha2trans. Northwest of door_alpha2trans is Alpha AI.
 
 [Raum Beta Greenhouse sowie Nebenräumen]
@@ -433,7 +431,6 @@ The description of Beta Greenhouse is "Eines von zwei Gewächshäusern auf der l
 
 [Fenster Beta Greenhouse]
 Fenster Beta Greenhouse is a Bodenfenster in Beta Greenhouse. The description of Fenster Beta Greenhouse is "Ein Bodenfenster. Es gibt den Blick ins Weltall frei.".
-
 
 Northeast of Beta Greenhouse is Storage Area.
 
@@ -447,10 +444,8 @@ Fenster Storage Area is a Bodenfenster in Storage Area. The description of Fenst
 [Delta AI]
 Up of Storage Area is a door called door_storage2delta. door_storage2deltaPanel is a Türpanel and a part of door_storage2delta with printed name "Türpanel". The Description of door_storage2delta is "Eine Luke die hoch zur Delta AI führt.". Up of door_storage2delta is Delta AI. The Description of Delta AI is "Ein Raum in dem sich eine KI befindet. Delta AI enthält Deckenfenster. Nordwestlich ist der Main Generator. Eine Treppe führt runter zur Storage Area.".
 
-
 [Fenster Delta AI]
 Fenster Delta AI is a Deckenfenster in Delta AI. The description of Fenster Delta AI is "[if Maschinenkern is GREEN] Ein Deckenfenster. Man kann den grün-glühenden Maschinenkern erkennen. Es ist noch mehr als genug Energie da. [otherwise if Maschinenkern is ORANGE] Ein Deckenfenster. Man kann den orange-glühenden Maschinenkern erkennen. Langsam geht ihm die Energie aus. [otherwise if Maschinenkern is RED] Ein Deckenfenster. Man kann den rot-glühenden Maschinenkern erkennen. Es ist kaum noch Energie vorhanden.".
-
 
 [Main Generator]
 Main Generator is a Room. The Description of the Main Generator is "In diesem Raum befindet sich der Hauptgenerator der Station. Main Generator enthält Deckenfenster. Südöstlich ist die Delta AI.". 
@@ -463,14 +458,20 @@ Southwest of Storage Area is Beta Greenhouse.
 East of Storage Area is Gamma Junction.
 
 
-[AP A 11 - Fähre]
+[
+	AP A 11 - Fähre 
+	Autor: Fadi
+]
 Fähre is an openable, enterable container. 
 Fähre is fixed in place.
 The description of Fähre is "Die Raumfähre mit der Percy und Barry zur Lupus Station geflogen kamen."
-[TODO Fähre is in the Hangar.]
+Fähre is in the Hangar.
 
-[AP A 16 - Palette und Antigrav]
 
+[
+	AP A 16 - Palette und Antigrav
+	Autor: Fadi
+]
 [Antigraviationsgreifer]
 Antigravitationsgreifer is a thing in the Fähre. 
 The description of Antigravitationsgreifer is "Ein Antigravitationsgreifer. Objekte, an denen der Greifer angebracht ist schweben durch die Gegend. Vielleicht könnte ihn an der Palette anbringen.".
@@ -479,7 +480,7 @@ Instead of putting the Antigravitationsgreifer on the Palette:
 	now the Palette is HOVER;
 	remove Antigravitationsgreifer from play;
 	say "Durch den Antigravitationsgreifer schwebt die Palette jetzt und kann gestoßen werden, sodass sie in einem anschließenden Raum schwebt.";
-
+	
 [Palette]
 Palette is a thing in the Fähre. 
 The description of Palette is "Eine Palette, auf der sich Forschungsutensilien befinden.".
@@ -524,25 +525,26 @@ Instead of pushing the Palette when Palette is HOVER:
 		stop;
 
 
-[AP A 13 - Maschinenkern]
+[
+	AP A 13 - Maschinenkern
+	Autor: Fadi
+]
 maschinenkern is a backdrop. 
 [kann rot, grün, orange sein]
 maschinenkern can be RED or ORANGE or GREEN. maschinenkern is GREEN. 
 
 
-
-[Arbeitspaket A 5]
-
+[
+	Arbeitspaket A 5
+	Autor: Fadi
+]
 [Solar Module Map]
 solar module is a region.
-
 [Räume deklarieren + Beschreibungen]
-
 [Hauptebene]
 [Region]
 hauptebene is a region. 
 hauptebene is inside the solar module.
-
 [Räume]
 Lab Module <Solar Module> is a room. 
 The description of Lab Module <Solar Module> is "Das Labor des Solar Modules. Östlich ist der Storage. In diesem Raum gibt es eine Treppe die nach oben zum Antenna Array führt." 
@@ -624,5 +626,42 @@ Sicherheitsausweis is a thing in Spind. The Description of Sicherheitsausweis is
 [MobiTab]
 Mobitab is a device in Spind. The Description of Mobitab is "Ein Mobitab. Eine Art Tablet mit vielen nützlichen Funktionen. Es kann mit einem Türpanel verbunden werden, um es zu beschädigen.". Mobitab is portable.
 
+[
+	AP A 19 - Drucklufthammer
+	Autor: Fadi	
+]
+[Drucklufthammer]
+Drucklufthammer is a device in the Umkleidekammer.
+The description of Drucklufthammer is "Ein Drucklufthammer mit integriertem Akku. Beim Benutzen macht er sehr laute Geräusche. Jedoch muss er nach jeder Benutzung wieder geladen werden."
+[Er kann entweder Geladen oder Entladen sein]
+Drucklufthammer can be GELADEN or ENTLADEN. Drucklufthammer is GELADEN.
+[Er kann nur genutzt werden, wenn er geladen ist]
+Instead of switching on Drucklufthammer when the Drucklufthammer is ENTLADEN: 
+	say "Der Akku des Drucklufthammers ist leer. Du musst ihn erst an einem Türpanel aufladen."
+[Nach dem Einschalten sind alle Kontaminierten im Raum aufmerksam und er ist entladen]
+After switching on the Drucklufthammer when the Drucklufthammer is GELADEN:
+	say "Der Druckluft hat ein lautes Geräusch erzeugt.";
+	[Schleife läuft durch jeden Kontaminierten im Raum und setzt ihn auf aufmerksam]
+	[
+	repeat with kontaminierter running through the kontaminierte in the location of the player: 
+		now kontaminierter is ATTENTIVE; [TODO was wenn Kontaminierter bereits aufmerksam war]
+		]
+	now the Drucklufthammer is ENTLADEN;
+	now the Drucklufthammer is switched off;
+	say "Der Akku des Drucklufthammers ist jetzt leer.";
+	
+[Verbindung zu einem Türpanel lädt den Hammer wieder auf]
+[Befehl implementieren: connect. to ]
+Understand "connect [Drucklufthammer] to [Türpanel]" as connecting.  Connecting is an action applying to two things.
+[Was passiert beim Verbinden]
+Carry out connecting:
+	now Drucklufthammer is GELADEN;
+[Was wird beim Verbinden ausgegeben]
+Report connecting:
+	if Drucklufthammer is GELADEN:
+		say "Der Drucklufthammer war bereits geladen.";
+	otherwise:
+		say "Der Drucklufthammer ist wieder vollständig aufgeladen.";
+	
 
 
