@@ -129,7 +129,7 @@ Up of Gamma Junction is a door called door_gamma2xeno. Up of door_gamma2xeno is 
 [Xeno Luke]
 [TODO name der Xenoluke ändern]
 door_gamma2xeno is a closed door with printed name "Xeno Luke". 
-door_gamma2xeno is below Xeno Lab. [TODO weiterer Raum]
+door_gamma2xeno is below Xeno Lab and above Gamma Junction.
 [hat Attribut BLOCKED oder UNBLOCKED (je nach Palette]
 door_gamma2xeno is either BLOCKED or UNBLOCKED. door_gamma2xeno is UNBLOCKED. 
 [Beschreibung ist je nach Attribut anders]
