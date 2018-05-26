@@ -1,4 +1,4 @@
-"Lupus" by Amina Mustafi
+"Lupus" by Amina Mustafi, Fadi Dokmak, Ibrahim Karaki
 
 [AP A 24 - Einführung]
 [Einführungstext der beim ersten Start des Spiels kommt]
@@ -832,9 +832,22 @@ Spind is a container in Hangar with printed name "Der Spind eines Deckoffiziers.
 
 [MobiTab]
 Mobitab is a device in Spind. The Description of Mobitab is "Ein Mobitab. Eine Art Tablet mit vielen nützlichen Funktionen. Es kann mit einem Türpanel verbunden werden, um es zu beschädigen.". Mobitab is portable.
+Before player taking mobitab:
+	if player have the Sicherheitsausweis:
+		now mobitab is not portable;
+		say "Du darfst das Mobitab nicht nehmen.";
+	otherwise:
+		now mobitab is portable;
 
 [Sicherheitsausweis]
 Sicherheitsausweis is a thing in Spind. The Description of Sicherheitsausweis is "Ein Sicherheitsausweis. Damit kann man wahrscheinlich einige Türen öffnen.". Sicherheitsausweis is portable.
+Before player taking Sicherheitsausweis:
+	if player have the mobitab:
+		now Sicherheitsausweis is not portable;
+		say "Du darfst den Sicherheitsausweis nicht nehmen.";
+	otherwise:
+		now Sicherheitsausweis is portable;
+
 
 [Leiche und Laborkittel]
 Leiche is a person. Leiche is in Gamma Delta Corridor. The description of Leiche is "Die Leiche eines Wissenschaftlers. Vielleicht trägt sie was Interessantes bei sich.". 
