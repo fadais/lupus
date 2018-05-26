@@ -103,19 +103,25 @@ Nordwestlich befindet sich Gamma Delta Corridor, südwestlich Gamma Beta Corrido
 Fenster Gamma Junction is a Bodenfenster in Gamma Junction. The description of Fenster Gamma Junction is "Ein Bodenfenster. Es gibt den Blick ins Weltall frei.".
 
 [Hangarmodul]
-Down of Gamma Junction is a door called door_hang2gamma. The description of door_hang2gamma is "Eine Tür zum Hangar.". Down of door_hang2gamma is Hangar. The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". door_hang2gammaPanel is a Türpanel and a part of door_hang2gamma with printed name "Türpanel".
+Down of Gamma Junction is a door called door_hang2gamma. The description of door_hang2gamma is "Eine Tür zum Hangar.". Down of door_hang2gamma is Hangar. The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". door_hang2gammaPanel is a Türpanel and a part of door_hang2gamma with printed name "door_hang2gammaPanel  Türpanel". The Description of door_hang2gammaPanel is "door_hang2gammaPanel  Türpanel".
+After putting the Sicherheitsausweis on the door_hang2gammaPanel:
+	if door_hang2gammaPanel is GANZ:	
+		now door_hang2gamma is unlocked;
+		say "Tür kann geöffnet werden.";
+	otherwise if door_hang2gammaPanel is DEFEKT:
+		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
 
 [Umkleiderkammer]
 Umkleidekammer is a container in Hangar. Umkleidekammer is closed. Umkleidekammer is openable.
-Umkleidekammer is not lockable. Umkleidekammer is fixed in place.
+Umkleidekammer is not lockable. Umkleidekammer is enterable. Umkleidekammer is fixed in place.
 
 [Umkleidekammerspind]
-Umkleidekammerspind is a container. The Umkleidekammerspind is in Umkleidekammer. The printed name of Umkleidekammerspind is "Ein alter Spind.". Umkleidekammerspind is not enterable.The Umkleidekammerspind is fixed in place. The carrying capacity of Umkleidekammerspind is 1.
+Umkleidekammerspind is a container. The Umkleidekammerspind is in Umkleidekammer. The printed name of Umkleidekammerspind is "Ein alter Spind.". Umkleidekammerspind is not enterable.The Umkleidekammerspind is fixed in place. The carrying capacity of Umkleidekammerspind is 1. Umkleidekammerspind is locked. Umkleidekammerspind is closed.
  
 [Spind]
 Spind is a container in Hangar with printed name "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed. Spind is openable. Spind is fixed in place. 
 
-Down of Hangar is a door called door_hang2dock. The description of door_hang2dock is "Tür zur Docking Bay.". Down of door_hang2dock is Docking Bay. The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". Umkleidekammer is enterable. Umkleidekammer is fixed in place.
+Down of Hangar is a door called door_hang2dock. The description of door_hang2dock is "Tür zur Docking Bay.". Down of door_hang2dock is Docking Bay. The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
 
 [Arbeitspaket AP A 2]
 [Xeno Lab Raum]
@@ -152,6 +158,13 @@ Every Turn when the door_gamma2xeno is open:
 
 
 Northwest of Gamma Junction is a door called door_gamma2gamma. door_gamma2gammaPanel is a Türpanel and a part of door_gamma2gamma with printed name "Türpanel".
+After putting the Sicherheitsausweis on door_gamma2gammaPanel:
+	if door_gamma2gammaPanel is GANZ:	
+		now door_gamma2gamma is unlocked;
+		say "Tür kann geöffnet werden.";
+	otherwise if door_gamma2gammaPanel is DEFEKT:
+		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+
 
 The description of door_gamma2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
 The door_gamma2gamma can be locked or unlocked.
