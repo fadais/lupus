@@ -372,8 +372,17 @@ Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
 Instead of opening the door_hang2gamma:
 	if door_hang2gamma is locked and Panel door_hang2gamma is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_hang2gamma is locked and Panel door_hang2gamma is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_hang2gamma is DEFEKT:
+		now door_hang2gamma is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_hang2gamma:
+	if player have mobitab:
+		now Panel door_hang2gamma is DEFEKT;
+		now door_hang2gamma is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_hang2gamma is a Türpanel and a part of door_hang2gamma with printed name "Panel door_hang2gamma".
 After putting the Sicherheitsausweis on Panel door_hang2gamma:
@@ -382,7 +391,7 @@ After putting the Sicherheitsausweis on Panel door_hang2gamma:
 		now door_hang2gamma is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_hang2gamma is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
 
 counterPanel1 is a number that varies. 
 Every Turn when the door_hang2gamma is open:
@@ -399,8 +408,17 @@ Every Turn when the door_hang2gamma is open:
 Instead of opening the door_gamma2gamma:
 	if door_gamma2gamma is locked and Panel gamma2gamma_door is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_gamma2gamma is locked and Panel gamma2gamma_door is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel gamma2gamma_door is DEFEKT:
+		now door_gamma2gamma is open;
+		say "Panel ist defekt.";		
+
+Instead of destroying the Panel gamma2gamma_door:
+	if player have mobitab:
+		now Panel gamma2gamma_door is DEFEKT;
+		now door_gamma2gamma is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel gamma2gamma_door is a Türpanel and a part of door_gamma2gamma with printed name "Panel gamma2gamma_door".
 After putting the Sicherheitsausweis on Panel gamma2gamma_door:
@@ -409,8 +427,8 @@ After putting the Sicherheitsausweis on Panel gamma2gamma_door:
 		now door_gamma2gamma is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel gamma2gamma_door is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
- 
+		say "Panel ist beschädigt.";
+
 counterPanel2 is a number that varies. 
 Every Turn when the door_gamma2gamma is open:
 	if counterPanel2 >= 1 and door_gamma2gamma is open and Panel gamma2gamma_door is GANZ:
@@ -419,7 +437,7 @@ Every Turn when the door_gamma2gamma is open:
 		now door_gamma2gamma is locked;
 		now counterPanel2 is 0;
 		stop;
-	now counterPanel2 is counterPanel2 + 1;
+	now counterPanel2 is counterPanel2 + 1;	
 
 
 [Panel zwischen Gamma Junction und Gamma Beta Corridor]
@@ -427,8 +445,17 @@ Every Turn when the door_gamma2gamma is open:
 Instead of opening the door_gamma2gambeta:
 	if door_gamma2gambeta is locked and Panel door_gamma2gambeta is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_gamma2gambeta is locked and Panel door_gamma2gambeta is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_gamma2gambeta is DEFEKT:
+		now door_gamma2gambeta is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_gamma2gambeta:
+	if player have mobitab:
+		now Panel door_gamma2gambeta is DEFEKT;
+		now door_gamma2gambeta is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_gamma2gambeta is a Türpanel and a part of door_gamma2gambeta with printed name "Panel door_gamma2gambeta".
 After putting the Sicherheitsausweis on Panel door_gamma2gambeta:
@@ -437,7 +464,7 @@ After putting the Sicherheitsausweis on Panel door_gamma2gambeta:
 		now door_gamma2gambeta is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_gamma2gambeta is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel3 is a number that varies. 
 Every Turn when the door_gamma2gambeta is open:
@@ -454,8 +481,17 @@ Every Turn when the door_gamma2gambeta is open:
 Instead of opening the door_gamma2beta:
 	if door_gamma2beta is locked and Panel gamma2beta_door is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_gamma2beta is locked and Panel gamma2beta_door is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel gamma2beta_door is DEFEKT:
+		now door_gamma2beta is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel gamma2beta_door:
+	if player have mobitab:
+		now Panel gamma2beta_door is DEFEKT;
+		now  door_gamma2beta is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel gamma2beta_door is a Türpanel and a part of door_gamma2beta with printed name "Panel gamma2beta_door".
 After putting the Sicherheitsausweis on Panel gamma2beta_door:
@@ -464,7 +500,7 @@ After putting the Sicherheitsausweis on Panel gamma2beta_door:
 		now door_gamma2beta is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel gamma2beta_door is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel12 is a number that varies.
 Every Turn when the door_gamma2beta is open:
@@ -482,8 +518,17 @@ Every Turn when the door_gamma2beta is open:
 Instead of opening the door_delta2gamma:
 	if door_delta2gamma is locked and Panel door_delta2gamma is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_delta2gamma is locked and Panel door_delta2gamma is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_delta2gamma is DEFEKT:
+		now door_delta2gamma is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_delta2gamma:
+	if player have mobitab:
+		now Panel door_delta2gamma is DEFEKT;
+		now  door_delta2gamma is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_delta2gamma is a Türpanel and a part of door_delta2gamma with printed name "Panel door_delta2gamma".
 After putting the Sicherheitsausweis on Panel door_delta2gamma:
@@ -492,7 +537,7 @@ After putting the Sicherheitsausweis on Panel door_delta2gamma:
 		now door_delta2gamma is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_delta2gamma is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel4 is a number that varies. 
 Every Turn when the door_delta2gamma is open:
@@ -509,8 +554,17 @@ Every Turn when the door_delta2gamma is open:
 Instead of opening the door_delta2solar:
 	if door_delta2solar is locked and Panel door_delta2solar is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_delta2solar is locked and Panel door_delta2solar is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_delta2solar is DEFEKT:
+		now door_delta2solar is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_delta2solar:
+	if player have mobitab:
+		now Panel door_delta2solar is DEFEKT;
+		now  door_delta2solar is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_delta2solar is a Türpanel and a part of door_delta2solar with printed name "Panel door_delta2solar".
 After putting the Sicherheitsausweis on Panel door_delta2solar:
@@ -519,7 +573,7 @@ After putting the Sicherheitsausweis on Panel door_delta2solar:
 		now door_delta2solar is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_delta2solar is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel5 is a number that varies. 
 Every Turn when the door_delta2solar is open:
@@ -536,8 +590,17 @@ Every Turn when the door_delta2solar is open:
 Instead of opening the door_alpha2delta:
 	if door_alpha2delta is locked and Panel door_alpha2delta is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_alpha2delta is locked and Panel door_alpha2delta is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_alpha2delta is DEFEKT:
+		now door_alpha2delta is open;
+		say "Panel ist defekt. ";
+		
+Instead of destroying the Panel door_alpha2delta:
+	if player have mobitab:
+		now Panel door_alpha2delta is DEFEKT;
+		now  door_alpha2delta is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_alpha2delta is a Türpanel and a part of door_alpha2delta with printed name "Panel door_alpha2delta".
 After putting the Sicherheitsausweis on Panel door_alpha2delta:
@@ -546,7 +609,7 @@ After putting the Sicherheitsausweis on Panel door_alpha2delta:
 		now door_alpha2delta is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_alpha2delta is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel6 is a number that varies. 
 Every Turn when the door_alpha2delta is open:
@@ -564,8 +627,17 @@ Every Turn when the door_alpha2delta is open:
 Instead of opening the door_duty2alpha:
 	if door_duty2alpha is locked and Panel door_duty2alpha is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_duty2alpha is locked and Panel door_duty2alpha is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_duty2alpha is DEFEKT:
+		now door_duty2alpha is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_duty2alpha:
+	if player have mobitab:
+		now Panel door_duty2alpha is DEFEKT;
+		now  door_duty2alpha is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_duty2alpha is a Türpanel and a part of door_duty2alpha with printed name "Panel door_duty2alpha".
 After putting the Sicherheitsausweis on Panel door_duty2alpha:
@@ -574,7 +646,7 @@ After putting the Sicherheitsausweis on Panel door_duty2alpha:
 		now door_duty2alpha is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_duty2alpha is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel7 is a number that varies. 
 Every Turn when the door_duty2alpha is open:
@@ -591,8 +663,17 @@ Every Turn when the door_duty2alpha is open:
 Instead of opening the door_alpha2aldelta:
 	if door_alpha2aldelta is locked and Panel alpha2aldelta_door is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_alpha2aldelta is locked and Panel alpha2aldelta_door is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel alpha2aldelta_door is DEFEKT:
+		now door_alpha2aldelta is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel alpha2aldelta_door:
+	if player have mobitab:
+		now Panel alpha2aldelta_door is DEFEKT;
+		now  door_alpha2aldelta is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel alpha2aldelta_door is a Türpanel and a part of door_alpha2aldelta with printed name "Panel alpha2aldelta_door".
 After putting the Sicherheitsausweis on Panel alpha2aldelta_door:
@@ -601,7 +682,7 @@ After putting the Sicherheitsausweis on Panel alpha2aldelta_door:
 		now door_alpha2aldelta is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel alpha2aldelta_door is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel8 is a number that varies. 
 Every Turn when the door_alpha2aldelta is open:
@@ -618,8 +699,17 @@ Every Turn when the door_alpha2aldelta is open:
 Instead of opening the door_alpha2alpha:
 	if door_alpha2alpha is locked and Panel door_alpha2alpha is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_alpha2alpha is locked and Panel door_alpha2alpha is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_alpha2alpha is DEFEKT:
+		now door_alpha2alpha is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_alpha2alpha:
+	if player have mobitab:
+		now Panel door_alpha2alpha is DEFEKT;
+		now  door_alpha2alpha is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_alpha2alpha is a Türpanel and a part of door_alpha2alpha with printed name "Panel door_alpha2alpha".
 After putting the Sicherheitsausweis on Panel door_alpha2alpha:
@@ -628,7 +718,7 @@ After putting the Sicherheitsausweis on Panel door_alpha2alpha:
 		now door_alpha2alpha is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_alpha2alpha is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel9 is a number that varies. 
 Every Turn when the door_alpha2alpha is open:
@@ -645,8 +735,17 @@ Every Turn when the door_alpha2alpha is open:
 Instead of opening the door_beta2alpha:
 	if door_beta2alpha is locked and Panel door_beta2alpha is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_beta2alpha is locked and Panel door_beta2alpha is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_beta2alpha is DEFEKT:
+		now door_beta2alpha is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_beta2alpha:
+	if player have mobitab:
+		now Panel door_beta2alpha is DEFEKT;
+		now  door_beta2alpha is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_beta2alpha is a Türpanel and a part of door_beta2alpha with printed name "Panel door_beta2alpha".
 After putting the Sicherheitsausweis on Panel door_beta2alpha:
@@ -655,7 +754,7 @@ After putting the Sicherheitsausweis on Panel door_beta2alpha:
 		now door_beta2alpha is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_beta2alpha is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel10 is a number that varies.
 Every Turn when the door_beta2alpha is open:
@@ -672,8 +771,17 @@ Every Turn when the door_beta2alpha is open:
 Instead of opening the door_beta2engin:
 	if door_beta2engin is locked and Panel door_beta2engin is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_beta2engin is locked and Panel door_beta2engin is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_beta2engin is DEFEKT:
+		now door_beta2engin is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_beta2engin:
+	if player have mobitab:
+		now Panel door_beta2engin is DEFEKT;
+		now  door_beta2engin is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_beta2engin is a Türpanel and a part of door_beta2engin with printed name "Panel door_beta2engin".
 After putting the Sicherheitsausweis on Panel door_beta2engin:
@@ -682,7 +790,7 @@ After putting the Sicherheitsausweis on Panel door_beta2engin:
 		now door_beta2engin is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_beta2engin is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel11 is a number that varies.
 Every Turn when the door_beta2engin is open:
@@ -699,8 +807,17 @@ Every Turn when the door_beta2engin is open:
 Instead of opening the door_cafe2storage:
 	if door_cafe2storage is locked and Panel door_cafe2storage is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_cafe2storage is locked and Panel door_cafe2storage is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_cafe2storage is DEFEKT:
+		now door_cafe2storage is open;
+		say "Panel ist defekt.";
+		
+Instead of destroying the Panel door_cafe2storage:
+	if player have mobitab:
+		now Panel door_cafe2storage is DEFEKT;
+		now  door_cafe2storage is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_cafe2storage is a Türpanel and a part of door_cafe2storage with printed name "Panel door_cafe2storage".
 After putting the Sicherheitsausweis on Panel door_cafe2storage:
@@ -709,7 +826,7 @@ After putting the Sicherheitsausweis on Panel door_cafe2storage:
 		now door_cafe2storage is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_cafe2storage is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel13 is a number that varies.
 Every Turn when the door_cafe2storage is open:
@@ -726,8 +843,17 @@ Every Turn when the door_cafe2storage is open:
 Instead of opening the door_storage2delta:
 	if door_storage2delta is locked and Panel door_storage2delta is GANZ:
 		say "Du musst das Panel benutzen";
-	otherwise if door_storage2delta is locked and Panel door_storage2delta is DEFEKT:
-		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+	otherwise if Panel door_storage2delta is DEFEKT:
+		now door_storage2delta is open;
+		say "Panel ist defekt. ";
+		
+Instead of destroying the Panel door_storage2delta:
+	if player have mobitab:
+		now Panel door_storage2delta is DEFEKT;
+		now  door_storage2delta is unlocked;	
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+	otherwise:
+		say "Du benötigst das Mobitab um das Panel zu zerstören";
 
 Panel door_storage2delta is a Türpanel and a part of door_storage2delta with printed name "Panel door_storage2delta".
 After putting the Sicherheitsausweis on Panel door_storage2delta:
@@ -736,7 +862,7 @@ After putting the Sicherheitsausweis on Panel door_storage2delta:
 		now door_storage2delta is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_storage2delta is DEFEKT:
-		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+		say "Panel ist beschädigt.";
  
 counterPanel14 is a number that varies.
 Every Turn when the door_storage2delta is open:
@@ -893,6 +1019,9 @@ Before player taking mobitab:
 		say "Du darfst das Mobitab nicht nehmen.";
 	otherwise:
 		now mobitab is portable;
+
+[Panel mit Mobitab zerstören]	
+Understand "destroy [Türpanel] with [Mobitab]" as Destroying.  Destroying is an action applying to two things.
 
 [Sicherheitsausweis]
 Sicherheitsausweis is a thing in Spind. The Description of Sicherheitsausweis is "Ein Sicherheitsausweis. Damit kann man wahrscheinlich einige Türen öffnen.". Sicherheitsausweis is portable.
