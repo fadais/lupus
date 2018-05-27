@@ -9,6 +9,21 @@ Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der S
 
 [ARBEITSPAKETE A 1, etc - ALLE RÄUME]
 
+[Regionen]
+Äussere Ring is a Region.
+Hangarmodul is a Region.
+Innere Ring is a Region.
+COM-Modul is a Region.
+Dienstmodul is a Region.
+
+[Raum Docking Bay]
+Docking Bay is a room.
+Down of Hangar is a door called door_hang2dock. 
+The description of door_hang2dock is "Tür zur Docking Bay.". 
+Down of door_hang2dock is Docking Bay. 
+The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
+Docking Bay is inside the Hangarmodul.
+
 [Raum Hangar]
 Hangar is a room.
 Up of Hangar is a door called door_hang2gamma. 
@@ -18,6 +33,7 @@ The door_hang2gamma can be LOCKED or UNLOCKED.
 The door_hang2gamma is LOCKED.
 The door_hang2gamma is CLOSED.
 The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". 
+Hangar is inside the Hangarmodul.
 
 [Raum Gamma Junction und Türen]
 Gamma Junction is a room. 
@@ -30,6 +46,7 @@ The description of door_gamma2gamma is "Eine Sicherheitsbarriere des äußeren R
 The door_gamma2gamma can be LOCKED or UNLOCKED.
 The door_gamma2gamma is LOCKED.
 The door_gamma2gamma is CLOSED.
+Gamma Junction is inside the Äussere Ring.
 
 [Tür - Gamma Junction]
 Southwest of Gamma Junction is a door called door_gamma2gambeta. 
@@ -42,6 +59,7 @@ The door_gamma2gambeta is CLOSED.
 Gamma Delta Corridor is a room.
 Northwest of door_gamma2gamma is Gamma Delta Corridor. 
 The description of Gamma Delta Corridor is "In diesem Raum kann man durch eine Wartungsluke in das Kommunikationsmodul gelangen. Des weiteren befinden sich Spuren von Handlaserwaffen, eine Leiche und ein Bodenfenster im Raum. Die Wartungsluke führt runter in die Com Base, allerdings ist sie durch eine Luke versperrt. Südöstlich befindet sich die  Gamma Junction und nordwestlich Delta Junction.".
+Gamma Delta Corridor is inside the Äussere Ring.
 
 Down of Gamma Delta Corridor is a door called door_gamma2com. 
 The description of door_gamma2com is "Wartungsluke zum Kommunikationsmodul.". 
@@ -58,6 +76,7 @@ The door_delta2gamma is CLOSED.
 Delta Junction is a room.
 Northwest of door_delta2gamma is Delta Junction.
 The description of Delta Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster zu sehen. Südöstlich ist Gamma Delta Corridor und südwestlich Alpha Delta Corridor. Eine Treppe führt hoch zum Solar Lab, allerdings ist sie durch eine Luke versperrt. In diesem Raum, befindet sich eine Tür die zum Delta Greenhouse führt, die sich in der linken Seitenebene befindet.".
+Delta Junction is inside the Äussere Ring.
 
 Up of Delta Junction is a door called door_delta2solar. 
 Southeast of Delta Junction is door_delta2gamma.
@@ -72,6 +91,7 @@ Southwest of door_gamma2gambeta is Gamma Beta Corridor.
 Northeast of door_gamma2beta is Gamma Beta Corridor.
 Southwest of door_gamma2beta is Beta Junction.
 The description of Gamma Beta Corridor is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Südwestlich ist Beta Junction und nordöstlich Gamma Junction.".
+Gamma Beta Corridor is inside the Äussere Ring.
 
 Southwest of Gamma Beta Corridor is door_gamma2beta.
 Northeast of Gamma Beta Corridor is door_gamma2gambeta.  
@@ -79,6 +99,7 @@ Northeast of Gamma Beta Corridor is door_gamma2gambeta.
 [Raum Alpha Delta Corridor]
 Alpha Delta Corridor is a room.
 The description of Alpha Delta Corridor is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Nordöstlich ist Delta Junction und südwestlich Alpha Junction.".
+Alpha Delta Corridor is inside the Äussere Ring.
 
 Northeast of Alpha Delta Corridor is a door called door_alpha2delta. 
 The description of door_alpha2delta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
@@ -94,6 +115,8 @@ Northeast of door_alpha2aldelta is Alpha Delta Corridor.
 [Raum Alpha Junction]
 Alpha Junction is a room.
 The description of Alpha Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Eine Treppe führt hoch zum Med-Lab, allerdings ist sie durch eine Luke versperrt. Nordöstlich befindet sich Alpha Delta Corridor, südwestlich Alpha Beta Corridor und darunter der Duty Room.".
+Alpha Junction is inside the Äussere Ring.
+
 Up of Alpha Junction is a door called door_alpha2med. 
 Down of Alpha Junction is a door called door_duty2alpha. 
 Northeast of Alpha Junction is a door called door_alpha2aldelta. 
@@ -109,6 +132,7 @@ Northwest of door_alpha2alpha is Alpha Junction.
 Alpha Beta Corridor is a room.
 The description of Alpha Beta Corridor is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum.
 Nordwestlich ist Alpha Junction und südöstlich Beta Junction.".
+Alpha Beta Corridor is inside the Äussere Ring.
 
 Northwest of Alpha Beta Corridor is a door called door_alpha2alpha. 
 The description of door_alpha2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
@@ -127,6 +151,8 @@ The door_beta2alpha is CLOSED.
 Beta Junction is a room.
 Southeast of door_beta2alpha is Beta Junction.
 The description of Beta Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Eine Treppe führt hoch zum Engineering Lab, allerdings ist sie durch eine Luke versperrt. Nordwestlich befindet sich der Alpha Beta Corridor und nordöstlich Gamma Beta Corridor.".
+Beta Junction is inside the Äussere Ring.
+
 Up of Beta Junction is a door called door_beta2engin. 
 The Description of door_beta2engin is "Ein Luke die runter zur Beta Junction im äußeren Ring führt.".
 
@@ -142,7 +168,8 @@ The door_gamma2beta is openable.
 
 [Raum Delta Greenhouse]
 Delta Greenhouse is a room. 
-[The description of Delta Greenhouse is "Eines von zwei Gewächshaus auf der Linken Seitenebene des Äußeren Rings. Ein Bodenfenster ist hier zu sehen. In diesem Raum befindet sich eine Tür, die östlich zum Delta Junction führt. Im Südwesten ist der Storage Room.".]
+The description of Delta Greenhouse is "Eines von zwei Gewächshaus auf der Linken Seitenebene des Äußeren Rings. Ein Bodenfenster ist hier zu sehen. In diesem Raum befindet sich eine Tür, die östlich zum Delta Junction führt. Im Südwesten ist der Storage Room.".
+Delta Greenhouse is inside the Äussere Ring.
 
 Southwest of Delta Greenhouse is Storage Room.
 East of Delta Greenhouse is Delta Junction.
@@ -150,33 +177,40 @@ East of Delta Greenhouse is Delta Junction.
 [Raum Storage Room]
 Storage Room is a room.
 The description of Storage Room is "Ein Lagerraum. Es gibt ein Bodenfenster im Raum. Darunter befindet sich die Cafeteria und nordöstlich das Delta Greenhouse. Eine Treppe führt hoch zur Alpha AI, allerdings ist sie durch eine Luke versperrt.".
+Storage Room is inside the Äussere Ring.
+
 Up of Storage Room is a door called door_storage2alpha.
 The description of door_storage2alpha is "Eine Luke, die hoch zur Alpha AI führt.". 
 Down of Storage Room is a door called door_cafe2storage. 
 The description of door_cafe2storage is "Eine Tür zur Cafeteria". 
+
 
 [Alpha AI]
 Alpha AI is a room.
 Northwest of door_alpha2trans is Alpha AI.
 Up of door_storage2alpha is Alpha AI. 
 The description of Alpha AI is "In diesem Raum befindet sich die KI AI. Alpha AI enthält Deckenfenster. Eine Treppe führt runter zum Storage Room. Südöstlich befindet sich der Transporter Raum.".
+Alpha AI is inside the Innere Ring.
  
 
 [Transporter Raum]
 Transporter Raum is a Room. 
 The Description of Transporter Raum is "In diesem Raum kann man sich in das Solar-Modul beamen. Transporter Raum enthält Deckenfenster. Nordwestlich ist die Alpha AI (Teleportiert den Spieler zum Transport Module in der Solar Module).". 
+Transporter Raum is inside the Innere Ring.
 
 Northwest of Transporter Raum is a door called door_alpha2trans. 
 
 [Raum Beta Greenhouse]
 Beta Greenhouse is a room. 
 The description of Beta Greenhouse is "Eines von zwei Gewächshäusern auf der linken Seitenebene des Äußeren Rings. Es ist ein Bodenfenster im Raum. Nordöstlich befindet sich die Storage Area."
+Beta Greenhouse is inside the Äussere Ring.
 
 [Raum Storage Area]
 Storage Area is a room.
 West of Gamma Junction is Storage Area.
 Northeast of Beta Greenhouse is Storage Area.
 The description of Storage Area is "Ein Lagerraum auf der linken Seitenebene des äußeren Rings. Storage Area enthält Bodenfenster. Südwestlich ist das Beta Greenhouse. Eine Treppe führt hoch zur Delta AI, allerdings ist sie durch eine Luke versperrt. Eine Tür führt östlich zum Gamma Junction.".
+Storage Area is inside the Äussere Ring.
 
 Up of Storage Area is a door called door_storage2delta. 
 The Description of door_storage2delta is "Eine Luke die hoch zur Delta AI führt.". 
@@ -186,11 +220,13 @@ Delta AI is a room.
 Southeast of the door_mag2delta is Delta AI.
 Up of door_storage2delta is Delta AI. 
 The Description of Delta AI is "Ein Raum in dem sich eine KI befindet. Delta AI enthält Deckenfenster. Nordwestlich ist der Main Generator. Eine Treppe führt runter zur Storage Area.".
+Delta AI is inside the Innere Ring.
 
 [Main Generator]
 Main Generator is a Room. 
 The Description of the Main Generator is "In diesem Raum befindet sich der Hauptgenerator der Station. Main Generator enthält Deckenfenster. Südöstlich ist die Delta AI.". 
 Southeast of the Main Generator is a door called door_mag2delta. 
+Main Generator is inside the Innere Ring.
 
 Southwest of Storage Area is Beta Greenhouse.
 East of Storage Area is Gamma Junction.
@@ -199,72 +235,76 @@ East of Storage Area is Gamma Junction.
 Med Lab is a room.
 Up of door_alpha2med is Med Lab. 
 The description of Med Lab is "Labor im inneren Ring auf der Hauptebene. Hier befinden sich verschiedene medizinische Einrichtungen. Dieser Raum enthält eine Dekontaminationskabine, ein Krankenbett und ein Deckenfenster.Eine Treppe führt runter zur Alpha Junction.".
+Med Lab is inside the Innere Ring.
 
 [Raum Engineering Lab]
 Engineering Lab is a room.
 Up of the door_beta2engin is Engineering Lab. 
 The Description of Engineering Lab is "Ein Maschinenraum, der von Ingenieuren genutzt wird. Es befindet sich ein Deckenfenster im Raum. Eine Treppe führt runter zur Beta Junction.". 
+Engineering Lab is inside the Innere Ring.
 
 
 [Raum Dienstmodul]
 Duty Room is a room.
 Down of door_duty2alpha is Duty Room. 
 The description of Duty Room is "Ein Dienstraum. Dieser Raum ist an den äußeren Ring angedockt. Darüber befindet sich die Alpha Junction und darunter die Crew Quarter. Über eine Tür im Osten gelangt der Spieler zum Briefing Room und über eine Tür im Westen gelangt der Spieler zur Cafeteria.".
+Duty Room is inside the Dienstmodul.
 
 [Raum Crew Quarter]
 Crew Quarter is a room.
 Down of Duty Room is Crew Quarter. 
 The description of Crew Quarter is "Mitarbeiter Raum, welcher unter anderem Umkleide- kabinen enthält. Darüber ist der Duty Room. Über eine Tür im Westen gelangt der Spieler zum Fitness Raum.". 
+Crew Quarter is inside the Dienstmodul.
 
 [Raum Fitness Raum]
 Fitness Raum is a room.
 West of Crew Quarter is Fitness Raum. 
 The description of Fitness Raum is "Ein Fitnessraum im Dienstmodul auf der linken Seitenebene. Über eine Tür im Osten gelangt der Spieler zum Crew Quarter.".
+Fitness Raum is inside the Dienstmodul.
 
 [Raum Cafeteria]
 Cafeteria is a room.
 Down of door_cafe2storage is Cafeteria.
 West of Duty Room is Cafeteria. 
 The description of Cafeteria is "Eine Cafeteria im Dienstmodul auf der linken Seitenebene. Darüber befindet sich der Storage Room. Über eine Tür im Osten gelangt der Spieler zum Duty Room.".
+Cafeteria is inside the Dienstmodul.
 
 [Raum Briefing Room]
 Briefing Room is a room.
 East of Duty Room is Briefing Room. 
 The description of Briefing Room is "Raum im Dienstmodul auf der rechten Seitenebene. Darunter befindet sich die Bridge. Über eine Tür im Westen gelangt der Spieler zum Duty Room führt.". 
+Briefing Room is inside the Dienstmodul.
 Down of Briefing Room is a door called door_brid2brief. 
-
-
-[Raum Docking Bay]
-Docking Bay is a room.
-Down of Hangar is a door called door_hang2dock. 
-The description of door_hang2dock is "Tür zur Docking Bay.". 
-Down of door_hang2dock is Docking Bay. 
-The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
 
 [Raum Solar Lab]
 Solar Lab is a room.
 Up of door_delta2solar is Solar Lab. 
 The Description of Solar Lab is "Raum in inneren Ring. Solar Lab enthält Deckenfenster. Eine Treppe führt runter zur Delta Junction.".
+Solar Lab is inside the Innere Ring. 
 
 [Raum - Kommunikationsmodul: Com Base]
 Com Base is a room.
 Down of door_gamma2com is Com Base. 
 The description of Com Base is "Die Basis des Kommunikationsmodul. Eine Treppe führt hoch zum Gamma Delta Corridor. Dieser Raum ist an den äußeren Ring angedockt. Eine Tür führt östlich zur Antenna Array und eine weitere Tür westlich zum Second Generator.".
+Com Base is inside the COM-Modul.
 
 [Raum - Kommunikationsmodul: Second Generator]
 Second Generator is a room.
 West of Com Base is Second Generator. 
 The description of Second Generator is "In diesem Raum befindet sich der Hilfsgenerator der Station. Eine Tür führt östlich ins Com Base.".
+Second Generator is inside the COM-Modul.
 
 [Raum - Kommunikationsmodul: Antenna Array]
 Antenna Array is a room.
 East of Com Base is Antenna Array. 
-[The description of Antenna Array is "Ein Raum, der sich im Com Modul befindet. Eine Tür führt westlich ins Com Base.".]
+The description of Antenna Array is "Ein Raum, der sich im Com Modul befindet. Eine Tür führt westlich ins Com Base.".
+Antenna Array is inside the COM-Modul.
 
 [AP A 8 - Bridge]
 Bridge is a room.
 Down of door_brid2brief is Bridge. 
 Down of door_brid2brief is Bridge. The description of Bridge is "In diesem Raum wird die Station gesteuert. Darüber befindet sich der Briefing Room.".
+Bridge is inside the Dienstmodul.
 
 [Tür vom Briefing Room zur Bridge]
 door_brid2brief is a closed door. 
@@ -284,6 +324,8 @@ say "Du benötigst das Mobitab um die Tür zu öffnen.";
 Xeno Lab is a room.
 Up of Gamma Junction is a door called door_gamma2xeno. Up of door_gamma2xeno is Xeno Lab. 
 The description of Xeno Lab is "Labor im inneren Ring. Xeno Lab enthält Deckenfenster und eine Klappe in der Wand. Eine Treppe führt runter zur Gamma Junction.". 
+Xeno Lab is inside the Innere Ring. 
+
 [Xeno Luke]
 [TODO name der Xenoluke ändern]
 door_gamma2xeno is a closed door with printed name "Xeno Luke". 
@@ -320,8 +362,7 @@ Umkleidekammer is not lockable. Umkleidekammer is enterable. Umkleidekammer is f
 [Umkleidekammerspind]
 Umkleidekammerspind is a container. The Umkleidekammerspind is in Umkleidekammer. The printed name of Umkleidekammerspind is "Ein alter Spind.". Umkleidekammerspind is not enterable.The Umkleidekammerspind is fixed in place. The carrying capacity of Umkleidekammerspind is 1. Umkleidekammerspind is locked. Umkleidekammerspind is closed.
 
-
-[TÜRPANEL]
+[Panel]
 
 Türpanel is a Kind of Supporter. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place. The carrying capacity of Türpanel is 1.
 Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
@@ -329,369 +370,383 @@ Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
 [Panel zwischen Hangar und Gamma Junction]
 
 Instead of opening the door_hang2gamma:
-	if door_hang2gamma is locked and Türpanel door_hang2gamma is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_hang2gamma is locked and Türpanel door_hang2gamma is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_hang2gamma is locked and Panel door_hang2gamma is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_hang2gamma is locked and Panel door_hang2gamma is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_hang2gamma is a Türpanel and a part of door_hang2gamma with printed name "Türpanel door_hang2gamma".
-After putting the Sicherheitsausweis on Türpanel door_hang2gamma:
-	if Türpanel door_hang2gamma is GANZ:             
+Panel door_hang2gamma is a Türpanel and a part of door_hang2gamma with printed name "Panel door_hang2gamma".
+After putting the Sicherheitsausweis on Panel door_hang2gamma:
+	if Panel door_hang2gamma is GANZ:             
 		now door_hang2gamma is unlocked;
 		now door_hang2gamma is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_hang2gamma is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
- 
+	otherwise if Panel door_hang2gamma is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+
+counterPanel1 is a number that varies. 
 Every Turn when the door_hang2gamma is open:
-	if counter >= 1 and door_hang2gamma is open and Türpanel door_hang2gamma is GANZ:
-		say "Die Tür door_gamma2gamma ist von selbst wieder zugegangen.";
+	if counterPanel1 >= 1 and door_hang2gamma is open and Panel door_hang2gamma is GANZ:
+		say "Die Tür door_hang2gamma ist von selbst wieder zugegangen.";
 		now door_hang2gamma is closed;
 		now door_hang2gamma is locked;
-		now counter is 0;
+		now counterPanel1 is 0;
 		stop;
-	now counter is counter + 1;
-
+	now counterPanel1 is counterPanel1 + 1;
+	
 [Panel zwischen Gamma Delta Corridor und Gamma Junction]
 
 Instead of opening the door_gamma2gamma:
-	if door_gamma2gamma is locked and Türpanel door_gamma2gamma is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_gamma2gamma is locked and Türpanel door_gamma2gamma is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_gamma2gamma is locked and Panel gamma2gamma_door is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_gamma2gamma is locked and Panel gamma2gamma_door is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_gamma2gamma is a Türpanel and a part of door_gamma2gamma with printed name "Türpanel door_gamma2gamma".
-After putting the Sicherheitsausweis on Türpanel door_gamma2gamma:
-	if Türpanel door_gamma2gamma is GANZ:             
+Panel gamma2gamma_door is a Türpanel and a part of door_gamma2gamma with printed name "Panel gamma2gamma_door".
+After putting the Sicherheitsausweis on Panel gamma2gamma_door:
+	if Panel gamma2gamma_door is GANZ:             
 		now door_gamma2gamma is unlocked;
 		now door_gamma2gamma is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_gamma2gamma is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel gamma2gamma_door is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel2 is a number that varies. 
 Every Turn when the door_gamma2gamma is open:
-	if counter >= 1 and door_gamma2gamma is open and Türpanel door_gamma2gamma is GANZ:
+	if counterPanel2 >= 1 and door_gamma2gamma is open and Panel gamma2gamma_door is GANZ:
 		say "Die Tür door_gamma2gamma ist von selbst wieder zugegangen.";
 		now door_gamma2gamma is closed;
 		now door_gamma2gamma is locked;
-		now counter is 0;
+		now counterPanel2 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel2 is counterPanel2 + 1;
 
 
 [Panel zwischen Gamma Junction und Gamma Beta Corridor]
 
 Instead of opening the door_gamma2gambeta:
-	if door_gamma2gambeta is locked and Türpanel door_gamma2gambeta is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_gamma2gambeta is locked and Türpanel door_gamma2gambeta is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_gamma2gambeta is locked and Panel door_gamma2gambeta is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_gamma2gambeta is locked and Panel door_gamma2gambeta is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_gamma2gambeta is a Türpanel and a part of door_gamma2gambeta with printed name "Türpanel door_gamma2gambeta".
-After putting the Sicherheitsausweis on Türpanel door_gamma2gambeta:
-	if Türpanel door_gamma2gambeta is GANZ:             
+Panel door_gamma2gambeta is a Türpanel and a part of door_gamma2gambeta with printed name "Panel door_gamma2gambeta".
+After putting the Sicherheitsausweis on Panel door_gamma2gambeta:
+	if Panel door_gamma2gambeta is GANZ:             
 		now door_gamma2gambeta is unlocked;
 		now door_gamma2gambeta is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_gamma2gambeta is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_gamma2gambeta is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel3 is a number that varies. 
 Every Turn when the door_gamma2gambeta is open:
-	if counter >= 1 and door_gamma2gambeta is open and Türpanel door_gamma2gambeta is GANZ:
+	if counterPanel3 >= 1 and door_gamma2gambeta is open and Panel door_gamma2gambeta is GANZ:
 		say "Die Tür door_gamma2gambeta ist von selbst wieder zugegangen.";
 		now door_gamma2gambeta is closed;
 		now door_gamma2gambeta is locked;
-		now counter is 0;
+		now counterPanel3 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel3 is counterPanel3 + 1;
+
+[Panel zwischen Gamma Beta Corridor und Beta Junction]
+
+Instead of opening the door_gamma2beta:
+	if door_gamma2beta is locked and Panel gamma2beta_door is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_gamma2beta is locked and Panel gamma2beta_door is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
+
+Panel gamma2beta_door is a Türpanel and a part of door_gamma2beta with printed name "Panel gamma2beta_door".
+After putting the Sicherheitsausweis on Panel gamma2beta_door:
+	if Panel gamma2beta_door is GANZ:             
+		now door_gamma2beta is unlocked;
+		now door_gamma2beta is open;
+		say "Tür hat sich geöffnet.";
+	otherwise if Panel gamma2beta_door is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
+ 
+counterPanel12 is a number that varies.
+Every Turn when the door_gamma2beta is open:
+	if counterPanel12 >= 1 and door_gamma2beta is open and Panel gamma2beta_door is GANZ:
+		say "Die Tür door_gamma2beta ist von selbst wieder zugegangen.";
+		now door_gamma2beta is closed;
+		now door_gamma2beta is locked;
+		now counterPanel12 is 0;
+		stop;
+	now counterPanel12 is counterPanel12 + 1;
 
 
 [Panel zwischen Delta Junction und Gamma Delta Corridor]
 
 Instead of opening the door_delta2gamma:
-	if door_delta2gamma is locked and Türpanel door_delta2gamma is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_delta2gamma is locked and Türpanel door_delta2gamma is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_delta2gamma is locked and Panel door_delta2gamma is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_delta2gamma is locked and Panel door_delta2gamma is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_delta2gamma is a Türpanel and a part of door_delta2gamma with printed name "Türpanel door_delta2gamma".
-After putting the Sicherheitsausweis on Türpanel door_delta2gamma:
-	if Türpanel door_delta2gamma is GANZ:             
+Panel door_delta2gamma is a Türpanel and a part of door_delta2gamma with printed name "Panel door_delta2gamma".
+After putting the Sicherheitsausweis on Panel door_delta2gamma:
+	if Panel door_delta2gamma is GANZ:             
 		now door_delta2gamma is unlocked;
 		now door_delta2gamma is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_delta2gamma is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_delta2gamma is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel4 is a number that varies. 
 Every Turn when the door_delta2gamma is open:
-	if counter >= 1 and door_delta2gamma is open and Türpanel door_delta2gamma is GANZ:
+	if counterPanel4 >= 1 and door_delta2gamma is open and Panel door_delta2gamma is GANZ:
 		say "Die Tür door_delta2gamma ist von selbst wieder zugegangen.";
 		now door_delta2gamma is closed;
 		now door_delta2gamma is locked;
-		now counter is 0;
+		now counterPanel4 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel4 is counterPanel4 + 1;
 
 [Panel zwischen Delta Junction und Solar Lab]
 
 Instead of opening the door_delta2solar:
-	if door_delta2solar is locked and Türpanel door_delta2solar is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_delta2solar is locked and Türpanel door_delta2solar is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_delta2solar is locked and Panel door_delta2solar is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_delta2solar is locked and Panel door_delta2solar is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_delta2solar is a Türpanel and a part of door_delta2solar with printed name "Türpanel door_delta2solar".
-After putting the Sicherheitsausweis on Türpanel door_delta2solar:
-	if Türpanel door_delta2solar is GANZ:             
+Panel door_delta2solar is a Türpanel and a part of door_delta2solar with printed name "Panel door_delta2solar".
+After putting the Sicherheitsausweis on Panel door_delta2solar:
+	if Panel door_delta2solar is GANZ:             
 		now door_delta2solar is unlocked;
 		now door_delta2solar is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_delta2solar is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_delta2solar is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel5 is a number that varies. 
 Every Turn when the door_delta2solar is open:
-	if counter >= 1 and door_delta2solar is open and Türpanel door_delta2solar is GANZ:
+	if counterPanel5 >= 1 and door_delta2solar is open and Panel door_delta2solar is GANZ:
 		say "Die Tür door_delta2solar ist von selbst wieder zugegangen.";
 		now door_delta2solar is closed;
 		now door_delta2solar is locked;
-		now counter is 0;
+		now counterPanel5 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel5 is counterPanel5 + 1;
 
 [Panel zwischen Alpha Delta Corridor und Delta Junction]
 
 Instead of opening the door_alpha2delta:
-	if door_alpha2delta is locked and Türpanel door_alpha2delta is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_alpha2delta is locked and Türpanel door_alpha2delta is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_alpha2delta is locked and Panel door_alpha2delta is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_alpha2delta is locked and Panel door_alpha2delta is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_alpha2delta is a Türpanel and a part of door_alpha2delta with printed name "Türpanel door_alpha2delta".
-After putting the Sicherheitsausweis on Türpanel door_alpha2delta:
-	if Türpanel door_alpha2delta is GANZ:             
+Panel door_alpha2delta is a Türpanel and a part of door_alpha2delta with printed name "Panel door_alpha2delta".
+After putting the Sicherheitsausweis on Panel door_alpha2delta:
+	if Panel door_alpha2delta is GANZ:             
 		now door_alpha2delta is unlocked;
 		now door_alpha2delta is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_alpha2delta is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_alpha2delta is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel6 is a number that varies. 
 Every Turn when the door_alpha2delta is open:
-	if counter >= 1 and door_alpha2delta is open and Türpanel door_alpha2delta is GANZ:
+	if counterPanel6 >= 1 and door_alpha2delta is open and Panel door_alpha2delta is GANZ:
 		say "Die Tür door_alpha2delta ist von selbst wieder zugegangen.";
 		now door_alpha2delta is closed;
 		now door_alpha2delta is locked;
-		now counter is 0;
+		now counterPanel6 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel6 is counterPanel6 + 1;
 
 
 [Panel zwischen Duty Room und Alpha Junction]
 
 Instead of opening the door_duty2alpha:
-	if door_duty2alpha is locked and Türpanel door_duty2alpha is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_duty2alpha is locked and Türpanel door_duty2alpha is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_duty2alpha is locked and Panel door_duty2alpha is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_duty2alpha is locked and Panel door_duty2alpha is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_duty2alpha is a Türpanel and a part of door_duty2alpha with printed name "Türpanel door_duty2alpha".
-After putting the Sicherheitsausweis on Türpanel door_duty2alpha:
-	if Türpanel door_duty2alpha is GANZ:             
+Panel door_duty2alpha is a Türpanel and a part of door_duty2alpha with printed name "Panel door_duty2alpha".
+After putting the Sicherheitsausweis on Panel door_duty2alpha:
+	if Panel door_duty2alpha is GANZ:             
 		now door_duty2alpha is unlocked;
 		now door_duty2alpha is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_duty2alpha is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_duty2alpha is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel7 is a number that varies. 
 Every Turn when the door_duty2alpha is open:
-	if counter >= 1 and door_duty2alpha is open and Türpanel door_duty2alpha is GANZ:
+	if counterPanel7 >= 1 and door_duty2alpha is open and Panel door_duty2alpha is GANZ:
 		say "Die Tür door_duty2alpha ist von selbst wieder zugegangen.";
 		now door_duty2alpha is closed;
 		now door_duty2alpha is locked;
-		now counter is 0;
+		now counterPanel7 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel7 is counterPanel7 + 1;
 
 [Panel zwischen Alpha Junction und Alpha Delta Corridor]
 
 Instead of opening the door_alpha2aldelta:
-	if door_alpha2aldelta is locked and Türpanel door_alpha2aldelta is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_alpha2aldelta is locked and Türpanel door_alpha2aldelta is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_alpha2aldelta is locked and Panel alpha2aldelta_door is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_alpha2aldelta is locked and Panel alpha2aldelta_door is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_alpha2aldelta is a Türpanel and a part of door_alpha2aldelta with printed name "Türpanel door_alpha2aldelta".
-After putting the Sicherheitsausweis on Türpanel door_alpha2aldelta:
-	if Türpanel door_alpha2aldelta is GANZ:             
+Panel alpha2aldelta_door is a Türpanel and a part of door_alpha2aldelta with printed name "Panel alpha2aldelta_door".
+After putting the Sicherheitsausweis on Panel alpha2aldelta_door:
+	if Panel alpha2aldelta_door is GANZ:             
 		now door_alpha2aldelta is unlocked;
 		now door_alpha2aldelta is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_alpha2aldelta is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel alpha2aldelta_door is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel8 is a number that varies. 
 Every Turn when the door_alpha2aldelta is open:
-	if counter >= 1 and door_alpha2aldelta is open and Türpanel door_alpha2aldelta is GANZ:
+	if counterPanel8 >= 1 and door_alpha2aldelta is open and Panel alpha2aldelta_door is GANZ:
 		say "Die Tür door_alpha2aldelta ist von selbst wieder zugegangen.";
 		now door_alpha2aldelta is closed;
 		now door_alpha2aldelta is locked;
-		now counter is 0;
+		now counterPanel8 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel8 is counterPanel8 + 1;
 
 [Panel zwischen Alpha Beta Corridor und Alpha Junction]
 
 Instead of opening the door_alpha2alpha:
-	if door_alpha2alpha is locked and Türpanel door_alpha2alpha is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_alpha2alpha is locked and Türpanel door_alpha2alpha is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_alpha2alpha is locked and Panel door_alpha2alpha is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_alpha2alpha is locked and Panel door_alpha2alpha is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_alpha2alpha is a Türpanel and a part of door_alpha2alpha with printed name "Türpanel door_alpha2alpha".
-After putting the Sicherheitsausweis on Türpanel door_alpha2alpha:
-	if Türpanel door_alpha2alpha is GANZ:             
+Panel door_alpha2alpha is a Türpanel and a part of door_alpha2alpha with printed name "Panel door_alpha2alpha".
+After putting the Sicherheitsausweis on Panel door_alpha2alpha:
+	if Panel door_alpha2alpha is GANZ:             
 		now door_alpha2alpha is unlocked;
 		now door_alpha2alpha is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_alpha2alpha is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_alpha2alpha is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel9 is a number that varies. 
 Every Turn when the door_alpha2alpha is open:
-	if counter >= 1 and door_alpha2alpha is open and Türpanel door_alpha2alpha is GANZ:
+	if counterPanel9 >= 1 and door_alpha2alpha is open and Panel door_alpha2alpha is GANZ:
 		say "Die Tür door_alpha2alpha ist von selbst wieder zugegangen.";
 		now door_alpha2alpha is closed;
 		now door_alpha2alpha is locked;
-		now counter is 0;
+		now counterPanel9 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel9 is counterPanel9 + 1;
 	
 [Panel zwischen Beta Junction und Alpha Beta Corridor]
 
 Instead of opening the door_beta2alpha:
-	if door_beta2alpha is locked and Türpanel door_beta2alpha is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_beta2alpha is locked and Türpanel door_beta2alpha is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_beta2alpha is locked and Panel door_beta2alpha is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_beta2alpha is locked and Panel door_beta2alpha is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_beta2alpha is a Türpanel and a part of door_beta2alpha with printed name "Türpanel door_beta2alpha".
-After putting the Sicherheitsausweis on Türpanel door_beta2alpha:
-	if Türpanel door_beta2alpha is GANZ:             
+Panel door_beta2alpha is a Türpanel and a part of door_beta2alpha with printed name "Panel door_beta2alpha".
+After putting the Sicherheitsausweis on Panel door_beta2alpha:
+	if Panel door_beta2alpha is GANZ:             
 		now door_beta2alpha is unlocked;
 		now door_beta2alpha is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_beta2alpha is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_beta2alpha is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel10 is a number that varies.
 Every Turn when the door_beta2alpha is open:
-	if counter >= 1 and door_beta2alpha is open and Türpanel door_beta2alpha is GANZ:
+	if counterPanel10 >= 1 and door_beta2alpha is open and Panel door_beta2alpha is GANZ:
 		say "Die Tür door_beta2alpha ist von selbst wieder zugegangen.";
 		now door_beta2alpha is closed;
 		now door_beta2alpha is locked;
-		now counter is 0;
+		now counterPanel10 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel10 is counterPanel10 + 1;
 
 [Panel zwischen Beta Junction und Engineering Lab]
 
 Instead of opening the door_beta2engin:
-	if door_beta2engin is locked and Türpanel door_beta2engin is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_beta2engin is locked and Türpanel door_beta2engin is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_beta2engin is locked and Panel door_beta2engin is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_beta2engin is locked and Panel door_beta2engin is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_beta2engin is a Türpanel and a part of door_beta2engin with printed name "Türpanel door_beta2engin".
-After putting the Sicherheitsausweis on Türpanel door_beta2engin:
-	if Türpanel door_beta2engin is GANZ:             
+Panel door_beta2engin is a Türpanel and a part of door_beta2engin with printed name "Panel door_beta2engin".
+After putting the Sicherheitsausweis on Panel door_beta2engin:
+	if Panel door_beta2engin is GANZ:             
 		now door_beta2engin is unlocked;
 		now door_beta2engin is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_beta2engin is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_beta2engin is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel11 is a number that varies.
 Every Turn when the door_beta2engin is open:
-	if counter >= 1 and door_beta2engin is open and Türpanel door_beta2engin is GANZ:
+	if counterPanel11 >= 1 and door_beta2engin is open and Panel door_beta2engin is GANZ:
 		say "Die Tür door_beta2engin ist von selbst wieder zugegangen.";
 		now door_beta2engin is closed;
 		now door_beta2engin is locked;
-		now counter is 0;
+		now counterPanel11 is 0;
 		stop;
-	now counter is counter + 1;
-
-[Panel zwischen Gamma Beta Corridor und Beta Junction]
-
-Instead of opening the door_gamma2beta:
-	if door_gamma2beta is locked and Türpanel door_gamma2beta is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_gamma2beta is locked and Türpanel door_gamma2beta is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
-
-Türpanel door_gamma2beta is a Türpanel and a part of door_gamma2beta with printed name "Türpanel door_gamma2beta".
-After putting the Sicherheitsausweis on Türpanel door_gamma2beta:
-	if Türpanel door_gamma2beta is GANZ:             
-		now door_gamma2beta is unlocked;
-		now door_gamma2beta is open;
-		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_gamma2beta is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
- 
-Every Turn when the door_gamma2beta is open:
-	if counter >= 1 and door_gamma2beta is open and Türpanel door_gamma2beta is GANZ:
-		say "Die Tür door_gamma2beta ist von selbst wieder zugegangen.";
-		now door_gamma2beta is closed;
-		now door_gamma2beta is locked;
-		now counter is 0;
-		stop;
-	now counter is counter + 1;
+	now counterPanel11 is counterPanel11 + 1;
 
 [Panel zwischen Storage Room und Cafeteria]
 
 Instead of opening the door_cafe2storage:
-	if door_cafe2storage is locked and Türpanel door_cafe2storage is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_cafe2storage is locked and Türpanel door_cafe2storage is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_cafe2storage is locked and Panel door_cafe2storage is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_cafe2storage is locked and Panel door_cafe2storage is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_cafe2storage is a Türpanel and a part of door_cafe2storage with printed name "Türpanel door_cafe2storage".
-After putting the Sicherheitsausweis on Türpanel door_cafe2storage:
-	if Türpanel door_cafe2storage is GANZ:             
+Panel door_cafe2storage is a Türpanel and a part of door_cafe2storage with printed name "Panel door_cafe2storage".
+After putting the Sicherheitsausweis on Panel door_cafe2storage:
+	if Panel door_cafe2storage is GANZ:             
 		now door_cafe2storage is unlocked;
 		now door_cafe2storage is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_cafe2storage is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_cafe2storage is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel13 is a number that varies.
 Every Turn when the door_cafe2storage is open:
-	if counter >= 1 and door_cafe2storage is open and Türpanel door_cafe2storage is GANZ:
+	if counterPanel13 >= 1 and door_cafe2storage is open and Panel door_cafe2storage is GANZ:
 		say "Die Tür door_cafe2storage ist von selbst wieder zugegangen.";
 		now door_cafe2storage is closed;
 		now door_cafe2storage is locked;
-		now counter is 0;
+		now counterPanel13 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel13 is counterPanel13 + 1;
 
 [Panel zwischen Storage Area und Delta AI]
 
 Instead of opening the door_storage2delta:
-	if door_storage2delta is locked and Türpanel door_storage2delta is GANZ:
-		say "Du musst das Türpanel benutzen";
-	otherwise if door_storage2delta is locked and Türpanel door_storage2delta is DEFEKT:
-		say "Türpanel ist defekt. Du musst die Tür anders öffnen.";
+	if door_storage2delta is locked and Panel door_storage2delta is GANZ:
+		say "Du musst das Panel benutzen";
+	otherwise if door_storage2delta is locked and Panel door_storage2delta is DEFEKT:
+		say "Panel ist defekt. Du musst die Tür anders öffnen.";
 
-Türpanel door_storage2delta is a Türpanel and a part of door_storage2delta with printed name "Türpanel door_storage2delta".
-After putting the Sicherheitsausweis on Türpanel door_storage2delta:
-	if Türpanel door_storage2delta is GANZ:             
+Panel door_storage2delta is a Türpanel and a part of door_storage2delta with printed name "Panel door_storage2delta".
+After putting the Sicherheitsausweis on Panel door_storage2delta:
+	if Panel door_storage2delta is GANZ:             
 		now door_storage2delta is unlocked;
 		now door_storage2delta is open;
 		say "Tür hat sich geöffnet.";
-	otherwise if Türpanel door_storage2delta is DEFEKT:
-		say "Türpanel ist beschädigt. Tür öffnet sich nicht.";
+	otherwise if Panel door_storage2delta is DEFEKT:
+		say "Panel ist beschädigt. Tür öffnet sich nicht.";
  
+counterPanel14 is a number that varies.
 Every Turn when the door_storage2delta is open:
-	if counter >= 1 and door_storage2delta is open and Türpanel door_storage2delta is GANZ:
+	if counterPanel14 >= 1 and door_storage2delta is open and Panel door_storage2delta is GANZ:
 		say "Die Tür door_storage2delta ist von selbst wieder zugegangen.";
 		now door_storage2delta is closed;
 		now door_storage2delta is locked;
-		now counter is 0;
+		now counterPanel14 is 0;
 		stop;
-	now counter is counter + 1;
+	now counterPanel14 is counterPanel14 + 1;
 
 
 [ARBEITSPAKET A 12 - FENSTER]
@@ -907,7 +962,7 @@ Fähre is an openable, enterable container.
 Fähre is fixed in place.
 The description of Fähre is "Die Raumfähre mit der Percy und Barry zur Lupus Station geflogen kamen."
 [TODO Fähre is in the Hangar.]
-Fähre is in the Hangar.
+Fähre is in the Docking Bay.
 
 [AP A 16 - Palette und Antigrav]
 
@@ -998,13 +1053,13 @@ After switching on the Drucklufthammer when the Drucklufthammer is GELADEN:
 Understand "connect [Drucklufthammer] to [Türpanel]" as connecting.  Connecting is an action applying to two things.
 [Was passiert beim Verbinden]
 Carry out connecting:
-	say "Der Drucklufthammer wird geladen..";
+	now Drucklufthammer is GELADEN;
+[Was wird beim Verbinden ausgegeben]
+Report connecting:
 	if Drucklufthammer is GELADEN:
 		say "Der Drucklufthammer war bereits geladen.";
 	otherwise:
 		say "Der Drucklufthammer ist wieder vollständig aufgeladen.";
-		now Drucklufthammer is GELADEN;
-	
 	
 
 [ARBEITSPAKET A 5 - SOLAR RÄUME]
@@ -1033,7 +1088,7 @@ Com Module <Solar Module> is inside the hauptebene.
 
 Control Module <Solar Module> is a room.
 The description of Control Module <Solar Module> is "Die Kontrollzentrale des Solar Modules. Westlich ist das Com Module. In diesem Raum gibt es eine Treppe die nach oben zum Pulsator Modul führt.".  
-Control Module <Solar Module> is inside the hauptebene. 
+Control Module <Solar Module> is inside the hauptebene.
 
 [Linke Seitenebene]
 [Region]
