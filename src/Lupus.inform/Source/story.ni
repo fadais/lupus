@@ -351,7 +351,7 @@ Every Turn when the door_gamma2xeno is open:
 		now door_gamma2xeno is closed;
 		now counter is 0;
 		stop;
-		now counter is counter + 1;
+	now counter is counter + 1;
 
 
 
@@ -1050,7 +1050,10 @@ Krankenbett is a Supporter in the Med Lab. Krankenbett is a Thing. The Descripti
 
 [Videoblog]
 Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place. Videoblog is a device.
-
+Understand "watch the Videoblog" as watching. watching is an action applying to one thing.
+Carry out watching:
+	say "Zusehen ist der Stationsarzt des Med Labs, vor seiner Kontamination. Er berichtet von einer biologischen Probe, die vom nahegelegenen Alien‐Planeten gewonnen wurde. Aufgrund eines Fehlers bei der Dekontamination der Raumanzüge sind zahlreiche Mitarbeiter der Station mit einem fremden Erreger kontaminiert worden, und es wurden immer mehr. Der Arzt hat es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren, in der durch den vom Engine‐Core erzeugtem blauen Feldes die Erreger deaktiviert werden können, so dass der Betroffene wieder gesund wird. Durch die Lautstärke des Abspielens wird der kontaminierte Arzt aufmerksam auf dich.";
+	[] 
 
 [Dekontaminationskabine]
 Dekontaminationskabine is container in Med Lab. It is fixed in place, enterable and openable. [Dekontaminationskabine is CLOSED.] The carrying capacity of Dekontaminationskabine is 1.
@@ -1274,3 +1277,45 @@ Pulsator Module <Solar Module> is south of Solar Module Room <Solar Module>.
 Solar Module Room <Solar Module is above Storage <Solar Module>.
 Control Module <Solar Module> is below Pulsator Module <Solar Module>.
 Storage <Solar Module> is above Damaged Module <Solar Module>.
+
+[Klatschen]
+Understand "clap" as clapping. Clapping is an action applying to nothing.
+Carry out clapping:
+	say "*Klatsch*";
+	repeat with mensch running through the Mensches in the location of the player: 
+		if mensch is KONTAMINIERT:
+			if mensch is UNATTENTIVE:
+				now mensch is ATTENTIVE;
+			if mensch is ATTENTIVE:
+				now mensch is FOLLOWING;				
+
+[Arbeitspaket A21 Person]
+[
+Mensch is a kind of person. 
+Mensch can be KONTAMINIERT or NOTKONTAMINIERT. Mensch is NOTKONTAMINIERT.
+Mensch can be UNATTENTIVE or ATTENTIVE or FOLLOWING. Mensch is UNATTENTIVE.
+turn_counter is a number that varies.
+konta, konta1 is a Mensch in the Hangar. konta is KONTAMINIERT. konta1 is KONTAMINIERT.
+[
+attentive is a truth state that varies. attentive is false.
+follow is a truth state that varies. follow is false.
+k_counter is a number that varies. 
+]
+[Schleife zur Prüfung der Kontaminierte]
+Every Turn:
+	[prüfe ob ein/mehrere Kontaminierte auf FOLLOWING gesetzt waren und bringe sie zum Spieler und setze sie zurück -> der Zug muss ein Raumwechsel gewesen sein, deshalb zug zähler zurück]
+	repeat with mensch running through the Mensches:
+		if mensch is FOLLOWING:
+			now mensch is in the location of the player;
+			now mensch is UNATTENTIVE;
+			now turn_counter is 0;
+			stop;
+	if alarm is DEAKTIV: [TODO hebel im storage room] [TODO saying] 
+		if the player is clapping or the player is watching or the player is switching on the Drucklufthammer:
+			say "";
+	[prüfe ob kontaminierte im Raum sind]
+	repeat with mensch running through the Mensches in the location of the player: 
+		if mensch is KONTAMINIERT:
+]
+		
+			
