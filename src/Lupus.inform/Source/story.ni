@@ -4,7 +4,7 @@
 [Einführungstext der beim ersten Start des Spiels kommt]
 when play begins:
 say "Die Lupus Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Der Pilot und Spezialist für Vakuumeinsätze Percy Braden sowie der Ingenieur Barry McIntyre befinden sich gerade auf dem Weg dahin. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.
-Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken Sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet.".
+Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet.".
 
 
 [ARBEITSPAKETE A 1, etc - ALLE RÄUME]
@@ -351,7 +351,7 @@ Every Turn when the door_gamma2xeno is open:
 		now door_gamma2xeno is closed;
 		now counter is 0;
 		stop;
-		now counter is counter + 1;
+	now counter is counter + 1;
 
 
 
@@ -400,7 +400,6 @@ Every Turn when the door_hang2gamma is open:
 		now door_hang2gamma is closed;
 		now door_hang2gamma is locked;
 		now counterPanel1 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel1 is counterPanel1 + 1;
 	
@@ -437,7 +436,6 @@ Every Turn when the door_gamma2gamma is open:
 		now door_gamma2gamma is closed;
 		now door_gamma2gamma is locked;
 		now counterPanel2 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel2 is counterPanel2 + 1;	
 
@@ -475,7 +473,6 @@ Every Turn when the door_gamma2gambeta is open:
 		now door_gamma2gambeta is closed;
 		now door_gamma2gambeta is locked;
 		now counterPanel3 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel3 is counterPanel3 + 1;
 
@@ -512,7 +509,6 @@ Every Turn when the door_gamma2beta is open:
 		now door_gamma2beta is closed;
 		now door_gamma2beta is locked;
 		now counterPanel12 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel12 is counterPanel12 + 1;
 
@@ -550,7 +546,6 @@ Every Turn when the door_delta2gamma is open:
 		now door_delta2gamma is closed;
 		now door_delta2gamma is locked;
 		now counterPanel4 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel4 is counterPanel4 + 1;
 
@@ -587,7 +582,6 @@ Every Turn when the door_delta2solar is open:
 		now door_delta2solar is closed;
 		now door_delta2solar is locked;
 		now counterPanel5 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel5 is counterPanel5 + 1;
 
@@ -624,7 +618,6 @@ Every Turn when the door_alpha2delta is open:
 		now door_alpha2delta is closed;
 		now door_alpha2delta is locked;
 		now counterPanel6 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel6 is counterPanel6 + 1;
 
@@ -662,7 +655,6 @@ Every Turn when the door_duty2alpha is open:
 		now door_duty2alpha is closed;
 		now door_duty2alpha is locked;
 		now counterPanel7 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel7 is counterPanel7 + 1;
 
@@ -699,7 +691,6 @@ Every Turn when the door_alpha2aldelta is open:
 		now door_alpha2aldelta is closed;
 		now door_alpha2aldelta is locked;
 		now counterPanel8 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel8 is counterPanel8 + 1;
 
@@ -736,7 +727,6 @@ Every Turn when the door_alpha2alpha is open:
 		now door_alpha2alpha is closed;
 		now door_alpha2alpha is locked;
 		now counterPanel9 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel9 is counterPanel9 + 1;
 	
@@ -773,7 +763,6 @@ Every Turn when the door_beta2alpha is open:
 		now door_beta2alpha is closed;
 		now door_beta2alpha is locked;
 		now counterPanel10 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel10 is counterPanel10 + 1;
 
@@ -810,7 +799,6 @@ Every Turn when the door_beta2engin is open:
 		now door_beta2engin is closed;
 		now door_beta2engin is locked;
 		now counterPanel11 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel11 is counterPanel11 + 1;
 
@@ -847,7 +835,6 @@ Every Turn when the door_cafe2storage is open:
 		now door_cafe2storage is closed;
 		now door_cafe2storage is locked;
 		now counterPanel13 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel13 is counterPanel13 + 1;
 
@@ -884,7 +871,6 @@ Every Turn when the door_storage2delta is open:
 		now door_storage2delta is closed;
 		now door_storage2delta is locked;
 		now counterPanel14 is 0;
-		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel14 is counterPanel14 + 1;
 
@@ -1007,9 +993,9 @@ After pushing Blinkender Knopf:
 [Klappe in der Wand] 
 Klappe in der Wand is a container. Klappe in der Wand is scenery. It is fixed in place and openable. Klappe in der Wand can be OPEN and CLOSED. 
 Before opening Klappe in der Wand:
-	say "Die Klappe lässt sich so nicht öffnen.";
+say "Die Klappe lässt sich so nicht öffnen.";
 After opening Klappe in der Wand:
-	say "Die Klappe ist aufgegangen. Dahinter befand sich eine Phiole mit rosafarbenem Nebel.";
+say "Die Klappe ist aufgegangen. Dahinter befand sich eine Phiole mit rosafarbenem Nebel.";
 
 [Phiole]
 Phiole is a thing in Klappe in der Wand. It is portable. Phiole can be NICHT ZERBROCHEN or ZERBROCHEN. Phiole is NICHT ZERBROCHEN. The description of Phiole is "[if Phiole is NICHT ZERBROCHEN] Eine Phiole mit rosafarbenen Nebel darin. [otherwise if Phiole is ZERBROCHEN] Eine zerbrochene, leere Phiole.".
@@ -1063,9 +1049,11 @@ Pult is a Supporter in the Med Lab. The Description of Pult is "Ein Pult auf dem
 Krankenbett is a Supporter in the Med Lab. Krankenbett is a Thing. The Description of the Krankenbett is "Ein bequem aussehendes Krankenbett". The carrying capacity of Krankenbett is 1. The Krankenbett is enterable.
 
 [Videoblog]
-Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place.
-Videoblog is a device.
-
+Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place. Videoblog is a device.
+Understand "watch the Videoblog" as watching. watching is an action applying to one thing.
+Carry out watching:
+	say "Zusehen ist der Stationsarzt des Med Labs, vor seiner Kontamination. Er berichtet von einer biologischen Probe, die vom nahegelegenen Alien‐Planeten gewonnen wurde. Aufgrund eines Fehlers bei der Dekontamination der Raumanzüge sind zahlreiche Mitarbeiter der Station mit einem fremden Erreger kontaminiert worden, und es wurden immer mehr. Der Arzt hat es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren, in der durch den vom Engine‐Core erzeugtem blauen Feldes die Erreger deaktiviert werden können, so dass der Betroffene wieder gesund wird. Durch die Lautstärke des Abspielens wird der kontaminierte Arzt aufmerksam auf dich.";
+	[] 
 
 [Dekontaminationskabine]
 Dekontaminationskabine is container in Med Lab. It is fixed in place, enterable and openable. [Dekontaminationskabine is CLOSED.] The carrying capacity of Dekontaminationskabine is 1.
@@ -1289,3 +1277,45 @@ Pulsator Module <Solar Module> is south of Solar Module Room <Solar Module>.
 Solar Module Room <Solar Module is above Storage <Solar Module>.
 Control Module <Solar Module> is below Pulsator Module <Solar Module>.
 Storage <Solar Module> is above Damaged Module <Solar Module>.
+
+[Klatschen]
+Understand "clap" as clapping. Clapping is an action applying to nothing.
+Carry out clapping:
+	say "*Klatsch*";
+	repeat with mensch running through the Mensches in the location of the player: 
+		if mensch is KONTAMINIERT:
+			if mensch is UNATTENTIVE:
+				now mensch is ATTENTIVE;
+			if mensch is ATTENTIVE:
+				now mensch is FOLLOWING;				
+
+[Arbeitspaket A21 Person]
+[
+Mensch is a kind of person. 
+Mensch can be KONTAMINIERT or NOTKONTAMINIERT. Mensch is NOTKONTAMINIERT.
+Mensch can be UNATTENTIVE or ATTENTIVE or FOLLOWING. Mensch is UNATTENTIVE.
+turn_counter is a number that varies.
+konta, konta1 is a Mensch in the Hangar. konta is KONTAMINIERT. konta1 is KONTAMINIERT.
+[
+attentive is a truth state that varies. attentive is false.
+follow is a truth state that varies. follow is false.
+k_counter is a number that varies. 
+]
+[Schleife zur Prüfung der Kontaminierte]
+Every Turn:
+	[prüfe ob ein/mehrere Kontaminierte auf FOLLOWING gesetzt waren und bringe sie zum Spieler und setze sie zurück -> der Zug muss ein Raumwechsel gewesen sein, deshalb zug zähler zurück]
+	repeat with mensch running through the Mensches:
+		if mensch is FOLLOWING:
+			now mensch is in the location of the player;
+			now mensch is UNATTENTIVE;
+			now turn_counter is 0;
+			stop;
+	if alarm is DEAKTIV: [TODO hebel im storage room] [TODO saying] 
+		if the player is clapping or the player is watching or the player is switching on the Drucklufthammer:
+			say "";
+	[prüfe ob kontaminierte im Raum sind]
+	repeat with mensch running through the Mensches in the location of the player: 
+		if mensch is KONTAMINIERT:
+]
+		
+			
