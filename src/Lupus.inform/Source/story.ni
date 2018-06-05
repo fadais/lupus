@@ -63,6 +63,10 @@ Gamma Delta Corridor is inside the Äussere Ring.
 
 Down of Gamma Delta Corridor is a door called door_gamma2com. 
 The description of door_gamma2com is "Wartungsluke zum Kommunikationsmodul.". 
+door_gamma2com is closed.
+door_gamma2com is Locked.
+door_gamma2com is not openable.
+door_gamma2com is not lockable.
 
 Southeast of Gamma Delta Corridor is door_gamma2gamma.
 
