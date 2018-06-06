@@ -1156,6 +1156,7 @@ Instead of pushing the Palette when Palette is HOVER:
 		stop;
 	if the printed name of room matches the text "door_beta2engin" or the printed name of room matches the text "door_alpha2med" or the printed name of room matches the text "door_delta2solar":
 		say "Die Palette ist in der Luke stecken geblieben und nun kannst du nicht mehr weiterspielen.";
+		[TODO Spielabbruch] 
 		stop;
 [Bewege Palette in den Raum]
 	now Palette is in room;
