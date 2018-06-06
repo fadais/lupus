@@ -63,6 +63,10 @@ Gamma Delta Corridor is inside the Äussere Ring.
 
 Down of Gamma Delta Corridor is a door called door_gamma2com. 
 The description of door_gamma2com is "Wartungsluke zum Kommunikationsmodul.". 
+door_gamma2com is closed.
+door_gamma2com is Locked.
+door_gamma2com is not openable.
+door_gamma2com is not lockable.
 
 Southeast of Gamma Delta Corridor is door_gamma2gamma.
 
@@ -400,6 +404,7 @@ Every Turn when the door_hang2gamma is open:
 		now door_hang2gamma is closed;
 		now door_hang2gamma is locked;
 		now counterPanel1 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel1 is counterPanel1 + 1;
 	
@@ -436,6 +441,7 @@ Every Turn when the door_gamma2gamma is open:
 		now door_gamma2gamma is closed;
 		now door_gamma2gamma is locked;
 		now counterPanel2 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel2 is counterPanel2 + 1;	
 
@@ -473,6 +479,7 @@ Every Turn when the door_gamma2gambeta is open:
 		now door_gamma2gambeta is closed;
 		now door_gamma2gambeta is locked;
 		now counterPanel3 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel3 is counterPanel3 + 1;
 
@@ -509,6 +516,7 @@ Every Turn when the door_gamma2beta is open:
 		now door_gamma2beta is closed;
 		now door_gamma2beta is locked;
 		now counterPanel12 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel12 is counterPanel12 + 1;
 
@@ -546,6 +554,7 @@ Every Turn when the door_delta2gamma is open:
 		now door_delta2gamma is closed;
 		now door_delta2gamma is locked;
 		now counterPanel4 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel4 is counterPanel4 + 1;
 
@@ -582,6 +591,7 @@ Every Turn when the door_delta2solar is open:
 		now door_delta2solar is closed;
 		now door_delta2solar is locked;
 		now counterPanel5 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel5 is counterPanel5 + 1;
 
@@ -618,6 +628,7 @@ Every Turn when the door_alpha2delta is open:
 		now door_alpha2delta is closed;
 		now door_alpha2delta is locked;
 		now counterPanel6 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel6 is counterPanel6 + 1;
 
@@ -655,6 +666,7 @@ Every Turn when the door_duty2alpha is open:
 		now door_duty2alpha is closed;
 		now door_duty2alpha is locked;
 		now counterPanel7 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel7 is counterPanel7 + 1;
 
@@ -691,6 +703,7 @@ Every Turn when the door_alpha2aldelta is open:
 		now door_alpha2aldelta is closed;
 		now door_alpha2aldelta is locked;
 		now counterPanel8 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel8 is counterPanel8 + 1;
 
@@ -727,6 +740,7 @@ Every Turn when the door_alpha2alpha is open:
 		now door_alpha2alpha is closed;
 		now door_alpha2alpha is locked;
 		now counterPanel9 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel9 is counterPanel9 + 1;
 	
@@ -763,6 +777,7 @@ Every Turn when the door_beta2alpha is open:
 		now door_beta2alpha is closed;
 		now door_beta2alpha is locked;
 		now counterPanel10 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel10 is counterPanel10 + 1;
 
@@ -799,6 +814,7 @@ Every Turn when the door_beta2engin is open:
 		now door_beta2engin is closed;
 		now door_beta2engin is locked;
 		now counterPanel11 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel11 is counterPanel11 + 1;
 
@@ -835,6 +851,7 @@ Every Turn when the door_cafe2storage is open:
 		now door_cafe2storage is closed;
 		now door_cafe2storage is locked;
 		now counterPanel13 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel13 is counterPanel13 + 1;
 
@@ -871,6 +888,7 @@ Every Turn when the door_storage2delta is open:
 		now door_storage2delta is closed;
 		now door_storage2delta is locked;
 		now counterPanel14 is 0;
+		now player have the Sicherheitsausweis;
 		stop;
 	now counterPanel14 is counterPanel14 + 1;
 
@@ -1049,7 +1067,11 @@ Pult is a Supporter in the Med Lab. The Description of Pult is "Ein Pult auf dem
 Krankenbett is a Supporter in the Med Lab. Krankenbett is a Thing. The Description of the Krankenbett is "Ein bequem aussehendes Krankenbett". The carrying capacity of Krankenbett is 1. The Krankenbett is enterable.
 
 [Videoblog]
-Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place. Videoblog is a device.
+Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place. Videoblog is a device. Videoblog is switched off.
+
+Instead of switching on the Videoblog when the Videoblog is switched off:
+	say "Zusehen ist der Stationsarzt des Med Labs, vor seiner Kontamination. Er berichtet von einer biologischen Probe, die vom nahegelegenen Alien‐Planeten gewonnen wurde. Aufgrund eines Fehlers bei der Dekontamination der Raumanzüge sind zahlreiche Mitarbeiter der Station mit einem fremden Erreger kontaminiert worden, und es wurden immer mehr. Der Arzt hat es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren, in der durch den vom Engine‐Core erzeugtem blauen Feldes die Erreger deaktiviert werden können, so dass der Betroffene wieder gesund wird. Durch die Lautstärke des Abspielens wird der kontaminierte Arzt aufmerksam auf dich.";
+	
 Understand "watch the Videoblog" as watching. watching is an action applying to one thing.
 Carry out watching:
 	say "Zusehen ist der Stationsarzt des Med Labs, vor seiner Kontamination. Er berichtet von einer biologischen Probe, die vom nahegelegenen Alien‐Planeten gewonnen wurde. Aufgrund eines Fehlers bei der Dekontamination der Raumanzüge sind zahlreiche Mitarbeiter der Station mit einem fremden Erreger kontaminiert worden, und es wurden immer mehr. Der Arzt hat es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren, in der durch den vom Engine‐Core erzeugtem blauen Feldes die Erreger deaktiviert werden können, so dass der Betroffene wieder gesund wird. Durch die Lautstärke des Abspielens wird der kontaminierte Arzt aufmerksam auf dich.";
@@ -1279,6 +1301,7 @@ Solar Module Room <Solar Module is above Storage <Solar Module>.
 Control Module <Solar Module> is below Pulsator Module <Solar Module>.
 Storage <Solar Module> is above Damaged Module <Solar Module>.
 
+[
 [Klatschen]
 Understand "clap" as clapping. Clapping is an action applying to nothing.
 Carry out clapping:
@@ -1291,7 +1314,7 @@ Carry out clapping:
 				now mensch is FOLLOWING;				
 
 [Arbeitspaket A21 Person]
-[
+
 Mensch is a kind of person. 
 Mensch can be KONTAMINIERT or NOTKONTAMINIERT. Mensch is NOTKONTAMINIERT.
 Mensch can be UNATTENTIVE or ATTENTIVE or FOLLOWING. Mensch is UNATTENTIVE.
