@@ -16,14 +16,6 @@ Innere Ring is a Region.
 COM-Modul is a Region.
 Dienstmodul is a Region.
 
-[Raum Docking Bay]
-Docking Bay is a room.
-Down of Hangar is a door called door_hang2dock. 
-The description of door_hang2dock is "Tür zur Docking Bay.". 
-Down of door_hang2dock is Docking Bay. 
-The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
-Docking Bay is inside the Hangarmodul.
-
 [Raum Hangar]
 Hangar is a room.
 Up of Hangar is a door called door_hang2gamma. 
@@ -34,6 +26,13 @@ The door_hang2gamma is LOCKED.
 The door_hang2gamma is CLOSED.
 The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden können. Zusätzlich ist ein Umkleideraum enthalten. Darunter befindet sich der Docking Bay und darüber die Gamma Junction.". 
 Hangar is inside the Hangarmodul.
+
+[Raum Docking Bay]
+Docking Bay is a room.
+The description of door_hang2dock is "Tür zur Docking Bay.". 
+door_hang2dock is above Docking Bay and below Hangar.
+The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
+Docking Bay is inside the Hangarmodul.
 
 [Raum Gamma Junction und Türen]
 Gamma Junction is a room. 
@@ -970,6 +969,9 @@ Fenster Main Generator is a Deckenfenster in Main Generator. The description of 
 [AP A 17]
 [Alarm]
 Alarm is a backdrop. Alarm can be AKTIV or DEAKTIV. Alarm is AKTIV. 
+Every Turn:
+	if Alarm is AKTIV:
+		say "Der Alarm ist sehr laut zu hören";
 [After looking at Videoblog:
 now Alarm is AKTIV;
 Kontaminierte hören nun bei allen Aktionen die Geräusche verursachen
@@ -1027,7 +1029,7 @@ now Phiole is ZERBROCHEN;
 now Blinkender Knopf is BLINKT NICHT;
 
 [Spind]
-Spind is a container in Hangar with printed name "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed and openable. Spind is fixed in place. 
+Spind is a container in Hangar with description "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed and openable. Spind is fixed in place. 
 
 [MobiTab]
 Mobitab is a device in Spind. The Description of Mobitab is "Ein Mobitab. Eine Art Tablet mit vielen nützlichen Funktionen. Es kann mit einem Türpanel verbunden werden, um es zu beschädigen.". Mobitab is portable.
@@ -1071,6 +1073,8 @@ Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Sta
 
 Instead of switching on the Videoblog when the Videoblog is switched off:
 	say "Zusehen ist der Stationsarzt des Med Labs, vor seiner Kontamination. Er berichtet von einer biologischen Probe, die vom nahegelegenen Alien‐Planeten gewonnen wurde. Aufgrund eines Fehlers bei der Dekontamination der Raumanzüge sind zahlreiche Mitarbeiter der Station mit einem fremden Erreger kontaminiert worden, und es wurden immer mehr. Der Arzt hat es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren, in der durch den vom Engine‐Core erzeugtem blauen Feldes die Erreger deaktiviert werden können, so dass der Betroffene wieder gesund wird. Durch die Lautstärke des Abspielens wird der kontaminierte Arzt aufmerksam auf dich.";
+	if alarm is DEAKTIV:
+		react;
 	
 
 [Dekontaminationskabine]
@@ -1108,7 +1112,7 @@ o   Setze Maschinenkern Energielevel auf ORANGE
 
 
 [AP A 11 - Fähre]
-Fähre is an openable, enterable container. 
+Fähre is an openable, enterable, closed, opaque container. 
 Fähre is fixed in place.
 The description of Fähre is "Die Raumfähre mit der Percy und Barry zur Lupus Station geflogen kamen."
 [TODO Fähre is in the Hangar.]
@@ -1190,11 +1194,8 @@ Instead of switching on Drucklufthammer when the Drucklufthammer is ENTLADEN:
 [Nach dem Einschalten sind alle Kontaminierten im Raum aufmerksam und er ist entladen]
 After switching on the Drucklufthammer when the Drucklufthammer is GELADEN:
 	say "Der Druckluft hat ein lautes Geräusch erzeugt.";
-	[Schleife läuft durch jeden Kontaminierten im Raum und setzt ihn auf aufmerksam]
-	[
-	repeat with kontaminierter running through the kontaminierte in the location of the player: 
-		now kontaminierter is ATTENTIVE; [TODO was wenn Kontaminierter bereits aufmerksam war]
-		]
+	[Kontaminierte reagieren auf den Hammer]
+	react;
 	now the Drucklufthammer is ENTLADEN;
 	now the Drucklufthammer is switched off;
 	say "Der Akku des Drucklufthammers ist jetzt leer.";
@@ -1297,45 +1298,125 @@ Solar Module Room <Solar Module is above Storage <Solar Module>.
 Control Module <Solar Module> is below Pulsator Module <Solar Module>.
 Storage <Solar Module> is above Damaged Module <Solar Module>.
 
-[
+
 [Klatschen]
 Understand "clap" as clapping. Clapping is an action applying to nothing.
 Carry out clapping:
 	say "*Klatsch*";
+	[reagiere nur bei ausgeschaltetem Alarm]
+	if alarm is DEAKTIV:
+		react;		
+	[DEBUG]
+	[
+	react;
+	]
+[Arbeitspaket A21 Person]
+[Methode für die Kontaminierten die Geräusche hören]
+To aufmerksam werden:
 	repeat with mensch running through the Mensches in the location of the player: 
 		if mensch is KONTAMINIERT:
 			if mensch is UNATTENTIVE:
+				now mensch is ATTENTIVE;	
+					
+[Methode für die Reaktion der Kontaminierten auf Aktionen]
+To react:
+	repeat with mensch running through the Mensches in the location of the player: 
+		if mensch is KONTAMINIERT:
+			now hasReacted is TRUE;
+			if mensch is UNATTENTIVE:
 				now mensch is ATTENTIVE;
-			if mensch is ATTENTIVE:
-				now mensch is FOLLOWING;				
+			else if mensch is ATTENTIVE:
+				now mensch is FOLLOWING;
+				stop;
+			else if mensch is FOLLOWING:
+				kontaminiert werden;
+				stop;
+				
+[Methode für die Kontamination des Spielers]
+To kontaminiert werden:
+	say "Leider wurdest du kontaminiert und kannst deshalb das Spiel nicht fortsetzen. -GAME OVER-";
+	end the story;
+	
+[Methode für die Verfolgung des Spielers durch Kontaminierte]
+To kontaminierte folgen:
+	[Prüfe ob ein/mehrere Kontaminierte auf FOLLOWING gesetzt waren und bringe sie zum Spieler]
+	repeat with mensch running through the Mensches:
+		if mensch is FOLLOWING:
+			[Kontaminierter verfolgt den Spieler + Reset]
+			now mensch is in the location of the player;
+			now mensch is UNATTENTIVE;
+			stop;
+			
+[setzt die kontaminierten zurück]
+To reset kontaminierte:
+	repeat with mensch running through the Mensches: 
+		if mensch is KONTAMINIERT:
+			now mensch is UNATTENTIVE;
 
-[Arbeitspaket A21 Person]
-
+[Mensch (Oberklasse von Kontaminierte)]
 Mensch is a kind of person. 
 Mensch can be KONTAMINIERT or NOTKONTAMINIERT. Mensch is NOTKONTAMINIERT.
 Mensch can be UNATTENTIVE or ATTENTIVE or FOLLOWING. Mensch is UNATTENTIVE.
-turn_counter is a number that varies.
-konta, konta1 is a Mensch in the Hangar. konta is KONTAMINIERT. konta1 is KONTAMINIERT.
-[
-attentive is a truth state that varies. attentive is false.
-follow is a truth state that varies. follow is false.
-k_counter is a number that varies. 
-]
-[Schleife zur Prüfung der Kontaminierte]
+[Kontaminierte]
+Kontaminierter is a kind of Mensch. Kontaminierter is KONTAMINIERT.
+[TEST]
+konta, konta1 is a Kontaminierter in the Hangar.
+[/TEST] 
+[Rundenzähler für Kontaminierte]
+turn_counter is a number that varies. turn_counter is 0.
+[Modus der Kontaminierten im Raum: 0 = nicht kontam., 1 = unattentive, 2 = attentive, 3 = follow]
+mode is a number that varies. mode is 0.
+[Kontaminierter hat bereits diese Runde reagiert auf eine Aktion]
+hasReacted is a truth state that varies. hasReacted is FALSE.
+[Ist True wenn der Raum diese Runde gewechselt wurde]
+room_change is a truth state that varies. room_change is FALSE.
+
+[Nach Raumwechsel -> Counter und Modus der Kontaminierten zurücksetzen]
+After going:
+	now turn_counter is 0;
+	now mode is 0;
+	now room_change is TRUE;
+	kontaminierte folgen;
+	reset kontaminierte;
+
+[Schleife zur Prüfung der Kontaminierten]
 Every Turn:
-	[prüfe ob ein/mehrere Kontaminierte auf FOLLOWING gesetzt waren und bringe sie zum Spieler und setze sie zurück -> der Zug muss ein Raumwechsel gewesen sein, deshalb zug zähler zurück]
-	repeat with mensch running through the Mensches:
-		if mensch is FOLLOWING:
-			now mensch is in the location of the player;
-			now mensch is UNATTENTIVE;
-			now turn_counter is 0;
-			stop;
-	if alarm is DEAKTIV: [TODO hebel im storage room] [TODO saying] 
-		if the player is clapping or the player is watching or the player is switching on the Drucklufthammer:
-			say "";
-	[prüfe ob kontaminierte im Raum sind]
-	repeat with mensch running through the Mensches in the location of the player: 
+	if room_change is TRUE: [Raumwechsel zählt nicht als Zug]
+		now room_change is FALSE;
+		stop;
+	[Modus der Kontaminierten]	
+	repeat with mensch running through the Mensches in the location of the player:
 		if mensch is KONTAMINIERT:
-]
+			now mode is 1;
+			if mensch is ATTENTIVE:
+				now mode is 2;		
+			else if mensch is FOLLOWING:
+				now mode is 3;	
+	[DEBUG]
+	say "Mode is [mode]. | ";
+	say "hasReacted is [hasReacted]. | ";
+	say "turnCounter is [turn_counter]. | ";
+	[/DEBUG]
+	[Interaktion mit Kontaminierten je nach Modus und Rundenzähler] 						
+	if mode is 0: [keine Kontamination]
+		stop;
+	if mode is greater than 0: [Kontaminierte im Raum]
+		now turn_counter is turn_counter + 1;
+		if mode is 1: [Unattentive]
+			if turn_counter is greater than 1: [2 Züge ohne Geräusche -> GAME OVER] 
+				kontaminiert werden;
+		if mode is greater than 1: [Attentive / Follow]
+			if hasReacted is FALSE: [diese Runde war keine Aktion mit Raumwechsel] 
+				react;
+	 [flags zurücksetzen]
+	now hasReacted is FALSE;
+
+			
+			
+			
+		
+
+	
+		
 		
 			
