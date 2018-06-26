@@ -1,5 +1,7 @@
 "Lupus" by Amina Mustafi, Fadi Dokmak, Ibrahim Karaki
 
+Storage Room is a room.
+
 [AP A 24 - Einführung]
 [Einführungstext der beim ersten Start des Spiels kommt]
 when play begins:
@@ -182,12 +184,59 @@ Storage Room is a room.
 The description of Storage Room is "Ein Lagerraum. Es gibt ein Bodenfenster im Raum. Darunter befindet sich die Cafeteria und nordöstlich das Delta Greenhouse. Eine Treppe führt hoch zur Alpha AI, allerdings ist sie durch eine Luke versperrt.".
 Storage Room is inside the Äussere Ring.
 
+[Hebel für Tür zum Alpha AI Raum -> Links = GESPERRT, rechts = ENTSPERRT]
+hebel is a fixed in place thing in the storage room. hebel can be LEFT or RIGHT. hebel is LEFT.
+[Ziehen des Hebels]
+Instead of pulling hebel:
+	if hebel is LEFT:
+		now hebel is RIGHT;
+		[Kontaminierte reagieren auf den Hebel]
+		react;
+		say "Ein lautes knarrendes Geräusch ist bei Ziehen des Hebels zu hören.[line break]";
+		say "Die Schleuse für die Luke zum Alpha-AI Raum wurde entriegelt. Du kannst die Luke nun öffnen.";
+	else:
+		if door_storage2alpha is open:
+			say "Die Luke zum Alpha-AI Raum ist noch offen. Du musst sie erst schließen, damit du sie sperren kannst.";
+			stop;
+		[Kontaminierte reagieren auf den Hebel]
+		say "Ein lautes knarrendes Geräusch ist bei Ziehen des Hebels zu hören.[line break]";
+		react;
+		say "Die Schleuse für die Luke zum Alpha-AI Raum wurde verriegelt.";
+		now hebel is LEFT;
+		
+[Luke versperrt sich nach 1 Zug automatisch (außer sie wurde geöffnet)]
+luke_counter is a number that varies. luke_counter is 0.
+Every Turn:
+	[Hebel wurde vor über einer Runde umgelegt und die Luke ist noch zu -> Versperren]
+	if hebel is RIGHT and door_storage2alpha is closed and luke_counter is greater than 0:
+		say "Die Schleuse für die Luke zum Alpha-AI Raum hat sich automatisch verriegelt.";
+		now hebel is LEFT;
+		now luke_counter is 0;
+	[Hebel wurde diese runde umgelegt -> counter inkremenent]
+	else if hebel is RIGHT and door_storage2alpha is closed and luke_counter is 0:
+		now luke_counter is luke_counter + 1;	
+
+[Luke zum Alpha AI Raum -> nur durch Hebel öffenbar]
 Up of Storage Room is a door called door_storage2alpha.
 The description of door_storage2alpha is "Eine Luke, die hoch zur Alpha AI führt.".
+
+[Tür zur Cafeteria]
 Down of Storage Room is a Sicherheitsbarriere called door_cafe2storage.
 The description of door_cafe2storage is "Eine Tür zur Cafeteria".
 
-
+[Luke zur Alpha AI -> nur wenn Hebel umgelegt (RIGHT) darf die Tür aufgehen]
+Instead of opening door_storage2alpha:
+	if door_storage2alpha is open:
+		say "Die Luke ist bereits offen.";
+		stop;
+	if hebel is LEFT:
+		say "Die Schleuse ist noch gesperrt. Du musst den Hebel ziehen, um die Schleuse zu entriegeln.";
+		stop;
+	else:
+		say "Die Luke ist nun offen.";
+		now door_storage2alpha is open;
+		
+		
 [Alpha AI]
 Alpha AI is a room.
 Northwest of door_alpha2trans is Alpha AI.
@@ -1036,34 +1085,31 @@ Alarm is a backdrop. Alarm can be AKTIV or DEAKTIV. Alarm is AKTIV.
 Every Turn:
 	if Alarm is AKTIV:
 		say "Der Alarm ist sehr laut zu hören";
-[After looking at Videoblog:
-now Alarm is AKTIV;
-Kontaminierte hören nun bei allen Aktionen die Geräusche verursachen
--       der Alarm verstummt nicht, wenn der Blinkende Knopf bereits einmal gedrückt wurde, also den Zustand AUS hat
--             nach Anschauen des Videoblogs im MedLab geht der Alarm wieder an(Szene 2), also bekommt den Zustand AN
-                -        Kontaminierte reagieren nur noch auf Geräusche, die den Alarm übertönen
--               Kontaminierte reagieren verschieden je nach Alarm Zustand
--             Wenn der Alarm den Zustand AN hat: 
-                -        Kontaminierte reagieren nur auf Geräusche die lauter als der Alarm sind: Drucklufthammer benutzen, Hebel im Storage Room  
--     anderen Aktionen (auch mit Geräuschen, außer oben genannte) werden von den Kontaminierten nicht gehört, also werden sie nicht aufmerksam und werden sie wie Aktionen ohne Geräusche behandelt (nach 2 Zügen wird man kontaminiert, kein folgen)
--       Wenn der Alarm den Zustand AUS hat:
--       Alle Aktionen, die Geräusche verursache (Ansprechen, klatschen, videoblog, drucklufthammer, knarrendes geräusch eines Hebels) wird der Kontaminierte aufmerksam
--       Außerhalb des Inneren und äußeren Ring ist der Alarm nicht zu hören, also hat er dort keinen Einfluss (bzw. ist AUS)]
-
-
 
 [Pfeifen]
-Pfeifen is a backdrop. Pfeifen can be AKTIV or DEAKTIV. Pfeifen is DEAKTIV. Pfeifen is in Gamma Junction and Xeno Lab. 
-After entering the Xeno Lab:
-now Pfeifen is AKTIV;
-After opening the door_gamma2xeno:
-now Pfeifen is AKTIV in Gamma Junction;
-After closing the door_gamma2xeno:
-now Pfeifen is DEAKTIV in Gamma Junction;
+Pfeifen is a backdrop. Pfeifen can be AKTIV or DEAKTIV. Pfeifen is DEAKTIV. 
+[TODO nur in Szene 1!!]
+Every Turn:
+	[Pfeifen ist im XenoLab zu hören (in Szene 1)]
+	if the player is in the Xeno Lab:
+		now Pfeifen is AKTIV;
+	else:
+		now Pfeifen is DEAKTIV;
+	[Pfeifen ist in der Gamma Junction zu hören, wenn die Xeno Luke offen ist (nur Szene 1)]
+	if the player is in the Gamma Junction AND door_gamma2xeno is open:
+		now Pfeifen is AKTIV;
+	else:
+		now Pfeifen is DEAKTIV;
+	[Meldung ausgeben wenn Pfeifen aktiv -> Kontaminierte reagieren auchd darauf]
+	if Pfeifen is AKTIV:
+		say "Es ist ein lautes Pfeifen zu hören.";
+		react;
 
+[AP A 18]
 [Blinkender Knopf]
 Blinkender Knopf is a thing in Xeno Lab. It is fixed in place. Blinkender Knopf can be BLINKT or BLINKT NICHT. Blinkender Knopf is BLINKT.
 The description of Blinkender Knopf is "[if Blinkender Knopf is BLINKT] Ein blinkender Knopf ‐ vielleicht verstummt das Pfeifen ja, wenn man ihn drückt. [otherwise if Blinkender Knopf is BLINKT NICHT] Ein Knopf. Er hat anscheinend keine Funktion.".
+[Nach dem Drücken auf den Blinkenden Knopf ]
 After pushing Blinkender Knopf:
 	if Blinkender Knopf is BLINKT:
 		now Pfeifen is DEAKTIV;
@@ -1073,24 +1119,27 @@ After pushing Blinkender Knopf:
 	otherwise if Blinkender Knopf is BLINKT NICHT:
 		say "Der Knopf scheint keine Funktion zu haben.[line break]";
 
-[AP A 18]
 [Klappe in der Wand] 
 Klappe in der Wand is a container. Klappe in der Wand is scenery. It is fixed in place and openable. Klappe in der Wand can be OPEN and CLOSED. 
-Before opening Klappe in der Wand:
-say "Die Klappe lässt sich so nicht öffnen.[line break]";
+[Klappe kann manuell nicht geöffnet werden]
+Instead opening Klappe in der Wand:
+	say "Die Klappe lässt sich so nicht öffnen.[line break]";
+	stop;
+[Nach dem Öffnen (automatisch) soll die Meldung kommen]
 After opening Klappe in der Wand:
-say "Die Klappe ist aufgegangen. Dahinter befand sich eine Phiole mit rosafarbenem Nebel.[line break]";
+	say "Die Klappe ist aufgegangen. Dahinter befand sich eine Phiole mit rosafarbenem Nebel.[line break]";
 
 [Phiole]
 Phiole is a thing in Klappe in der Wand. It is portable. Phiole can be NICHT ZERBROCHEN or ZERBROCHEN. Phiole is NICHT ZERBROCHEN. The description of Phiole is "[if Phiole is NICHT ZERBROCHEN] Eine Phiole mit rosafarbenen Nebel darin. [otherwise if Phiole is ZERBROCHEN] Eine zerbrochene, leere Phiole.".
 Before taking the Phiole:
 now Phiole is NICHT ZERBROCHEN;
 After taking the Phiole:
-say "Beim Versuch die Phiole zu nehmen fällt sie auf den Boden und zerbricht. Dabei wird rosafarbener Nebel freigesetzt und Percy wird kontaminiert.[line break]";
+say "Beim Versuch die Phiole zu nehmen fällt sie auf den Boden und zerbricht. Dabei wird rosafarbener Nebel freigesetzt, der Percy kontaminiert...[line break]";
 now Phiole is in Xeno Lab;
 now Phiole is ZERBROCHEN;
-[now Percy is KONTAMINIERT;]
+now Percy is KONTAMINIERT;
 now Blinkender Knopf is BLINKT NICHT;
+[TODO Spielerwechsel + Szenenwechsel]
 
 [Spind]
 Spind is a container in Hangar with description "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed and openable. Spind is fixed in place. 
@@ -1154,39 +1203,38 @@ Instead of switching on the Videoblog when the Videoblog is switched off:
 		react;
 	
 
-[Dekontaminationskabine]
-Dekontaminationskabine is container in Med Lab. It is fixed in place, enterable and openable. [Dekontaminationskabine is CLOSED.] The carrying capacity of Dekontaminationskabine is 1.
-Dekontaminationskabine can be AKTIVIERT, DEAKTIVIERT, EMPTY or FULL.  The description of Dekontaminationskabine is "Eine Dekontaminationskabine. Wenn man einen Kontaminierten hineinlockt und die Tür hinter ihm schließt, könnte man ihn heilen.".
-
-[Before closing Dekontaminationskabine:
-if Dekontaminationskabine is EMPTY and AKTIVIERT:
-say "Kabine ist leer. Es kann keine Dekontamination stattfinden.";
-otherwise if Dekontaminationskabine is FULL and Maschinenkern is GREEN:
-say "Dekontamination kann starten";
-otherwise if Dekontaminationskabine is 
-
-After closing Dekontaminationskabine:
-say "Die Dekontamination war erfolgreich. Percy ist geheilt!";
-now player is NICHT KONTAMINIERT;
-now Maschinenkern is ORANGE;
-now door_brid2brief is UNLOCKED;
+[	AP A20
+	 Dekontaminationskabine
 ]
-[
+Dekontaminationskabine is container in Med Lab. 
+It is fixed in place, enterable and openable.   
+The description of Dekontaminationskabine is "Eine Dekontaminationskabine. Wenn man einen Kontaminierten hineinlockt und die Tür hinter ihm schließt, könnte man ihn heilen.".
 
--       BEFORE: bevor man sie schließt:
-o   Falls die Kabine leer ist, passiert nichts
-o   Falls Percy in der Kabine ist UND Maschinenkern Energielevel = GREEN, dann startet die Dekontamination
-o   Falls ein anderer Kontaminierten (NICHT PERCY) drin ist UND Maschinenkern Energielevel = GREEN, dann kommt „Das ist nicht Percy! Du hast verloren!“ (Spiel beendet)
-o   Falls mehrere Kontaminierte in der Kabine sind UND Maschinenkern Energielevel = HIGH: „Es kann nur ein Kontaminierter gleichzeitig geheilt werden.“
-o   Falls Maschinenkern Energielevel != GREEN: „Die Energie der Station reicht nicht mehr dafür aus.“
--       AFTER: nach der Dekontamination
--       Gebe folgende Meldung aus: „Die Dekontamination war erfolgreich. Percy ist geheilt!“
--        Setze Percy kontaminiert auf FALSE
-o   Setze Maschinenkern Energielevel auf ORANGE
-·        
--      Entriegle die door_brid2brief, sodass sie durch das Mobitab geöffnet werden kann]
-
-
+[beim Schließen wird der Kontaminierte in der Kabine geheilt -> es muss Percy sein + sie darf nicht leer sein + kein weiterer im Raum -> sonst abbruch + counter reset
+ ]
+kontam_counter is a number that varies. kontam_counter is 0.
+Instead of closing Dekontaminationskabine:
+	repeat with kontam running through the Mensches in the Dekontaminationskabine:
+		now kontam_counter is kontam_counter + 1;
+		[Es befindet sich ein Kontaminierter in der Kabine (NICHT Percy)]
+		if kontam is not percy:
+			say "Es sollte sich nur Percy in der Kabine befinden, damit die Dekontamination funktioniert. [line break]Dekontamination wird abgebrochen..";
+			now kontam_counter is 0;
+			stop;
+	[Kabine ist leer]
+	if kontam_counter is 0:
+		say "Die Kabine ist leer. [line break]Dekontamination wird abgebrochen..";
+		now kontam_counter is 0;
+		stop;
+	[mehr als ein Kontaminierter in der Kabine]
+	if kontam_counter is greater than 1:
+		say "Es darf sich nur ein Kontaminierter in der Kabine befinden. [line break]Dekontamination wird abgebrochen..";
+		now kontam_counter is 0;
+		stop;
+	[nur Percy im Raum]
+	now Dekontaminationskabine is closed;
+	say "Die Dekontamination von Percy war erfolgreich und nun ist er wieder gesund."; 
+	now Percy is NOTKONTAMINIERT;
 
 [AP A 11 - Fähre]
 Fähre is an openable, enterable, closed, opaque container. 
@@ -1387,7 +1435,6 @@ Carry out clapping:
 	[
 	react;
 	]
-[Arbeitspaket A21 Person]
 [Methode für die Kontaminierten die Geräusche hören]
 To aufmerksam werden:
 	repeat with mensch running through the Mensches in the location of the player: 
@@ -1430,17 +1477,13 @@ To reset kontaminierte:
 		if mensch is KONTAMINIERT:
 			now mensch is UNATTENTIVE;
 
-[Mensch (Oberklasse von Kontaminierte)]
+[	AP A21
+	 Mensch (Oberklasse von Kontaminierte)
+]
 Mensch is a kind of person. 
 Mensch can be KONTAMINIERT or NOTKONTAMINIERT. Mensch is NOTKONTAMINIERT.
 Mensch can be UNATTENTIVE or ATTENTIVE or FOLLOWING. Mensch is UNATTENTIVE.
-[Kontaminierte]
-Kontaminierter is a kind of Mensch. Kontaminierter is KONTAMINIERT.
-[TEST]
-[
-konta, konta1 is a Kontaminierter in the Hangar.
-]
-[/TEST] 
+
 [Rundenzähler für Kontaminierte]
 turn_counter is a number that varies. turn_counter is 0.
 [Modus der Kontaminierten im Raum: 0 = nicht kontam., 1 = unattentive, 2 = attentive, 3 = follow]
@@ -1491,3 +1534,20 @@ Every Turn:
 				react;
 	 [flags zurücksetzen]
 	now hasReacted is FALSE;
+	
+[	AP A22
+	 Kontaminierte
+]
+Kontaminierter is a kind of Mensch. 
+Kontaminierter is KONTAMINIERT.
+[TEST]
+[
+konta, konta1 is a Kontaminierter in the Hangar.
+]
+[/TEST] 
+
+[	AP A23
+	 Percy und Barry
+]
+Percy is a Mensch. 
+Barry is a Mensch.
