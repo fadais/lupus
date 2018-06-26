@@ -19,7 +19,7 @@ Dienstmodul is a Region.
 [Raum Hangar]
 Hangar is a room.
 Up of Hangar is a door called door_hang2gamma. 
-The description of door_hang2gamma is "Eine Tür zum Hangar.". 
+The description of door_hang2gamma is "Du kannst durch diese Tür ins Gamma Junction vom Hangar gelangen oder andersherum. Die Tür ist geschlossen. Du musst sie öffnen.". 
 Up of door_hang2gamma is Gamma Junction.
 The door_hang2gamma can be LOCKED or UNLOCKED. 
 The door_hang2gamma is LOCKED.
@@ -29,7 +29,7 @@ Hangar is inside the Hangarmodul.
 
 [Raum Docking Bay]
 Docking Bay is a room.
-The description of door_hang2dock is "Tür zur Docking Bay.". 
+The description of door_hang2dock is "Du kannst durch diese Tür ins Hangar von der Docking Bay gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie öffnen.". 
 door_hang2dock is above Docking Bay and below Hangar.
 The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
 Docking Bay is inside the Hangarmodul.
@@ -41,7 +41,7 @@ Nordwestlich befindet sich Gamma Delta Corridor, südwestlich Gamma Beta Corrido
 
 [Tür - Gamma Junction]
 Northwest of Gamma Junction is a door called door_gamma2gamma. 
-The description of door_gamma2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
+The description of door_gamma2gamma is "Du kannst durch diese Tür ins Gamma Delta Corridor vom Gamma Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
 The door_gamma2gamma can be LOCKED or UNLOCKED.
 The door_gamma2gamma is LOCKED.
 The door_gamma2gamma is CLOSED.
@@ -49,7 +49,7 @@ Gamma Junction is inside the Äussere Ring.
 
 [Tür - Gamma Junction]
 Southwest of Gamma Junction is a door called door_gamma2gambeta. 
-The description of door_gamma2gambeta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
+The description of door_gamma2gambeta is "Du kannst durch diese Tür ins Gamma Beta Corridor vom Gamma Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
 The door_gamma2gambeta can be LOCKED or UNLOCKED.
 The door_gamma2gambeta is LOCKED.
 The door_gamma2gambeta is CLOSED.
@@ -61,7 +61,7 @@ The description of Gamma Delta Corridor is "In diesem Raum kann man durch eine W
 Gamma Delta Corridor is inside the Äussere Ring.
 
 Down of Gamma Delta Corridor is a door called door_gamma2com. 
-The description of door_gamma2com is "Wartungsluke zum Kommunikationsmodul.". 
+The description of door_gamma2com is "Du kannst durch diese Tür ins Com Base vom Gamma Delta Corridor gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
 door_gamma2com is closed.
 door_gamma2com is Locked.
 door_gamma2com is not openable.
@@ -70,7 +70,7 @@ door_gamma2com is not lockable.
 Southeast of Gamma Delta Corridor is door_gamma2gamma.
 
 Northwest of Gamma Delta Corridor is a door called door_delta2gamma. 
-The description of door_delta2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The description of door_delta2gamma is "Du kannst durch diese Tür ins Delta Junction vom Gamma Delta Corridor gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen."
 The door_delta2gamma can be LOCKED or UNLOCKED.
 The door_delta2gamma is LOCKED.
 The door_delta2gamma is CLOSED.
@@ -105,7 +105,7 @@ The description of Alpha Delta Corridor is "Korridor im äußeren Ring. Es ist e
 Alpha Delta Corridor is inside the Äussere Ring.
 
 Northeast of Alpha Delta Corridor is a door called door_alpha2delta. 
-The description of door_alpha2delta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The description of door_alpha2delta is "Du kannst durch diese Tür ins Alpha Delta Corridor vom Delta Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
 The door_alpha2delta can be LOCKED or UNLOCKED.
 The door_alpha2delta is LOCKED.
 The door_alpha2delta is CLOSED.
@@ -123,7 +123,7 @@ Alpha Junction is inside the Äussere Ring.
 Up of Alpha Junction is a door called door_alpha2med. 
 Down of Alpha Junction is a door called door_duty2alpha. 
 Northeast of Alpha Junction is a door called door_alpha2aldelta. 
-The description of door_alpha2aldelta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The description of door_alpha2aldelta is "Du kannst durch diese Tür ins Alpha Junction vom Alpha Delta Corridor gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
 The door_alpha2aldelta can be LOCKED or UNLOCKED.
 The door_alpha2aldelta is LOCKED.
 The door_alpha2aldelta is CLOSED.
@@ -138,14 +138,14 @@ Nordwestlich ist Alpha Junction und südöstlich Beta Junction.".
 Alpha Beta Corridor is inside the Äussere Ring.
 
 Northwest of Alpha Beta Corridor is a door called door_alpha2alpha. 
-The description of door_alpha2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The description of door_alpha2alpha is "Du kannst durch diese Tür ins Alpha Beta Corridor vom Alpha Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
 The door_alpha2alpha can be LOCKED or UNLOCKED.
 The door_alpha2alpha is LOCKED.
 The door_alpha2alpha is CLOSED.
 
 
 Southeast of Alpha Beta Corridor is a door called door_beta2alpha. 
-The description of door_beta2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The description of door_beta2alpha is "Du kannst durch diese Tür ins Beta Junction vom Alpha Beta Corridor gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
 The door_beta2alpha can be LOCKED or UNLOCKED.
 The door_beta2alpha is LOCKED.
 The door_beta2alpha is CLOSED.
@@ -157,12 +157,12 @@ The description of Beta Junction is "Korridor im äußeren Ring. Es ist ein Bode
 Beta Junction is inside the Äussere Ring.
 
 Up of Beta Junction is a door called door_beta2engin. 
-The Description of door_beta2engin is "Ein Luke die runter zur Beta Junction im äußeren Ring führt.".
+The Description of door_beta2engin is "Du kannst durch diese Tür ins Engineering Lab vom Beta Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen".
 
 Northwest of Beta Junction is door_beta2alpha.
 
 Northeast of Beta Junction is a door called door_gamma2beta. 
-The description of door_gamma2beta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
+The description of door_gamma2beta is "Du kannst durch diese Tür ins Gamma Beta Corridor vom Beta Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
 The door_gamma2beta can be LOCKED or UNLOCKED.
 The door_gamma2beta is LOCKED.
 The door_gamma2beta is CLOSED.
@@ -183,9 +183,9 @@ The description of Storage Room is "Ein Lagerraum. Es gibt ein Bodenfenster im R
 Storage Room is inside the Äussere Ring.
 
 Up of Storage Room is a door called door_storage2alpha.
-The description of door_storage2alpha is "Eine Luke, die hoch zur Alpha AI führt.". 
+The description of door_storage2alpha is "Du kannst durch diese Tür ins Alpha AI vom Storage Room gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
 Down of Storage Room is a door called door_cafe2storage. 
-The description of door_cafe2storage is "Eine Tür zur Cafeteria". 
+The description of door_cafe2storage is "Du kannst durch diese Tür in die Cafeteria vom Storage Room gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
 
 
 [Alpha AI]
@@ -216,7 +216,7 @@ The description of Storage Area is "Ein Lagerraum auf der linken Seitenebene des
 Storage Area is inside the Äussere Ring.
 
 Up of Storage Area is a door called door_storage2delta. 
-The Description of door_storage2delta is "Eine Luke die hoch zur Delta AI führt.". 
+The Description of door_storage2delta is "Du kannst durch diese Tür ins Delta AI von der Storage Area gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
 
 [Delta AI]
 Delta AI is a room.
@@ -311,7 +311,7 @@ Bridge is inside the Dienstmodul.
 
 [Tür vom Briefing Room zur Bridge]
 door_brid2brief is a closed door. 
-The description of door_brid2brief is "Die Luke zur Brücke.Sie kann mit einem Mobitab geöffnet werden, sobald die Kommandosperre ausgeschaltet wurde.".
+The description of door_brid2brief is "Du kannst durch diese Tür zur Brücke vom Briefing Room gelangen oder anderherum. Die Tür ist geschlossen. Du kannst sie mit dem Mobitab öffnen, sobald die Kommandosperre ausgeschaltet wurde.".
 door_brid2brief is above Bridge. 
 [die Tür kann erst geöffnet bzw. passiert werden wenn Maschinenkern nicht mehr grün ist]
 Instead of opening door_brid2brief when the Maschinenkern is GREEN, say "Die Kommandosperre ist noch aktiv.“.
@@ -1410,13 +1410,3 @@ Every Turn:
 				react;
 	 [flags zurücksetzen]
 	now hasReacted is FALSE;
-
-			
-			
-			
-		
-
-	
-		
-		
-			
