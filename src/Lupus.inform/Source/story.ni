@@ -1,6 +1,8 @@
 "Lupus Station" by Amina Mustafi, Fadi Dokmak, Ibrahim Karaki
 
-Xeno Lab is a room.
+
+The player is Percy.
+
 
 [
 	AP A 24 - Einführung + Szenen
@@ -12,24 +14,29 @@ Xeno Lab is a room.
 ]
 Böses Willkommen is a scene.
 [Einführungstext der beim ersten Start des Spiels kommt + Szene 1]
-The description of Böses Willkommen is "Die Lupus Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Der Pilot und Spezialist für Vakuumeinsätze Percy Braden sowie der Ingenieur Barry McIntyre befinden sich gerade auf dem Weg dahin. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.[line break][line break]Böses Willkommen[line break][line break]Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Ein knarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. [line break]Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet. [line break]Du beginnst das Spiel als Percy.".
+The description of Böses Willkommen is "Die Lupus Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Der Pilot und Spezialist für Vakuumeinsätze Percy Braden sowie der Ingenieur Barry McIntyre befinden sich gerade auf dem Weg dahin. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.[line break][line break][bold type]Böses Willkommen[roman type][line break][line break]Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Ein knarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. [line break]Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet. [line break]Du beginnst das Spiel als Percy.".
 [Erste Szene beginnt beim Starten des Spiels]
 Böses Willkommen begins when play begins.
 [
 	Szene 2
 ]
 Percy hat ein Problem is a scene.
-The description of Percy hat ein Problem is "[line break][line break]Percy hat ein Problem[line break][line break]Nachdem Barry herausgefunden hat, dass die Raumfähre einer aufwendigen Reparatur bedarf, fragt er sich, warum er immer noch kein Stationspersonal gesehen hat und wo Percy denn nun seit Mitnahme der Palette abgeblieben ist.[line break]Du spielst nun als Percy.".
+The description of Percy hat ein Problem is "[line break][line break][bold type]Percy hat ein Problem[roman type][line break][line break]Nachdem Barry herausgefunden hat, dass die Raumfähre einer aufwendigen Reparatur bedarf, fragt er sich, warum er immer noch kein Stationspersonal gesehen hat und wo Percy denn nun seit Mitnahme der Palette abgeblieben ist.[line break]Du spielst nun als Percy.".
 [beginnt nach Percys Kontamination]
 Percy hat ein Problem begins when Percy is KONTAMINIERT.
+When Percy hat ein Problem begins:
+	now Barry is in the Hangar;
+
 [
 	Szene 3
 ]
 Kommt alle zusammen is a scene. 
-The description of Kommt alle zusammen is "[line break]Kommt alle zusammen[line break]Percy hat ein Problem[line break][line break]Percy ist nach der Heilung noch ein wenig verwirrt, lässt sich aber bereitwillig von Barry auf den aktuellen Stand bringen. Allem Anschein nach ist niemand sonst auf der Station mehr dekontaminiert, denn selbst die Brücke reagiert nicht auf Kommunikationsversuche. Sie beschließen, das Personal der Station zu retten. Leider ist Percy noch sehr schwindelig, so dass er sich im Med‐Lab auf das Krankenbett legen muss. Zu allem Unglück stellt Barry nun einen Hauptenergieabfall auf der Station fest".
+The description of Kommt alle zusammen is "[line break][bold type]Kommt alle zusammen[roman type][line break]Percy hat ein Problem[line break][line break]Percy ist nach der Heilung noch ein wenig verwirrt, lässt sich aber bereitwillig von Barry auf den aktuellen Stand bringen. Allem Anschein nach ist niemand sonst auf der Station mehr dekontaminiert, denn selbst die Brücke reagiert nicht auf Kommunikationsversuche. Sie beschließen, das Personal der Station zu retten. Leider ist Percy noch sehr schwindelig, so dass er sich im Med‐Lab auf das Krankenbett legen muss. Zu allem Unglück stellt Barry nun einen Hauptenergieabfall auf der Station fest".
 [beginnt nach Percys Dekontamination]
 Kommt alle zusammen begins when Dekontaminationskabine is closed.
-
+When Kommt alle zusammen begins:
+	now Percy is in the Med Lab on the Krankenbett;
+	now Barry is in the Med Lab;
 
 [
 	Arbeitspaket A1- ALLE RÄUME
@@ -43,7 +50,8 @@ COM-Modul is a Region.
 Dienstmodul is a Region.
 
 [Sicherheitsbarrieren]
-Sicherheitsbarriere is a kind of door. Sicherheitsbarriere can be opened_now or opened_ago. Sicherheitsbarriere is opened_now. 
+[Oberklasse für Sicherheitsbarrieren, besitzt flag für das Schließen nach 1 Runde]
+Sicherheitsbarriere is a kind of door. Sicherheitsbarriere can be opened_now or opened_1ago or opened_2ago. Sicherheitsbarriere is opened_now. 
 
 [Raum Hangar]
 Hangar is a room.
@@ -451,7 +459,7 @@ Instead of opening door_gamma2xeno when the player is not wearing the Laborkitte
 say "Du benötigst den passenden Transponder.[line break]";
 [Xeno Luke kann nur passiert werden, wenn sie blockiert ist]
 Instead of going through the door_gamma2xeno when the door_gamma2xeno is UNBLOCKED:
-say "Du musst die Luke blockieren bevor du durch kannst.[line break]";
+say "Die Luke lässt sich ohne passenden Transponder nicht öffnen..[line break]";
 
 [Xeno Luke schließt sich 1 Zug nach dem Öffnern wieder, wenn sie nicht blockiert wurde]
 counter is a number that varies. 
@@ -488,7 +496,7 @@ To card-open (panel - a Türpanel):
 		repeat with tür running through the Sicherheitsbarrieres in the location of the player:
 			if panel is part of tür:
 				[falls bereits offen -> Abbruch]
-				if door is open:
+				if tür is open:
 					say "Die Luke ist bereits offen.";
 					stop;
 				[öffne tür und setze flag]
@@ -536,13 +544,16 @@ Every Turn:
 	repeat with tür running through the Sicherheitsbarrieres:
 		if tür is open:
 			if tür is opened_now: [flag gesetzt -> Tür ist erst diese Runde aufgegangen]
-				now tür is opened_ago;
+				now tür is opened_1ago;
+				stop;
+			if tür is opened_1ago:
+				now tür is opened_2ago;
+				say "[tür] ist wieder zu gegangen.";
 				stop;
 			else:
 				[finde zugehöriges Panel]
 				repeat with panel running through the Türpanels:
 					if panel is a part of tür and panel is GANZ:
-						say "[tür] ist wieder geschlossen";
 						now tür is closed;
 						stop;
 
@@ -805,7 +816,7 @@ Instead of closing Dekontaminationskabine:
 	AP A 11 - Fähre
 	Autor: Fadi Dokmak
 ]
-Fähre is an openable, enterable, closed, opaque container. 
+Fähre is an openable, enterable, opaque container. 
 Fähre is fixed in place.
 The description of Fähre is "Die Raumfähre mit der Percy und Barry zur Lupus Station geflogen kamen."
 [TODO Fähre is in the Hangar.]
@@ -1080,7 +1091,7 @@ hasReacted is a truth state that varies. hasReacted is FALSE.
 [Ist True wenn der Raum diese Runde gewechselt wurde]
 room_change is a truth state that varies. room_change is FALSE.
 [Nach Raumwechsel -> Counter und Modus der Kontaminierten zurücksetzen]
-After going:
+Before going:
 	now turn_counter is 0;
 	now mode is 0;
 	now room_change is TRUE;
@@ -1091,7 +1102,7 @@ After going:
 Every Turn:
 	if room_change is TRUE: [Raumwechsel zählt nicht als Zug]
 		now room_change is FALSE;
-		stop;
+		stop;		
 	[Modus der Kontaminierten]	
 	repeat with mensch running through the Mensches in the location of the player:
 		if mensch is KONTAMINIERT:
@@ -1120,7 +1131,6 @@ Every Turn:
 				react;
 	 [flags zurücksetzen]
 	now hasReacted is FALSE;
-	
 
 [	
 	AP A22 - Kontaminierte
@@ -1138,5 +1148,5 @@ konta, konta1 is a Kontaminierter in the Hangar.
 	AP A23 Percy und Barry
 	Autor: Amina Mustafi
 ]
-Percy is a Mensch. 
-Barry is a Mensch.
+Percy is a Mensch. Percy is in the Hangar.
+Barry is a Mensch. Barry is in the Fähre.
