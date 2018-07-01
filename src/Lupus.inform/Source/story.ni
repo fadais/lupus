@@ -1,14 +1,13 @@
 "Lupus" by Amina Mustafi, Fadi Dokmak, Ibrahim Karaki
 
+Storage Room is a room.
+
 [AP A 24 - Einführung]
 [Einführungstext der beim ersten Start des Spiels kommt]
 when play begins:
-say "Die Lupus Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Der Pilot und Spezialist für Vakuumeinsätze Percy Braden sowie der Ingenieur Barry McIntyre befinden sich gerade auf dem Weg dahin. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.
-Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet.".
-
+say "Die Lupus Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Der Pilot und Spezialist für Vakuumeinsätze Percy Braden sowie der Ingenieur Barry McIntyre befinden sich gerade auf dem Weg dahin. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.[line break]Percy fliegt die Fähre, Barry übernimmt die Kommunikation. Als sie sich der Station nähern wundernsie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. [line break]Da der Leitstrahl sie führt und das automatische Andocken einleitet, denkensie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Einknarrendes Geräusch beim Einflug in die DockingBay lässt aber nichts Gutes ahnen. Als sie aus der Fähre aussteigen, finden sie den Dock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry die Fähre äußerlich bzgl. des entstandenen Schadens untersucht. Percy soll derweil nach dem Stationspersonal recherchieren und sich auf der Brücke beim wachhabenden Offizier meldet.[line break][line break]";
 
 [ARBEITSPAKETE A 1, etc - ALLE RÄUME]
-
 [Regionen]
 Äussere Ring is a Region.
 Hangarmodul is a Region.
@@ -16,10 +15,13 @@ Innere Ring is a Region.
 COM-Modul is a Region.
 Dienstmodul is a Region.
 
+[Sicherheitsbarrieren]
+Sicherheitsbarriere is a kind of door. Sicherheitsbarriere can be opened_now or opened_ago. Sicherheitsbarriere is opened_now. 
+
 [Raum Hangar]
 Hangar is a room.
-Up of Hangar is a door called door_hang2gamma. 
-The description of door_hang2gamma is "Du kannst durch diese Tür ins Gamma Junction vom Hangar gelangen oder andersherum. Die Tür ist geschlossen. Du musst sie öffnen.". 
+Up of Hangar is a Sicherheitsbarriere called door_hang2gamma. 
+The description of door_hang2gamma is "Eine Tür zum Hangar.". 
 Up of door_hang2gamma is Gamma Junction.
 The door_hang2gamma can be LOCKED or UNLOCKED. 
 The door_hang2gamma is LOCKED.
@@ -28,8 +30,8 @@ The description of Hangar is "Ein Raum, in dem Raumfähren abgestellt werden kö
 Hangar is inside the Hangarmodul.
 
 [Raum Docking Bay]
-Docking Bay is a room.
-The description of door_hang2dock is "Du kannst durch diese Tür ins Hangar von der Docking Bay gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie öffnen.". 
+Docking Bay is a room. door_hang2dock is a Sicherheitsbarriere.
+The description of door_hang2dock is "Tür zur Docking Bay.". 
 door_hang2dock is above Docking Bay and below Hangar.
 The description of Docking Bay is "In diesem Raum können Fähren angedockt werden. Über der Docking Bay befindet sich der Hangar.". 
 Docking Bay is inside the Hangarmodul.
@@ -40,28 +42,28 @@ The description of Gamma Junction is "Korridor im äußeren Ring. Es ist ein Bod
 Nordwestlich befindet sich Gamma Delta Corridor, südwestlich Gamma Beta Corridor und darunter der Hangar. Eine Treppe führt hoch zum Xeno Lab, die durch eine Luke versperrt ist. Eine Tür führt zur Storage Area, die sich in der linken Seitenebene befindet.".
 
 [Tür - Gamma Junction]
-Northwest of Gamma Junction is a door called door_gamma2gamma. 
-The description of door_gamma2gamma is "Du kannst durch diese Tür ins Gamma Delta Corridor vom Gamma Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
+Northwest of Gamma Junction is a Sicherheitsbarriere called door_gamma2gamma. 
+The description of door_gamma2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
 The door_gamma2gamma can be LOCKED or UNLOCKED.
 The door_gamma2gamma is LOCKED.
 The door_gamma2gamma is CLOSED.
 Gamma Junction is inside the Äussere Ring.
 
 [Tür - Gamma Junction]
-Southwest of Gamma Junction is a door called door_gamma2gambeta. 
-The description of door_gamma2gambeta is "Du kannst durch diese Tür ins Gamma Beta Corridor vom Gamma Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
+Southwest of Gamma Junction is a Sicherheitsbarriere called door_gamma2gambeta. 
+The description of door_gamma2gambeta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..". 
 The door_gamma2gambeta can be LOCKED or UNLOCKED.
 The door_gamma2gambeta is LOCKED.
 The door_gamma2gambeta is CLOSED.
 
 [Raum Gamma Delta Corridor]
-Gamma Delta Corridor is a room.
+Gamma Delta Corridor is a room. 
 Northwest of door_gamma2gamma is Gamma Delta Corridor. 
 The description of Gamma Delta Corridor is "In diesem Raum kann man durch eine Wartungsluke in das Kommunikationsmodul gelangen. Des weiteren befinden sich Spuren von Handlaserwaffen, eine Leiche und ein Bodenfenster im Raum. Die Wartungsluke führt runter in die Com Base, allerdings ist sie durch eine Luke versperrt. Südöstlich befindet sich die  Gamma Junction und nordwestlich Delta Junction.".
 Gamma Delta Corridor is inside the Äussere Ring.
 
-Down of Gamma Delta Corridor is a door called door_gamma2com. 
-The description of door_gamma2com is "Du kannst durch diese Tür ins Com Base vom Gamma Delta Corridor gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
+Down of Gamma Delta Corridor is a Sicherheitsbarriere called door_gamma2com. 
+The description of door_gamma2com is "Wartungsluke zum Kommunikationsmodul.". 
 door_gamma2com is closed.
 door_gamma2com is Locked.
 door_gamma2com is not openable.
@@ -69,8 +71,8 @@ door_gamma2com is not lockable.
 
 Southeast of Gamma Delta Corridor is door_gamma2gamma.
 
-Northwest of Gamma Delta Corridor is a door called door_delta2gamma. 
-The description of door_delta2gamma is "Du kannst durch diese Tür ins Delta Junction vom Gamma Delta Corridor gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen."
+Northwest of Gamma Delta Corridor is a Sicherheitsbarriere called door_delta2gamma. 
+The description of door_delta2gamma is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_delta2gamma can be LOCKED or UNLOCKED.
 The door_delta2gamma is LOCKED.
 The door_delta2gamma is CLOSED.
@@ -81,7 +83,7 @@ Northwest of door_delta2gamma is Delta Junction.
 The description of Delta Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster zu sehen. Südöstlich ist Gamma Delta Corridor und südwestlich Alpha Delta Corridor. Eine Treppe führt hoch zum Solar Lab, allerdings ist sie durch eine Luke versperrt. In diesem Raum, befindet sich eine Tür die zum Delta Greenhouse führt, die sich in der linken Seitenebene befindet.".
 Delta Junction is inside the Äussere Ring.
 
-Up of Delta Junction is a door called door_delta2solar. 
+Up of Delta Junction is a Sicherheitsbarriere called door_delta2solar. 
 Southeast of Delta Junction is door_delta2gamma.
 Southwest of Delta Junction is door_alpha2delta.
 West of Delta Junction is Delta Greenhouse.
@@ -104,8 +106,8 @@ Alpha Delta Corridor is a room.
 The description of Alpha Delta Corridor is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Nordöstlich ist Delta Junction und südwestlich Alpha Junction.".
 Alpha Delta Corridor is inside the Äussere Ring.
 
-Northeast of Alpha Delta Corridor is a door called door_alpha2delta. 
-The description of door_alpha2delta is "Du kannst durch diese Tür ins Alpha Delta Corridor vom Delta Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
+Northeast of Alpha Delta Corridor is a Sicherheitsbarriere called door_alpha2delta. 
+The description of door_alpha2delta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_alpha2delta can be LOCKED or UNLOCKED.
 The door_alpha2delta is LOCKED.
 The door_alpha2delta is CLOSED.
@@ -120,10 +122,10 @@ Alpha Junction is a room.
 The description of Alpha Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Eine Treppe führt hoch zum Med-Lab, allerdings ist sie durch eine Luke versperrt. Nordöstlich befindet sich Alpha Delta Corridor, südwestlich Alpha Beta Corridor und darunter der Duty Room.".
 Alpha Junction is inside the Äussere Ring.
 
-Up of Alpha Junction is a door called door_alpha2med. 
-Down of Alpha Junction is a door called door_duty2alpha. 
-Northeast of Alpha Junction is a door called door_alpha2aldelta. 
-The description of door_alpha2aldelta is "Du kannst durch diese Tür ins Alpha Junction vom Alpha Delta Corridor gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
+Up of Alpha Junction is a Sicherheitsbarriere called door_alpha2med. 
+Down of Alpha Junction is a Sicherheitsbarriere called door_duty2alpha. 
+Northeast of Alpha Junction is a Sicherheitsbarriere called door_alpha2aldelta. 
+The description of door_alpha2aldelta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_alpha2aldelta can be LOCKED or UNLOCKED.
 The door_alpha2aldelta is LOCKED.
 The door_alpha2aldelta is CLOSED.
@@ -137,15 +139,15 @@ The description of Alpha Beta Corridor is "Korridor im äußeren Ring. Es ist ei
 Nordwestlich ist Alpha Junction und südöstlich Beta Junction.".
 Alpha Beta Corridor is inside the Äussere Ring.
 
-Northwest of Alpha Beta Corridor is a door called door_alpha2alpha. 
-The description of door_alpha2alpha is "Du kannst durch diese Tür ins Alpha Beta Corridor vom Alpha Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
+Northwest of Alpha Beta Corridor is a Sicherheitsbarriere called door_alpha2alpha. 
+The description of door_alpha2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_alpha2alpha can be LOCKED or UNLOCKED.
 The door_alpha2alpha is LOCKED.
 The door_alpha2alpha is CLOSED.
 
 
-Southeast of Alpha Beta Corridor is a door called door_beta2alpha. 
-The description of door_beta2alpha is "Du kannst durch diese Tür ins Beta Junction vom Alpha Beta Corridor gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
+Southeast of Alpha Beta Corridor is a Sicherheitsbarriere called door_beta2alpha. 
+The description of door_beta2alpha is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_beta2alpha can be LOCKED or UNLOCKED.
 The door_beta2alpha is LOCKED.
 The door_beta2alpha is CLOSED.
@@ -156,13 +158,13 @@ Southeast of door_beta2alpha is Beta Junction.
 The description of Beta Junction is "Korridor im äußeren Ring. Es ist ein Bodenfenster im Raum. Eine Treppe führt hoch zum Engineering Lab, allerdings ist sie durch eine Luke versperrt. Nordwestlich befindet sich der Alpha Beta Corridor und nordöstlich Gamma Beta Corridor.".
 Beta Junction is inside the Äussere Ring.
 
-Up of Beta Junction is a door called door_beta2engin. 
-The Description of door_beta2engin is "Du kannst durch diese Tür ins Engineering Lab vom Beta Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen".
+Up of Beta Junction is a Sicherheitsbarriere called door_beta2engin. 
+The Description of door_beta2engin is "Ein Luke die runter zur Beta Junction im äußeren Ring führt.".
 
 Northwest of Beta Junction is door_beta2alpha.
 
-Northeast of Beta Junction is a door called door_gamma2beta. 
-The description of door_gamma2beta is "Du kannst durch diese Tür ins Gamma Beta Corridor vom Beta Junction gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.".
+Northeast of Beta Junction is a Sicherheitsbarriere called door_gamma2beta. 
+The description of door_gamma2beta is "Eine Sicherheitsbarriere des äußeren Ringes. Zum Öffnen und Schließen muss das Türpanel benutzt werden. Sonst könnte dir das MobiTab behilflich sein..".
 The door_gamma2beta can be LOCKED or UNLOCKED.
 The door_gamma2beta is LOCKED.
 The door_gamma2beta is CLOSED.
@@ -182,12 +184,59 @@ Storage Room is a room.
 The description of Storage Room is "Ein Lagerraum. Es gibt ein Bodenfenster im Raum. Darunter befindet sich die Cafeteria und nordöstlich das Delta Greenhouse. Eine Treppe führt hoch zur Alpha AI, allerdings ist sie durch eine Luke versperrt.".
 Storage Room is inside the Äussere Ring.
 
+[Hebel für Tür zum Alpha AI Raum -> Links = GESPERRT, rechts = ENTSPERRT]
+hebel is a fixed in place thing in the storage room. hebel can be LEFT or RIGHT. hebel is LEFT.
+[Ziehen des Hebels]
+Instead of pulling hebel:
+	if hebel is LEFT:
+		now hebel is RIGHT;
+		[Kontaminierte reagieren auf den Hebel]
+		react;
+		say "Ein lautes knarrendes Geräusch ist bei Ziehen des Hebels zu hören.[line break]";
+		say "Die Schleuse für die Luke zum Alpha-AI Raum wurde entriegelt. Du kannst die Luke nun öffnen.";
+	else:
+		if door_storage2alpha is open:
+			say "Die Luke zum Alpha-AI Raum ist noch offen. Du musst sie erst schließen, damit du sie sperren kannst.";
+			stop;
+		[Kontaminierte reagieren auf den Hebel]
+		say "Ein lautes knarrendes Geräusch ist bei Ziehen des Hebels zu hören.[line break]";
+		react;
+		say "Die Schleuse für die Luke zum Alpha-AI Raum wurde verriegelt.";
+		now hebel is LEFT;
+		
+[Luke versperrt sich nach 1 Zug automatisch (außer sie wurde geöffnet)]
+luke_counter is a number that varies. luke_counter is 0.
+Every Turn:
+	[Hebel wurde vor über einer Runde umgelegt und die Luke ist noch zu -> Versperren]
+	if hebel is RIGHT and door_storage2alpha is closed and luke_counter is greater than 0:
+		say "Die Schleuse für die Luke zum Alpha-AI Raum hat sich automatisch verriegelt.";
+		now hebel is LEFT;
+		now luke_counter is 0;
+	[Hebel wurde diese runde umgelegt -> counter inkremenent]
+	else if hebel is RIGHT and door_storage2alpha is closed and luke_counter is 0:
+		now luke_counter is luke_counter + 1;	
+
+[Luke zum Alpha AI Raum -> nur durch Hebel öffenbar]
 Up of Storage Room is a door called door_storage2alpha.
-The description of door_storage2alpha is "Du kannst durch diese Tür ins Alpha AI vom Storage Room gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
-Down of Storage Room is a door called door_cafe2storage. 
-The description of door_cafe2storage is "Du kannst durch diese Tür in die Cafeteria vom Storage Room gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
+The description of door_storage2alpha is "Eine Luke, die hoch zur Alpha AI führt.".
 
+[Tür zur Cafeteria]
+Down of Storage Room is a Sicherheitsbarriere called door_cafe2storage.
+The description of door_cafe2storage is "Eine Tür zur Cafeteria".
 
+[Luke zur Alpha AI -> nur wenn Hebel umgelegt (RIGHT) darf die Tür aufgehen]
+Instead of opening door_storage2alpha:
+	if door_storage2alpha is open:
+		say "Die Luke ist bereits offen.";
+		stop;
+	if hebel is LEFT:
+		say "Die Schleuse ist noch gesperrt. Du musst den Hebel ziehen, um die Schleuse zu entriegeln.";
+		stop;
+	else:
+		say "Die Luke ist nun offen.";
+		now door_storage2alpha is open;
+		
+		
 [Alpha AI]
 Alpha AI is a room.
 Northwest of door_alpha2trans is Alpha AI.
@@ -215,8 +264,8 @@ Northeast of Beta Greenhouse is Storage Area.
 The description of Storage Area is "Ein Lagerraum auf der linken Seitenebene des äußeren Rings. Storage Area enthält Bodenfenster. Südwestlich ist das Beta Greenhouse. Eine Treppe führt hoch zur Delta AI, allerdings ist sie durch eine Luke versperrt. Eine Tür führt östlich zum Gamma Junction.".
 Storage Area is inside the Äussere Ring.
 
-Up of Storage Area is a door called door_storage2delta. 
-The Description of door_storage2delta is "Du kannst durch diese Tür ins Delta AI von der Storage Area gelangen oder anderherum. Die Tür ist geschlossen. Du musst sie mithilfe eines MobiTab oder Sicherheitsausweises öffnen und schließen.". 
+Up of Storage Area is a Sicherheitsbarriere called door_storage2delta. 
+The Description of door_storage2delta is "Eine Luke die hoch zur Delta AI führt.". 
 
 [Delta AI]
 Delta AI is a room.
@@ -311,15 +360,15 @@ Bridge is inside the Dienstmodul.
 
 [Tür vom Briefing Room zur Bridge]
 door_brid2brief is a closed door. 
-The description of door_brid2brief is "Du kannst durch diese Tür zur Brücke vom Briefing Room gelangen oder anderherum. Die Tür ist geschlossen. Du kannst sie mit dem Mobitab öffnen, sobald die Kommandosperre ausgeschaltet wurde.".
+The description of door_brid2brief is "Die Luke zur Brücke.Sie kann mit einem Mobitab geöffnet werden, sobald die Kommandosperre ausgeschaltet wurde.".
 door_brid2brief is above Bridge. 
 [die Tür kann erst geöffnet bzw. passiert werden wenn Maschinenkern nicht mehr grün ist]
-Instead of opening door_brid2brief when the Maschinenkern is GREEN, say "Die Kommandosperre ist noch aktiv.“.
-Instead of going through door_brid2brief when the Maschinenkern is GREEN, say "Die Kommandosperre ist noch aktiv.“.
+Instead of opening door_brid2brief when the Maschinenkern is GREEN, say "Die Kommandosperre ist noch aktiv.[line break]“.
+Instead of going through door_brid2brief when the Maschinenkern is GREEN, say "Die Kommandosperre ist noch aktiv.[line break]“.
 [danach kann die Tür nur passiert werden, wenn das Mobitab im inventar ist]
 mobitab is a thing. [TODO Entfernen sobald mobitab implementiert]
 Instead of opening door_brid2brief when the player is not having the mobitab and Maschinenkern is not GREEN:
-say "Du benötigst das Mobitab um die Tür zu öffnen.";
+say "Du benötigst das Mobitab um die Tür zu öffnen.[line break]";
 
 
 [Arbeitspaket AP A 2]
@@ -341,22 +390,20 @@ The description of door_gamma2xeno is "[if door_gamma2xeno is BLOCKED] Die Luke 
 [TÜR XENO LAB]
 [Xeno Luke kann nur geöffnet werden wenn der Spieler den Kittel trägt]
 Instead of opening door_gamma2xeno when the player is not wearing the Laborkittel:
-say "Du benötigst den passenden Transponder.";
+say "Du benötigst den passenden Transponder.[line break]";
 [Xeno Luke kann nur passiert werden, wenn sie blockiert ist]
 Instead of going through the door_gamma2xeno when the door_gamma2xeno is UNBLOCKED:
-say "Du musst die Luke blockieren bevor du durch kannst";
+say "Du musst die Luke blockieren bevor du durch kannst.[line break]";
 
 [Xeno Luke schließt sich 1 Zug nach dem Öffnern wieder, wenn sie nicht blockiert wurde]
 counter is a number that varies. 
 Every Turn when the door_gamma2xeno is open:
 	if counter >= 1 and door_gamma2xeno is open and door_gamma2xeno is UNBLOCKED:
-		say "Die Xeno Luke ist von selbst wieder zugegangen.";
+		say "Die Xeno Luke ist von selbst wieder zugegangen.[line break]";
 		now door_gamma2xeno is closed;
 		now counter is 0;
 		stop;
 	now counter is counter + 1;
-
-
 
 [Umkleiderkammer]
 Umkleidekammer is a container in Hangar. Umkleidekammer is closed. Umkleidekammer is openable.
@@ -366,162 +413,208 @@ Umkleidekammer is not lockable. Umkleidekammer is enterable. Umkleidekammer is f
 Umkleidekammerspind is a container. The Umkleidekammerspind is in Umkleidekammer. The printed name of Umkleidekammerspind is "Ein alter Spind.". Umkleidekammerspind is not enterable.The Umkleidekammerspind is fixed in place. The carrying capacity of Umkleidekammerspind is 1. Umkleidekammerspind is locked. Umkleidekammerspind is closed.
 
 [Panel]
-
-Türpanel is a Kind of Supporter. The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". Türpanel is fixed in place. The carrying capacity of Türpanel is 1.
+[Methode zum Auflegen des Ausweises]
+To card-open (panel - a Türpanel):
+	if panel is GANZ:
+		[finde zugehörige Tür und entsperre]
+		repeat with tür running through the Sicherheitsbarrieres in the location of the player:
+			if panel is part of tür:
+				[falls bereits offen -> Abbruch]
+				if door is open:
+					say "Die Luke ist bereits offen.";
+					stop;
+				[öffne tür und setze flag]
+				now tür is UNLOCKED; 
+				now tür is opened_now;
+				now tür is open;
+				say "Die Luke ist nun offen.";
+	otherwise if Panel door_hang2gamma is DEFEKT:
+		say "Das Panel ist beschädigt.";
+		
+	
+[Türpanel Deklaration]
+Türpanel is a Kind of Supporter. 
+The Description of Türpanel is "Ein Türpanel. Mit dem richtigen Ausweis kann man damit die Luke öffnen. Vielleicht kann man sie ja auch auf andere Weise benutzen..". 
+Türpanel is fixed in place. 
+The carrying capacity of Türpanel is 1.
 Türpanel can be DEFEKT or GANZ. Türpanel is GANZ.
 
 [Panel zwischen Hangar und Gamma Junction]
-
+[
 Instead of opening the door_hang2gamma:
 	if door_hang2gamma is locked and Panel door_hang2gamma is GANZ:
-		say "Du musst das Panel benutzen";
+		say "Du musst das Panel benutzen.[line break]";
 	otherwise if Panel door_hang2gamma is DEFEKT:
 		now door_hang2gamma is open;
-		say "Panel ist defekt.";
-		
+		say "Das Türpanel ist defekt.[line break]";
+]
+[
 Instead of destroying the Panel door_hang2gamma:
 	if player have mobitab:
 		now Panel door_hang2gamma is DEFEKT;
 		now door_hang2gamma is unlocked;	
-		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.[line break]";
 	otherwise:
-		say "Du benötigst das Mobitab um das Panel zu zerstören";
+		say "Du benötigst das Mobitab um das Panel zu zerstören.[line break]";
+]
+Panel door_hang2gamma is a Türpanel and a part of door_hang2gamma.
 
-Panel door_hang2gamma is a Türpanel and a part of door_hang2gamma with printed name "Panel door_hang2gamma".
-After putting the Sicherheitsausweis on Panel door_hang2gamma:
-	if Panel door_hang2gamma is GANZ:             
-		now door_hang2gamma is unlocked;
-		now door_hang2gamma is open;
-		say "Tür hat sich geöffnet.";
-	otherwise if Panel door_hang2gamma is DEFEKT:
-		say "Panel ist beschädigt.";
+[Türpanel mit Ausweis öffnen]
+Instead putting the Ausweis on a Türpanel:
+	card-open the second noun;
+[Alle offenen Türen mit aktivem Türpanel sollen nach 1 Zug wieder zu gehen]
+Every Turn:
+	[
+		Schleife läuft durch alle Sicherheitsbarrieren und prüft die opened_now flag
+		-> falls sie TRUE ist, dann ist das die erste Runde in der die Tür offen ist
+		-> sonst ist sie seit 2 Runden auf und es muss geprüft werden ob das dazugehörige
+			Panel noch funktioniert
+	]
+	repeat with tür running through the Sicherheitsbarrieres:
+		if tür is open:
+			if tür is opened_now: [flag gesetzt -> Tür ist erst diese Runde aufgegangen]
+				now tür is opened_ago;
+				stop;
+			else:
+				[finde zugehöriges Panel]
+				repeat with panel running through the Türpanels:
+					if panel is a part of tür and panel is GANZ:
+						say "[tür] ist wieder geschlossen";
+						now tür is closed;
+						stop;
 
+[
 counterPanel1 is a number that varies. 
 Every Turn when the door_hang2gamma is open:
 	if counterPanel1 >= 1 and door_hang2gamma is open and Panel door_hang2gamma is GANZ:
-		say "Die Tür door_hang2gamma ist von selbst wieder zugegangen.";
+		say "Die Tür door_hang2gamma ist von selbst wieder zugegangen.[line break]";
 		now door_hang2gamma is closed;
 		now door_hang2gamma is locked;
 		now counterPanel1 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel1 is counterPanel1 + 1;
-	
-[Panel zwischen Gamma Delta Corridor und Gamma Junction]
+]
 
+[Panel zwischen Gamma Delta Corridor und Gamma Junction]
+[
 Instead of opening the door_gamma2gamma:
 	if door_gamma2gamma is locked and Panel gamma2gamma_door is GANZ:
-		say "Du musst das Panel benutzen";
+		say "Du musst das Panel benutzen.[line break]";
 	otherwise if Panel gamma2gamma_door is DEFEKT:
 		now door_gamma2gamma is open;
-		say "Panel ist defekt.";		
+		say "Panel ist defekt.[line break]";		
 
 Instead of destroying the Panel gamma2gamma_door:
 	if player have mobitab:
 		now Panel gamma2gamma_door is DEFEKT;
 		now door_gamma2gamma is unlocked;	
-		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.[line break]";
 	otherwise:
-		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+		say "Du benötigst das Mobitab um das Panel zu zerstören.[line break]";
+]
 Panel gamma2gamma_door is a Türpanel and a part of door_gamma2gamma with printed name "Panel gamma2gamma_door".
-After putting the Sicherheitsausweis on Panel gamma2gamma_door:
+[
+After putting the Ausweis on Panel gamma2gamma_door:
 	if Panel gamma2gamma_door is GANZ:             
 		now door_gamma2gamma is unlocked;
 		now door_gamma2gamma is open;
-		say "Tür hat sich geöffnet.";
+		say "Tür hat sich geöffnet.[line break]";
 	otherwise if Panel gamma2gamma_door is DEFEKT:
-		say "Panel ist beschädigt.";
-
+		say "Panel ist beschädigt.[line break]";
+]
+[
 counterPanel2 is a number that varies. 
 Every Turn when the door_gamma2gamma is open:
 	if counterPanel2 >= 1 and door_gamma2gamma is open and Panel gamma2gamma_door is GANZ:
-		say "Die Tür door_gamma2gamma ist von selbst wieder zugegangen.";
+		say "Die Tür door_gamma2gamma ist von selbst wieder zugegangen.[line break]";
 		now door_gamma2gamma is closed;
 		now door_gamma2gamma is locked;
 		now counterPanel2 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel2 is counterPanel2 + 1;	
-
+]
 
 [Panel zwischen Gamma Junction und Gamma Beta Corridor]
-
+[
 Instead of opening the door_gamma2gambeta:
 	if door_gamma2gambeta is locked and Panel door_gamma2gambeta is GANZ:
-		say "Du musst das Panel benutzen";
+		say "Du musst das Panel benutzen.[line break]";
 	otherwise if Panel door_gamma2gambeta is DEFEKT:
 		now door_gamma2gambeta is open;
-		say "Panel ist defekt.";
+		say "Panel ist defekt.[line break]";
 		
 Instead of destroying the Panel door_gamma2gambeta:
 	if player have mobitab:
 		now Panel door_gamma2gambeta is DEFEKT;
 		now door_gamma2gambeta is unlocked;	
-		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.[line break]";
 	otherwise:
-		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+		say "Du benötigst das Mobitab um das Panel zu zerstören.[line break]";
+]
 Panel door_gamma2gambeta is a Türpanel and a part of door_gamma2gambeta with printed name "Panel door_gamma2gambeta".
-After putting the Sicherheitsausweis on Panel door_gamma2gambeta:
+[
+After putting the Ausweis on Panel door_gamma2gambeta:
 	if Panel door_gamma2gambeta is GANZ:             
 		now door_gamma2gambeta is unlocked;
 		now door_gamma2gambeta is open;
-		say "Tür hat sich geöffnet.";
+		say "Tür hat sich geöffnet.[line break]";
 	otherwise if Panel door_gamma2gambeta is DEFEKT:
-		say "Panel ist beschädigt.";
+		say "Panel ist beschädigt.[line break]";
  
 counterPanel3 is a number that varies. 
 Every Turn when the door_gamma2gambeta is open:
 	if counterPanel3 >= 1 and door_gamma2gambeta is open and Panel door_gamma2gambeta is GANZ:
-		say "Die Tür door_gamma2gambeta ist von selbst wieder zugegangen.";
+		say "Die Tür door_gamma2gambeta ist von selbst wieder zugegangen.[line break]";
 		now door_gamma2gambeta is closed;
 		now door_gamma2gambeta is locked;
 		now counterPanel3 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel3 is counterPanel3 + 1;
-
+]
 [Panel zwischen Gamma Beta Corridor und Beta Junction]
-
+[
 Instead of opening the door_gamma2beta:
 	if door_gamma2beta is locked and Panel gamma2beta_door is GANZ:
-		say "Du musst das Panel benutzen";
+		say "Du musst das Panel benutzen.[line break]";
 	otherwise if Panel gamma2beta_door is DEFEKT:
 		now door_gamma2beta is open;
-		say "Panel ist defekt.";
+		say "Panel ist defekt.[line break]";
 		
 Instead of destroying the Panel gamma2beta_door:
 	if player have mobitab:
 		now Panel gamma2beta_door is DEFEKT;
 		now  door_gamma2beta is unlocked;	
-		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
+		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.[line break]";
 	otherwise:
-		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+		say "Du benötigst das Mobitab .[line break]";
+]
 Panel gamma2beta_door is a Türpanel and a part of door_gamma2beta with printed name "Panel gamma2beta_door".
-After putting the Sicherheitsausweis on Panel gamma2beta_door:
+[
+After putting the Ausweis on Panel gamma2beta_door:
 	if Panel gamma2beta_door is GANZ:             
 		now door_gamma2beta is unlocked;
 		now door_gamma2beta is open;
-		say "Tür hat sich geöffnet.";
+		say "Tür hat sich geöffnet.[line break]";
 	otherwise if Panel gamma2beta_door is DEFEKT:
-		say "Panel ist beschädigt.";
- 
+		say "Panel ist beschädigt.[line break]";
+ ]
+[
 counterPanel12 is a number that varies.
 Every Turn when the door_gamma2beta is open:
 	if counterPanel12 >= 1 and door_gamma2beta is open and Panel gamma2beta_door is GANZ:
-		say "Die Tür door_gamma2beta ist von selbst wieder zugegangen.";
+		say "Die Tür door_gamma2beta ist von selbst wieder zugegangen.[line break]";
 		now door_gamma2beta is closed;
 		now door_gamma2beta is locked;
 		now counterPanel12 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel12 is counterPanel12 + 1;
-
-
+]
 [Panel zwischen Delta Junction und Gamma Delta Corridor]
-
+[
 Instead of opening the door_delta2gamma:
 	if door_delta2gamma is locked and Panel door_delta2gamma is GANZ:
 		say "Du musst das Panel benutzen";
@@ -536,16 +629,18 @@ Instead of destroying the Panel door_delta2gamma:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_delta2gamma is a Türpanel and a part of door_delta2gamma with printed name "Panel door_delta2gamma".
-After putting the Sicherheitsausweis on Panel door_delta2gamma:
+[
+After putting the Ausweis on Panel door_delta2gamma:
 	if Panel door_delta2gamma is GANZ:             
 		now door_delta2gamma is unlocked;
 		now door_delta2gamma is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_delta2gamma is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel4 is a number that varies. 
 Every Turn when the door_delta2gamma is open:
 	if counterPanel4 >= 1 and door_delta2gamma is open and Panel door_delta2gamma is GANZ:
@@ -553,12 +648,12 @@ Every Turn when the door_delta2gamma is open:
 		now door_delta2gamma is closed;
 		now door_delta2gamma is locked;
 		now counterPanel4 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel4 is counterPanel4 + 1;
-
+]
 [Panel zwischen Delta Junction und Solar Lab]
-
+[
 Instead of opening the door_delta2solar:
 	if door_delta2solar is locked and Panel door_delta2solar is GANZ:
 		say "Du musst das Panel benutzen";
@@ -573,16 +668,18 @@ Instead of destroying the Panel door_delta2solar:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_delta2solar is a Türpanel and a part of door_delta2solar with printed name "Panel door_delta2solar".
-After putting the Sicherheitsausweis on Panel door_delta2solar:
+[
+After putting the Ausweis on Panel door_delta2solar:
 	if Panel door_delta2solar is GANZ:             
 		now door_delta2solar is unlocked;
 		now door_delta2solar is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_delta2solar is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel5 is a number that varies. 
 Every Turn when the door_delta2solar is open:
 	if counterPanel5 >= 1 and door_delta2solar is open and Panel door_delta2solar is GANZ:
@@ -590,12 +687,12 @@ Every Turn when the door_delta2solar is open:
 		now door_delta2solar is closed;
 		now door_delta2solar is locked;
 		now counterPanel5 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel5 is counterPanel5 + 1;
-
+]
 [Panel zwischen Alpha Delta Corridor und Delta Junction]
-
+[
 Instead of opening the door_alpha2delta:
 	if door_alpha2delta is locked and Panel door_alpha2delta is GANZ:
 		say "Du musst das Panel benutzen";
@@ -610,16 +707,18 @@ Instead of destroying the Panel door_alpha2delta:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_alpha2delta is a Türpanel and a part of door_alpha2delta with printed name "Panel door_alpha2delta".
-After putting the Sicherheitsausweis on Panel door_alpha2delta:
+[
+After putting the Ausweis on Panel door_alpha2delta:
 	if Panel door_alpha2delta is GANZ:             
 		now door_alpha2delta is unlocked;
 		now door_alpha2delta is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_alpha2delta is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel6 is a number that varies. 
 Every Turn when the door_alpha2delta is open:
 	if counterPanel6 >= 1 and door_alpha2delta is open and Panel door_alpha2delta is GANZ:
@@ -627,13 +726,13 @@ Every Turn when the door_alpha2delta is open:
 		now door_alpha2delta is closed;
 		now door_alpha2delta is locked;
 		now counterPanel6 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel6 is counterPanel6 + 1;
-
+]
 
 [Panel zwischen Duty Room und Alpha Junction]
-
+[
 Instead of opening the door_duty2alpha:
 	if door_duty2alpha is locked and Panel door_duty2alpha is GANZ:
 		say "Du musst das Panel benutzen";
@@ -648,16 +747,18 @@ Instead of destroying the Panel door_duty2alpha:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_duty2alpha is a Türpanel and a part of door_duty2alpha with printed name "Panel door_duty2alpha".
-After putting the Sicherheitsausweis on Panel door_duty2alpha:
+[
+After putting the Ausweis on Panel door_duty2alpha:
 	if Panel door_duty2alpha is GANZ:             
 		now door_duty2alpha is unlocked;
 		now door_duty2alpha is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_duty2alpha is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel7 is a number that varies. 
 Every Turn when the door_duty2alpha is open:
 	if counterPanel7 >= 1 and door_duty2alpha is open and Panel door_duty2alpha is GANZ:
@@ -665,12 +766,12 @@ Every Turn when the door_duty2alpha is open:
 		now door_duty2alpha is closed;
 		now door_duty2alpha is locked;
 		now counterPanel7 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel7 is counterPanel7 + 1;
-
+]
 [Panel zwischen Alpha Junction und Alpha Delta Corridor]
-
+[
 Instead of opening the door_alpha2aldelta:
 	if door_alpha2aldelta is locked and Panel alpha2aldelta_door is GANZ:
 		say "Du musst das Panel benutzen";
@@ -685,16 +786,18 @@ Instead of destroying the Panel alpha2aldelta_door:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel alpha2aldelta_door is a Türpanel and a part of door_alpha2aldelta with printed name "Panel alpha2aldelta_door".
-After putting the Sicherheitsausweis on Panel alpha2aldelta_door:
+[
+After putting the Ausweis on Panel alpha2aldelta_door:
 	if Panel alpha2aldelta_door is GANZ:             
 		now door_alpha2aldelta is unlocked;
 		now door_alpha2aldelta is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel alpha2aldelta_door is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel8 is a number that varies. 
 Every Turn when the door_alpha2aldelta is open:
 	if counterPanel8 >= 1 and door_alpha2aldelta is open and Panel alpha2aldelta_door is GANZ:
@@ -702,12 +805,12 @@ Every Turn when the door_alpha2aldelta is open:
 		now door_alpha2aldelta is closed;
 		now door_alpha2aldelta is locked;
 		now counterPanel8 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
-	now counterPanel8 is counterPanel8 + 1;
-
+	now counterPanel8 is counterPanel8 + 1
+]
 [Panel zwischen Alpha Beta Corridor und Alpha Junction]
-
+[
 Instead of opening the door_alpha2alpha:
 	if door_alpha2alpha is locked and Panel door_alpha2alpha is GANZ:
 		say "Du musst das Panel benutzen";
@@ -722,16 +825,18 @@ Instead of destroying the Panel door_alpha2alpha:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_alpha2alpha is a Türpanel and a part of door_alpha2alpha with printed name "Panel door_alpha2alpha".
-After putting the Sicherheitsausweis on Panel door_alpha2alpha:
+[
+After putting the Ausweis on Panel door_alpha2alpha:
 	if Panel door_alpha2alpha is GANZ:             
 		now door_alpha2alpha is unlocked;
 		now door_alpha2alpha is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_alpha2alpha is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel9 is a number that varies. 
 Every Turn when the door_alpha2alpha is open:
 	if counterPanel9 >= 1 and door_alpha2alpha is open and Panel door_alpha2alpha is GANZ:
@@ -739,12 +844,12 @@ Every Turn when the door_alpha2alpha is open:
 		now door_alpha2alpha is closed;
 		now door_alpha2alpha is locked;
 		now counterPanel9 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel9 is counterPanel9 + 1;
-	
+]
 [Panel zwischen Beta Junction und Alpha Beta Corridor]
-
+[
 Instead of opening the door_beta2alpha:
 	if door_beta2alpha is locked and Panel door_beta2alpha is GANZ:
 		say "Du musst das Panel benutzen";
@@ -759,16 +864,18 @@ Instead of destroying the Panel door_beta2alpha:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_beta2alpha is a Türpanel and a part of door_beta2alpha with printed name "Panel door_beta2alpha".
-After putting the Sicherheitsausweis on Panel door_beta2alpha:
+[
+After putting the Ausweis on Panel door_beta2alpha:
 	if Panel door_beta2alpha is GANZ:             
 		now door_beta2alpha is unlocked;
 		now door_beta2alpha is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_beta2alpha is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel10 is a number that varies.
 Every Turn when the door_beta2alpha is open:
 	if counterPanel10 >= 1 and door_beta2alpha is open and Panel door_beta2alpha is GANZ:
@@ -776,12 +883,12 @@ Every Turn when the door_beta2alpha is open:
 		now door_beta2alpha is closed;
 		now door_beta2alpha is locked;
 		now counterPanel10 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel10 is counterPanel10 + 1;
-
+]
 [Panel zwischen Beta Junction und Engineering Lab]
-
+[
 Instead of opening the door_beta2engin:
 	if door_beta2engin is locked and Panel door_beta2engin is GANZ:
 		say "Du musst das Panel benutzen";
@@ -796,16 +903,18 @@ Instead of destroying the Panel door_beta2engin:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_beta2engin is a Türpanel and a part of door_beta2engin with printed name "Panel door_beta2engin".
-After putting the Sicherheitsausweis on Panel door_beta2engin:
+[
+After putting the Ausweis on Panel door_beta2engin:
 	if Panel door_beta2engin is GANZ:             
 		now door_beta2engin is unlocked;
 		now door_beta2engin is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_beta2engin is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[ 
 counterPanel11 is a number that varies.
 Every Turn when the door_beta2engin is open:
 	if counterPanel11 >= 1 and door_beta2engin is open and Panel door_beta2engin is GANZ:
@@ -813,12 +922,12 @@ Every Turn when the door_beta2engin is open:
 		now door_beta2engin is closed;
 		now door_beta2engin is locked;
 		now counterPanel11 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel11 is counterPanel11 + 1;
-
+]
 [Panel zwischen Storage Room und Cafeteria]
-
+[
 Instead of opening the door_cafe2storage:
 	if door_cafe2storage is locked and Panel door_cafe2storage is GANZ:
 		say "Du musst das Panel benutzen";
@@ -833,16 +942,18 @@ Instead of destroying the Panel door_cafe2storage:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_cafe2storage is a Türpanel and a part of door_cafe2storage with printed name "Panel door_cafe2storage".
-After putting the Sicherheitsausweis on Panel door_cafe2storage:
+[
+After putting the Ausweis on Panel door_cafe2storage:
 	if Panel door_cafe2storage is GANZ:             
 		now door_cafe2storage is unlocked;
 		now door_cafe2storage is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_cafe2storage is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel13 is a number that varies.
 Every Turn when the door_cafe2storage is open:
 	if counterPanel13 >= 1 and door_cafe2storage is open and Panel door_cafe2storage is GANZ:
@@ -850,12 +961,12 @@ Every Turn when the door_cafe2storage is open:
 		now door_cafe2storage is closed;
 		now door_cafe2storage is locked;
 		now counterPanel13 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel13 is counterPanel13 + 1;
-
+]
 [Panel zwischen Storage Area und Delta AI]
-
+[
 Instead of opening the door_storage2delta:
 	if door_storage2delta is locked and Panel door_storage2delta is GANZ:
 		say "Du musst das Panel benutzen";
@@ -870,16 +981,18 @@ Instead of destroying the Panel door_storage2delta:
 		say "Das Panel wurde zerstört. Die Tür kann geöffnet werden.";
 	otherwise:
 		say "Du benötigst das Mobitab um das Panel zu zerstören";
-
+]
 Panel door_storage2delta is a Türpanel and a part of door_storage2delta with printed name "Panel door_storage2delta".
-After putting the Sicherheitsausweis on Panel door_storage2delta:
+[
+After putting the Ausweis on Panel door_storage2delta:
 	if Panel door_storage2delta is GANZ:             
 		now door_storage2delta is unlocked;
 		now door_storage2delta is open;
 		say "Tür hat sich geöffnet.";
 	otherwise if Panel door_storage2delta is DEFEKT:
 		say "Panel ist beschädigt.";
- 
+ ]
+[
 counterPanel14 is a number that varies.
 Every Turn when the door_storage2delta is open:
 	if counterPanel14 >= 1 and door_storage2delta is open and Panel door_storage2delta is GANZ:
@@ -887,10 +1000,10 @@ Every Turn when the door_storage2delta is open:
 		now door_storage2delta is closed;
 		now door_storage2delta is locked;
 		now counterPanel14 is 0;
-		now player have the Sicherheitsausweis;
+		now player have the Ausweis;
 		stop;
 	now counterPanel14 is counterPanel14 + 1;
-
+]
 
 [ARBEITSPAKET A 12 - FENSTER]
 [Bodenfenster]
@@ -972,61 +1085,61 @@ Alarm is a backdrop. Alarm can be AKTIV or DEAKTIV. Alarm is AKTIV.
 Every Turn:
 	if Alarm is AKTIV:
 		say "Der Alarm ist sehr laut zu hören";
-[After looking at Videoblog:
-now Alarm is AKTIV;
-Kontaminierte hören nun bei allen Aktionen die Geräusche verursachen
--       der Alarm verstummt nicht, wenn der Blinkende Knopf bereits einmal gedrückt wurde, also den Zustand AUS hat
--             nach Anschauen des Videoblogs im MedLab geht der Alarm wieder an(Szene 2), also bekommt den Zustand AN
-                -        Kontaminierte reagieren nur noch auf Geräusche, die den Alarm übertönen
--               Kontaminierte reagieren verschieden je nach Alarm Zustand
--             Wenn der Alarm den Zustand AN hat: 
-                -        Kontaminierte reagieren nur auf Geräusche die lauter als der Alarm sind: Drucklufthammer benutzen, Hebel im Storage Room  
--     anderen Aktionen (auch mit Geräuschen, außer oben genannte) werden von den Kontaminierten nicht gehört, also werden sie nicht aufmerksam und werden sie wie Aktionen ohne Geräusche behandelt (nach 2 Zügen wird man kontaminiert, kein folgen)
--       Wenn der Alarm den Zustand AUS hat:
--       Alle Aktionen, die Geräusche verursache (Ansprechen, klatschen, videoblog, drucklufthammer, knarrendes geräusch eines Hebels) wird der Kontaminierte aufmerksam
--       Außerhalb des Inneren und äußeren Ring ist der Alarm nicht zu hören, also hat er dort keinen Einfluss (bzw. ist AUS)]
-
-
 
 [Pfeifen]
-Pfeifen is a backdrop. Pfeifen can be AKTIV or DEAKTIV. Pfeifen is DEAKTIV. Pfeifen is in Gamma Junction and Xeno Lab. 
-After entering the Xeno Lab:
-now Pfeifen is AKTIV;
-After opening the door_gamma2xeno:
-now Pfeifen is AKTIV in Gamma Junction;
-After closing the door_gamma2xeno:
-now Pfeifen is DEAKTIV in Gamma Junction;
+Pfeifen is a backdrop. Pfeifen can be AKTIV or DEAKTIV. Pfeifen is DEAKTIV. 
+[TODO nur in Szene 1!!]
+Every Turn:
+	[Pfeifen ist im XenoLab zu hören (in Szene 1)]
+	if the player is in the Xeno Lab:
+		now Pfeifen is AKTIV;
+	else:
+		now Pfeifen is DEAKTIV;
+	[Pfeifen ist in der Gamma Junction zu hören, wenn die Xeno Luke offen ist (nur Szene 1)]
+	if the player is in the Gamma Junction AND door_gamma2xeno is open:
+		now Pfeifen is AKTIV;
+	else:
+		now Pfeifen is DEAKTIV;
+	[Meldung ausgeben wenn Pfeifen aktiv -> Kontaminierte reagieren auchd darauf]
+	if Pfeifen is AKTIV:
+		say "Es ist ein lautes Pfeifen zu hören.";
+		react;
 
+[AP A 18]
 [Blinkender Knopf]
 Blinkender Knopf is a thing in Xeno Lab. It is fixed in place. Blinkender Knopf can be BLINKT or BLINKT NICHT. Blinkender Knopf is BLINKT.
 The description of Blinkender Knopf is "[if Blinkender Knopf is BLINKT] Ein blinkender Knopf ‐ vielleicht verstummt das Pfeifen ja, wenn man ihn drückt. [otherwise if Blinkender Knopf is BLINKT NICHT] Ein Knopf. Er hat anscheinend keine Funktion.".
+[Nach dem Drücken auf den Blinkenden Knopf ]
 After pushing Blinkender Knopf:
 	if Blinkender Knopf is BLINKT:
 		now Pfeifen is DEAKTIV;
 		now Alarm is DEAKTIV;
 		now Klappe in der Wand is OPEN;
-		say "Es hat sich eine Klappe in der Wand geöffnet und eine Phiole war dahinter verborgen";
+		say "Es hat sich eine Klappe in der Wand geöffnet und eine Phiole war dahinter verborgen.[line break]";
 	otherwise if Blinkender Knopf is BLINKT NICHT:
-		say "Knopf wurde gedrückt, daher keine Funktion!";
+		say "Der Knopf scheint keine Funktion zu haben.[line break]";
 
-[AP A 18]
 [Klappe in der Wand] 
 Klappe in der Wand is a container. Klappe in der Wand is scenery. It is fixed in place and openable. Klappe in der Wand can be OPEN and CLOSED. 
-Before opening Klappe in der Wand:
-say "Die Klappe lässt sich so nicht öffnen.";
+[Klappe kann manuell nicht geöffnet werden]
+Instead opening Klappe in der Wand:
+	say "Die Klappe lässt sich so nicht öffnen.[line break]";
+	stop;
+[Nach dem Öffnen (automatisch) soll die Meldung kommen]
 After opening Klappe in der Wand:
-say "Die Klappe ist aufgegangen. Dahinter befand sich eine Phiole mit rosafarbenem Nebel.";
+	say "Die Klappe ist aufgegangen. Dahinter befand sich eine Phiole mit rosafarbenem Nebel.[line break]";
 
 [Phiole]
 Phiole is a thing in Klappe in der Wand. It is portable. Phiole can be NICHT ZERBROCHEN or ZERBROCHEN. Phiole is NICHT ZERBROCHEN. The description of Phiole is "[if Phiole is NICHT ZERBROCHEN] Eine Phiole mit rosafarbenen Nebel darin. [otherwise if Phiole is ZERBROCHEN] Eine zerbrochene, leere Phiole.".
 Before taking the Phiole:
 now Phiole is NICHT ZERBROCHEN;
 After taking the Phiole:
-say "Beim Versuch die Phiole zu nehmen fällt sie auf den Boden und zerbricht. Dabei wird rosafarbener Nebel freigesetzt und Percy wird kontaminiert.";
+say "Beim Versuch die Phiole zu nehmen fällt sie auf den Boden und zerbricht. Dabei wird rosafarbener Nebel freigesetzt, der Percy kontaminiert...[line break]";
 now Phiole is in Xeno Lab;
 now Phiole is ZERBROCHEN;
-[now Percy is KONTAMINIERT;]
+now Percy is KONTAMINIERT;
 now Blinkender Knopf is BLINKT NICHT;
+[TODO Spielerwechsel + Szenenwechsel]
 
 [Spind]
 Spind is a container in Hangar with description "Der Spind eines Deckoffiziers. Vielleicht findet sich darin ja was Nützliches.".  Spind is not enterable. Spind is closed and openable. Spind is fixed in place. 
@@ -1034,23 +1147,36 @@ Spind is a container in Hangar with description "Der Spind eines Deckoffiziers. 
 [MobiTab]
 Mobitab is a device in Spind. The Description of Mobitab is "Ein Mobitab. Eine Art Tablet mit vielen nützlichen Funktionen. Es kann mit einem Türpanel verbunden werden, um es zu beschädigen.". Mobitab is portable.
 Before player taking mobitab:
-	if player have the Sicherheitsausweis:
+	if player have the Ausweis:
 		now mobitab is not portable;
 		say "Du darfst das Mobitab nicht nehmen.";
 	otherwise:
 		now mobitab is portable;
-
+		
 [Panel mit Mobitab zerstören]	
-Understand "destroy [Türpanel] with [Mobitab]" as Destroying.  Destroying is an action applying to two things.
-
-[Sicherheitsausweis]
-Sicherheitsausweis is a thing in Spind. The Description of Sicherheitsausweis is "Ein Sicherheitsausweis. Damit kann man wahrscheinlich einige Türen öffnen.". Sicherheitsausweis is portable.
-Before player taking Sicherheitsausweis:
-	if player have the mobitab:
-		now Sicherheitsausweis is not portable;
-		say "Du darfst den Sicherheitsausweis nicht nehmen.";
+Understand "destroy [Türpanel] with [Mobitab]" as Destroying. Destroying is an action applying to two things.
+Carry out destroying:
+	if player have mobitab:
+		if the noun is not DEFEKT: [Panel ist nicht defekt]
+			now the noun is DEFEKT;
+			[Entsperre dazugehörige Tür]
+			repeat with tür running through the doors in the location of the player:
+				if the noun is part of tür:
+					now tür is UNLOCKED;
+			say "Das Türpanel wurde zerstört. Die dazugehörige Luke kann nun manuell geöffnet werden.[line break]";
+		else: [Panel ist bereits defekt]
+			say "Das Türpanel ist bereits defekt.";
 	otherwise:
-		now Sicherheitsausweis is portable;
+		say "Du benötigst das Mobitab um das Türpanel zu zerstören.[line break]";
+
+[Ausweis]
+Ausweis is a thing in Spind. The Description of Ausweis is "Ein Ausweis. Damit kann man wahrscheinlich einige Türen öffnen.". Ausweis is portable.
+Before player taking Ausweis:
+	if player have the mobitab:
+		now Ausweis is not portable;
+		say "Du darfst den Ausweis nicht nehmen.[line break]";
+	otherwise:
+		now Ausweis is portable;
 
 
 [Leiche und Laborkittel]
@@ -1072,44 +1198,43 @@ Krankenbett is a Supporter in the Med Lab. Krankenbett is a Thing. The Descripti
 Videoblog is on the Pult. The Description of Videoblog is "Der Videoblog des Stationsarztes.". Videoblog is fixed in place. Videoblog is a device. Videoblog is switched off.
 
 Instead of switching on the Videoblog when the Videoblog is switched off:
-	say "Zusehen ist der Stationsarzt des Med Labs, vor seiner Kontamination. Er berichtet von einer biologischen Probe, die vom nahegelegenen Alien‐Planeten gewonnen wurde. Aufgrund eines Fehlers bei der Dekontamination der Raumanzüge sind zahlreiche Mitarbeiter der Station mit einem fremden Erreger kontaminiert worden, und es wurden immer mehr. Der Arzt hat es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren, in der durch den vom Engine‐Core erzeugtem blauen Feldes die Erreger deaktiviert werden können, so dass der Betroffene wieder gesund wird. Durch die Lautstärke des Abspielens wird der kontaminierte Arzt aufmerksam auf dich.";
+	say "Zusehen ist der Stationsarzt des Med Labs, vor seiner Kontamination. Er berichtet von einer biologischen Probe, die vom nahegelegenen Alien‐Planeten gewonnen wurde. Aufgrund eines Fehlers bei der Dekontamination der Raumanzüge sind zahlreiche Mitarbeiter der Station mit einem fremden Erreger kontaminiert worden, und es wurden immer mehr. [line break]Der Arzt hat es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren, in der durch den vom Engine‐Core erzeugtem blauen Feldes die Erreger deaktiviert werden können, so dass der Betroffene wieder gesund wird. [line break]Durch die Lautstärke des Abspielens wird der kontaminierte Arzt aufmerksam auf dich.[line break]";
 	if alarm is DEAKTIV:
 		react;
 	
 
-[Dekontaminationskabine]
-Dekontaminationskabine is container in Med Lab. It is fixed in place, enterable and openable. [Dekontaminationskabine is CLOSED.] The carrying capacity of Dekontaminationskabine is 1.
-Dekontaminationskabine can be AKTIVIERT, DEAKTIVIERT, EMPTY or FULL.  The description of Dekontaminationskabine is "Eine Dekontaminationskabine. Wenn man einen Kontaminierten hineinlockt und die Tür hinter ihm schließt, könnte man ihn heilen.".
-
-[Before closing Dekontaminationskabine:
-if Dekontaminationskabine is EMPTY and AKTIVIERT:
-say "Kabine ist leer. Es kann keine Dekontamination stattfinden.";
-otherwise if Dekontaminationskabine is FULL and Maschinenkern is GREEN:
-say "Dekontamination kann starten";
-otherwise if Dekontaminationskabine is 
-
-After closing Dekontaminationskabine:
-say "Die Dekontamination war erfolgreich. Percy ist geheilt!";
-now player is NICHT KONTAMINIERT;
-now Maschinenkern is ORANGE;
-now door_brid2brief is UNLOCKED;
+[	AP A20
+	 Dekontaminationskabine
 ]
-[
+Dekontaminationskabine is container in Med Lab. 
+It is fixed in place, enterable and openable.   
+The description of Dekontaminationskabine is "Eine Dekontaminationskabine. Wenn man einen Kontaminierten hineinlockt und die Tür hinter ihm schließt, könnte man ihn heilen.".
 
--       BEFORE: bevor man sie schließt:
-o   Falls die Kabine leer ist, passiert nichts
-o   Falls Percy in der Kabine ist UND Maschinenkern Energielevel = GREEN, dann startet die Dekontamination
-o   Falls ein anderer Kontaminierten (NICHT PERCY) drin ist UND Maschinenkern Energielevel = GREEN, dann kommt „Das ist nicht Percy! Du hast verloren!“ (Spiel beendet)
-o   Falls mehrere Kontaminierte in der Kabine sind UND Maschinenkern Energielevel = HIGH: „Es kann nur ein Kontaminierter gleichzeitig geheilt werden.“
-o   Falls Maschinenkern Energielevel != GREEN: „Die Energie der Station reicht nicht mehr dafür aus.“
--       AFTER: nach der Dekontamination
--       Gebe folgende Meldung aus: „Die Dekontamination war erfolgreich. Percy ist geheilt!“
--        Setze Percy kontaminiert auf FALSE
-o   Setze Maschinenkern Energielevel auf ORANGE
-·        
--      Entriegle die door_brid2brief, sodass sie durch das Mobitab geöffnet werden kann]
-
-
+[beim Schließen wird der Kontaminierte in der Kabine geheilt -> es muss Percy sein + sie darf nicht leer sein + kein weiterer im Raum -> sonst abbruch + counter reset
+ ]
+kontam_counter is a number that varies. kontam_counter is 0.
+Instead of closing Dekontaminationskabine:
+	repeat with kontam running through the Mensches in the Dekontaminationskabine:
+		now kontam_counter is kontam_counter + 1;
+		[Es befindet sich ein Kontaminierter in der Kabine (NICHT Percy)]
+		if kontam is not percy:
+			say "Es sollte sich nur Percy in der Kabine befinden, damit die Dekontamination funktioniert. [line break]Dekontamination wird abgebrochen..";
+			now kontam_counter is 0;
+			stop;
+	[Kabine ist leer]
+	if kontam_counter is 0:
+		say "Die Kabine ist leer. [line break]Dekontamination wird abgebrochen..";
+		now kontam_counter is 0;
+		stop;
+	[mehr als ein Kontaminierter in der Kabine]
+	if kontam_counter is greater than 1:
+		say "Es darf sich nur ein Kontaminierter in der Kabine befinden. [line break]Dekontamination wird abgebrochen..";
+		now kontam_counter is 0;
+		stop;
+	[nur Percy im Raum]
+	now Dekontaminationskabine is closed;
+	say "Die Dekontamination von Percy war erfolgreich und nun ist er wieder gesund."; 
+	now Percy is NOTKONTAMINIERT;
 
 [AP A 11 - Fähre]
 Fähre is an openable, enterable, closed, opaque container. 
@@ -1127,7 +1252,7 @@ The description of Antigravitationsgreifer is "Ein Antigravitationsgreifer. Obje
 Instead of putting the Antigravitationsgreifer on the Palette:
 now the Palette is HOVER;
 remove Antigravitationsgreifer from play;
-say "Durch den Antigravitationsgreifer schwebt die Palette jetzt und kann gestoßen werden, sodass sie in einem anschließenden Raum schwebt.";
+say "Durch den Antigravitationsgreifer schwebt die Palette jetzt und kann gestoßen werden, sodass sie in einem anschließenden Raum schwebt.[line break]";
 
 [Palette]
 Palette is a thing in the Fähre. 
@@ -1146,31 +1271,31 @@ Instead of pushing the Palette when Palette is HOVER:
 			if place is open:
 				add the other side of place to the list, if absent;
 	if the number of entries in list is 0:
-		say "Die Palette ist gegen die Wand geschwebt";
+		say "Die Palette ist gegen die Wand geschwebt.[line break]";
 		stop;
 [wähle einen zufälligen Raum aus der Liste]
 	let random be a random number between 1 and the number of entries in list;
 	let room be the entry random of list;
 [Prüfe ob der gewählte Raum eine Ausnahme ist]
 	if the printed name of room matches the text "door_com2doc":
-		say “Die Palette darf nicht durch die Weltraumtür.”;
+		say “Die Palette darf nicht durch die Weltraumtür.[line break]”;
 		stop;
 	if the printed name of room matches the text "door_gamma2gamma":
-		say "Der Wartungsschacht ist zu eng für die Palette.”;
+		say "Der Wartungsschacht ist zu eng für die Palette.[line break]”;
 		stop;
 	if the printed name of room matches the text "door_beta2engin" or the printed name of room matches the text "door_alpha2med" or the printed name of room matches the text "door_delta2solar":
-		say "Die Palette ist in der Luke stecken geblieben und nun kannst du nicht mehr weiterspielen.";
+		say "Die Palette ist in der Luke stecken geblieben und nun kannst du nicht mehr weiterspielen.[line break]";
 		[TODO Spielabbruch] 
 		stop;
 [Bewege Palette in den Raum]
 	now Palette is in room;
-	say "Die Palette ist in den Raum [room] geschwebt.";
+	say "Die Palette ist in den Raum [room] geschwebt.[line break]";
 [Prüfe ob Xeno Lab]
 	if room is Xeno Lab:
 		now door_gamma2xeno is BLOCKED;
 		now door_gamma2xeno is open;
 		remove Palette from play; 
-		say "Die Palette ist durch die Luke des Xeno Lab in einen Raum des inneren Ringes geflogen, sodass der Antigravitationsgreifer durch den Engine‐Core überlastet ist und die Palette nun die Luke blockiert, also die Luke nicht mehr geschlossen werden kann. Ein Durchschreiten ist jetzt möglich.”;
+		say "Die Palette ist durch die Luke des Xeno Lab in einen Raum des inneren Ringes geflogen, sodass der Antigravitationsgreifer durch den Engine‐Core überlastet ist und die Palette nun die Luke blockiert, also die Luke nicht mehr geschlossen werden kann. [line break]Ein Durchschreiten ist jetzt möglich.[line break]”;
 		stop;
 
 
@@ -1190,15 +1315,15 @@ The description of Drucklufthammer is "Ein Drucklufthammer mit integriertem Akku
 Drucklufthammer can be GELADEN or ENTLADEN. Drucklufthammer is GELADEN.
 [Er kann nur genutzt werden, wenn er geladen ist]
 Instead of switching on Drucklufthammer when the Drucklufthammer is ENTLADEN: 
-	say "Der Akku des Drucklufthammers ist leer. Du musst ihn erst an einem Türpanel aufladen."
+	say "Der Akku des Drucklufthammers ist leer. Du musst ihn erst an einem Türpanel aufladen.[line break]".
 [Nach dem Einschalten sind alle Kontaminierten im Raum aufmerksam und er ist entladen]
 After switching on the Drucklufthammer when the Drucklufthammer is GELADEN:
-	say "Der Druckluft hat ein lautes Geräusch erzeugt.";
+	say "Der Druckluft hat ein lautes Geräusch erzeugt.[line break]";
 	[Kontaminierte reagieren auf den Hammer]
 	react;
 	now the Drucklufthammer is ENTLADEN;
 	now the Drucklufthammer is switched off;
-	say "Der Akku des Drucklufthammers ist jetzt leer.";
+	say "Der Akku des Drucklufthammers ist jetzt leer.[line break]";
 	
 [Verbindung zu einem Türpanel lädt den Hammer wieder auf]
 [Befehl implementieren: connect. to ]
@@ -1209,9 +1334,9 @@ Carry out connecting:
 [Was wird beim Verbinden ausgegeben]
 Report connecting:
 	if Drucklufthammer is GELADEN:
-		say "Der Drucklufthammer war bereits geladen.";
+		say "Der Drucklufthammer war bereits geladen.[line break]";
 	otherwise:
-		say "Der Drucklufthammer ist wieder vollständig aufgeladen.";
+		say "Der Drucklufthammer ist wieder vollständig aufgeladen.[line break]";
 	
 
 [ARBEITSPAKET A 5 - SOLAR RÄUME]
@@ -1302,7 +1427,7 @@ Storage <Solar Module> is above Damaged Module <Solar Module>.
 [Klatschen]
 Understand "clap" as clapping. Clapping is an action applying to nothing.
 Carry out clapping:
-	say "*Klatsch*";
+	say "*Klatsch*[line break]";
 	[reagiere nur bei ausgeschaltetem Alarm]
 	if alarm is DEAKTIV:
 		react;		
@@ -1310,7 +1435,6 @@ Carry out clapping:
 	[
 	react;
 	]
-[Arbeitspaket A21 Person]
 [Methode für die Kontaminierten die Geräusche hören]
 To aufmerksam werden:
 	repeat with mensch running through the Mensches in the location of the player: 
@@ -1334,7 +1458,7 @@ To react:
 				
 [Methode für die Kontamination des Spielers]
 To kontaminiert werden:
-	say "Leider wurdest du kontaminiert und kannst deshalb das Spiel nicht fortsetzen. -GAME OVER-";
+	say "Leider wurdest du kontaminiert und kannst deshalb das Spiel nicht fortsetzen.[line break]-GAME OVER-[line break]";
 	end the story;
 	
 [Methode für die Verfolgung des Spielers durch Kontaminierte]
@@ -1353,15 +1477,13 @@ To reset kontaminierte:
 		if mensch is KONTAMINIERT:
 			now mensch is UNATTENTIVE;
 
-[Mensch (Oberklasse von Kontaminierte)]
+[	AP A21
+	 Mensch (Oberklasse von Kontaminierte)
+]
 Mensch is a kind of person. 
 Mensch can be KONTAMINIERT or NOTKONTAMINIERT. Mensch is NOTKONTAMINIERT.
 Mensch can be UNATTENTIVE or ATTENTIVE or FOLLOWING. Mensch is UNATTENTIVE.
-[Kontaminierte]
-Kontaminierter is a kind of Mensch. Kontaminierter is KONTAMINIERT.
-[TEST]
-konta, konta1 is a Kontaminierter in the Hangar.
-[/TEST] 
+
 [Rundenzähler für Kontaminierte]
 turn_counter is a number that varies. turn_counter is 0.
 [Modus der Kontaminierten im Raum: 0 = nicht kontam., 1 = unattentive, 2 = attentive, 3 = follow]
@@ -1393,9 +1515,11 @@ Every Turn:
 			else if mensch is FOLLOWING:
 				now mode is 3;	
 	[DEBUG]
-	say "Mode is [mode]. | ";
-	say "hasReacted is [hasReacted]. | ";
-	say "turnCounter is [turn_counter]. | ";
+	[
+	say "Mode is [mode].[line break]";
+	say "hasReacted is [hasReacted].[line break]";
+	say "turnCounter is [turn_counter].[line break]";
+	]
 	[/DEBUG]
 	[Interaktion mit Kontaminierten je nach Modus und Rundenzähler] 						
 	if mode is 0: [keine Kontamination]
@@ -1410,3 +1534,20 @@ Every Turn:
 				react;
 	 [flags zurücksetzen]
 	now hasReacted is FALSE;
+	
+[	AP A22
+	 Kontaminierte
+]
+Kontaminierter is a kind of Mensch. 
+Kontaminierter is KONTAMINIERT.
+[TEST]
+[
+konta, konta1 is a Kontaminierter in the Hangar.
+]
+[/TEST] 
+
+[	AP A23
+	 Percy und Barry
+]
+Percy is a Mensch. 
+Barry is a Mensch.
