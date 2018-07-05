@@ -781,10 +781,7 @@ Every Turn:
 ]
 [Leiche und Laborkittel]
 Leiche is a person. Leiche is in Gamma Delta Corridor. The description of Leiche is "Die Leiche eines Wissenschaftlers. Sie trägt einen interessanten Laborkittel.". 
-[NOCH NICHT FERTIG!!]
-[Instead of saying to Leiche:
-	say "Das ist eine Leiche. Du kannst nicht mit ihr reden.".
-]
+
 Leiche wears Laborkittel. The description of Laborkittel is "Ein Laborkittel, der mal einem Wissenschaftler gehört hat. Es scheint so, als wäre darin irgendetwas eingenäht.".
 Laborkittel is a wearable thing. Laborkittel is a portable thing.
 
@@ -1001,7 +998,7 @@ The description of Damaged Module <Solar Module> is "Das Damaged Module des Sola
 Damaged Module <Solar Module> is inside the linke seitenebene.
 
 Delta Greenhouse <Solar Module> is a room. 
-The description of Delta Greenhouse <Solar Module> is "Das Damaged Module des Solar Modules. Südlich ist das Energy Module. In diesem Raum befindet sich eine Treppe die nach oben zum Storage führt." 
+The description of Delta Greenhouse <Solar Module> is "Das Gewächshaus des Solar Moduls. Nördlich ist das Rescue Modul. In diesem Raum befindet sich eine Treppe, die nach oben zum COM-Modul führt." 
 Delta Greenhouse <Solar Module> is inside the linke seitenebene.
 
 Energy Module <Solar Module> is a room. 
@@ -1023,7 +1020,7 @@ Transporter Module <Solar Module> is a room.
 The description of Transporter Module <Solar Module> is "Hier befindet sich der Teleporter des Solar Modules. Nördlich ist das Antenna Array zu erreichen."
 Transporter Module <Solar Module> is inside the rechte seitenebene.
 
-Pulsator Module <Solar Module> is a room. The description of Pulsator Module <Solar Module> is "Hier befindet sich der Teleporter des Solar Modules. Nördlich ist das Antenna Array zu erreichen."
+Pulsator Module <Solar Module> is a room. The description of Pulsator Module <Solar Module> is "Der Pulsatorraum des Solar Moduls. Nördlich befindet sich das Solar Modul <Solar Module>. In diesem Raum befindet sich eine Treppe, die nach unten zum Kontrollmodul führt."
 Pulsator Module <Solar Module> is inside the rechte seitenebene.
 
 [Räumliche Anordnung]
@@ -1038,6 +1035,7 @@ Pulsator Module <Solar Module> is south of Solar Module Room <Solar Module>.
 Solar Module Room <Solar Module is above Storage <Solar Module>.
 Control Module <Solar Module> is below Pulsator Module <Solar Module>.
 Storage <Solar Module> is above Damaged Module <Solar Module>.
+
 
 [
 	Methoden für Kontaminierte
