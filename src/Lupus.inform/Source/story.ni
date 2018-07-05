@@ -50,7 +50,6 @@ When Kommt alle zusammen begins:
 	say "Der Alarm ist bei der Dekontamination wieder angegangen.";
 	now Percy is on the Krankenbett;
 	now Barry is in the Med Lab;
-	now door_hang2umkleide is unlocked;
 
 [
 	Arbeitspaket A1- ALLE RÄUME
@@ -808,6 +807,8 @@ Instead of switching on the Videoblog when the Videoblog is switched off:
 	say "Zusehen ist der Stationsarzt des Med Labs, vor seiner Kontamination. Er berichtet von einer biologischen Probe, die vom nahegelegenen Alien‐Planeten gewonnen wurde. Aufgrund eines Fehlers bei der Dekontamination der Raumanzüge sind zahlreiche Mitarbeiter der Station mit einem fremden Erreger kontaminiert worden, und es wurden immer mehr. [line break]Der Arzt hat es noch geschafft einen speziellen Filter in die Luftzirkulation einzubauen und eine spezielle Dekontaminationskabine für eine Person zu konstruieren, in der durch den vom Engine‐Core erzeugtem blauen Feldes die Erreger deaktiviert werden können, so dass der Betroffene wieder gesund wird. [line break]Durch die Lautstärke des Abspielens wird der kontaminierte Arzt aufmerksam auf dich.[line break][line break]";
 	[Kontaminierte reagieren darauf]
 	react;
+	[Umkleide entsperren für Hammer]
+	now door_hang2umkleide is unlocked;
 	
 
 [	
